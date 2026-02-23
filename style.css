@@ -156,3 +156,36 @@ a:hover{
   font-size:13px;
   margin:28px 0 10px;
 }
+
+/* ================= BUTTONS ================= */
+.btn-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:12px;
+}
+
+.btn{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:12px;
+  border:1px solid var(--accent-border);
+  background: var(--accent-light);
+  color: var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
+
+.btn:hover{
+  text-decoration:none;
+  filter: brightness(0.98);
+}
+
+.btn.secondary{
+  background:#fff;
+}
+
+.btn.disabled{
+  opacity:0.55;
+  pointer-events:none;
+}
