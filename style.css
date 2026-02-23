@@ -189,3 +189,18 @@ a:hover{
   opacity:0.55;
   pointer-events:none;
 }
+
+
+.banner{
+  background: var(--accent-light);
+  border: 1px solid var(--accent-border);
+  color: var(--fg);
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin: 18px 0;
+}
+
+.banner strong{
+  color: var(--accent);
+}
+
