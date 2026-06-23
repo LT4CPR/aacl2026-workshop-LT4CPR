@@ -67,8 +67,8 @@ main { padding: 1.25rem 0 .75rem; flex: 1; }
 .card h3 { font-size: 1rem; font-weight: 600; margin-bottom: .5rem; color: var(--navy); }
 .card p  { margin-bottom: .9rem; color: #2e3550; }
 .card p:last-child { margin-bottom: 0; }
-.card ul { padding-left: 1.3rem; margin-bottom: .9rem; }
-.card ul li { margin-bottom: .45rem; }
+.card ul, .card ol { padding-left: 1.3rem; margin-bottom: .9rem; }
+.card ul li, .card ol li { margin-bottom: .45rem; }
 
 /* Banner */
 .banner { background: #fff8f0; border: 1px solid #f0b97a;

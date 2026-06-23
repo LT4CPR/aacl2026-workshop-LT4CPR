@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LT4CPR @ AACL 2026 - Flyer</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    @page { size: A4; margin: 12mm; }
+
+    :root {
+      --navy:   #1b2a45;
+      --orange: #c95420;
+      --blue:   #1755a8;
+      --bg:     #eef0f5;
+      --border: #cdd3de;
+      --text:   #1a1a2e;
+      --muted:  #4a5a70;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.5;
+      font-size: 14px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .flyer {
+      width: 186mm; /* 210mm - 2x12mm margins */
+      margin: 0 auto;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ─────────────────────────────────── */
+    .flyer-header {
+      position: relative;
+      min-height: 175px;
+      background-color: var(--navy);
+      background-image: url('img/venue.webp');
+      background-size: cover;
+      background-position: center 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border-radius: 10px 10px 0 0;
+      border-bottom: 6px solid var(--orange);
+      overflow: hidden;
+    }
+
+    .flyer-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(27, 42, 69, 0.76);
+    }
+
+    .header-body {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      padding: 24px 28px 22px;
+    }
+
+    .workshop-badge {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 8px;
+    }
+
+    .flyer-title {
+      font-size: 38px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+
+    .flyer-subtitle {
+      font-size: 14px;
+      font-weight: 600;
+      opacity: 0.93;
+      margin-bottom: 10px;
+    }
+
+    .flyer-meta {
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.82;
+      margin-bottom: 8px;
+    }
+
+    .flyer-tagline {
+      display: inline-block;
+      font-size: 11.5px;
+      font-style: italic;
+      font-weight: 600;
+      background: var(--orange);
+      color: #fff;
+      padding: 3px 10px;
+      border-radius: 3px;
+    }
+
+    /* ── Body ───────────────────────────────────── */
+    .flyer-body {
+      padding: 22px 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .about {
+      font-size: 12.5px;
+      color: #2e3550;
+      line-height: 1.65;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Section label ──────────────────────────── */
+    .section-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 10px;
+    }
+
+    /* ── Topics ─────────────────────────────────── */
+    .topics-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 28px;
+    }
+
+    .topics-list li {
+      font-size: 12px;
+      padding-left: 13px;
+      position: relative;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    .topics-list li::before {
+      content: "•";
+      color: var(--orange);
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+
+    /* ── Two-col ─────────────────────────────────── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    /* ── Shared task ────────────────────────────── */
+    .task-box {
+      background: #edf2fb;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 16px;
+    }
+
+    .box-heading {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .box-desc {
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── Keynote ────────────────────────────────── */
+    .keynote-box {
+      background: #fff8f2;
+      border-left: 4px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 16px;
+    }
+
+    .keynote-box .section-label { color: var(--orange); }
+    .keynote-box .box-heading   { color: var(--navy); }
+    .keynote-box .box-desc      { color: var(--muted); }
+    .keynote-box .box-desc strong { color: var(--text); }
+
+    /* ── Field Reports ──────────────────────────── */
+    .field-reports {
+      background: #fff8f2;
+      border: 2px solid var(--orange);
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+
+    .field-badge {
+      display: inline-block;
+      background: var(--orange);
+      color: #fff;
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 2px 9px;
+      border-radius: 3px;
+      margin-bottom: 8px;
+    }
+
+    .field-heading {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .field-desc {
+      font-size: 12px;
+      color: #3a3a4a;
+      line-height: 1.6;
+    }
+
+    /* ── CFP block ──────────────────────────────── */
+    .cfp-block {
+      background: var(--navy);
+      border-radius: 8px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .cfp-left { flex: 1; }
+
+    .cfp-heading {
+      font-size: 17px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+
+    .cfp-sub {
+      font-size: 11.5px;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 10px;
+    }
+
+    .cfp-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .cfp-pill {
+      font-size: 10px;
+      font-weight: 700;
+      background: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.9);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 4px;
+      padding: 3px 9px;
+    }
+
+    .cfp-deadline {
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .cfp-deadline-label {
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--orange);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .cfp-deadline-val {
+      font-size: 15px;
+      font-weight: 900;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    /* ── Orange separator ───────────────────────── */
+    .orange-sep {
+      height: 5px;
+      background: var(--orange);
+      border-radius: 0;
+    }
+
+    /* ── Footer ─────────────────────────────────── */
+    .flyer-footer {
+      margin-top: 0;
+      background: var(--navy);
+      border-radius: 0 0 10px 10px;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .qr-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .qr-label {
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+
+    #qr-code canvas,
+    #qr-code img { display: block; border-radius: 4px; }
+
+    .footer-text { flex: 1; }
+
+    .footer-url {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .footer-email {
+      display: block;
+      font-size: 12px;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 8px;
+    }
+
+    .footer-tags {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--orange);
+      margin-bottom: 8px;
+    }
+
+    .footer-nsf {
+      display: block;
+      font-size: 9px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.5;
+    }
+
+    /* ── Print ──────────────────────────────────── */
+    @media print {
+      body { margin: 0; background: #fff; }
+      .flyer { width: 100%; box-shadow: none; }
+    }
+
+    /* ── Screen preview ─────────────────────────── */
+    @media screen {
+      body { background: #cdd1db; padding: 36px 0 52px; }
+      .flyer { box-shadow: 0 12px 52px rgba(0,0,0,0.24); }
+    }
+  </style>
+</head>
+<body>
+  <div class="flyer">
+
+    <header class="flyer-header">
+      <div class="header-body">
+        <div class="workshop-badge">Workshop at AACL-IJCNLP 2026</div>
+        <div class="flyer-title">LT4CPR</div>
+        <div class="flyer-subtitle">Language Technologies for Crisis Preparedness and Response</div>
+        <div class="flyer-meta">November 9, 2026 &nbsp;·&nbsp; Hengqin, Zhuhai, China &nbsp;·&nbsp; Hybrid</div>
+        <div class="flyer-tagline">Where language AI meets crisis operations</div>
+      </div>
+    </header>
+
+    <div class="flyer-body">
+
+      <p class="about">
+        A one-day workshop co-located with AACL-IJCNLP 2026, bringing together NLP researchers
+        and crisis management practitioners to advance language technologies for disaster
+        preparedness and response. Featuring invited talks, a panel discussion, and a shared task.
+      </p>
+
+      <div>
+        <div class="section-label">Topics of Interest</div>
+        <ul class="topics-list">
+          <li>Social media monitoring and narrative analysis</li>
+          <li>Volunteer and community coordination tools</li>
+          <li>Crisis detection and early warning systems</li>
+          <li>Machine translation in humanitarian contexts</li>
+          <li>Automatic sitrep generation</li>
+          <li>Translating NLP research into operational tools</li>
+          <li>Information extraction and situational awareness</li>
+          <li>Ethics and societal implications of AI in crisis</li>
+        </ul>
+      </div>
+
+      <div class="two-col">
+
+        <div class="task-box">
+          <div class="section-label">Shared Task</div>
+          <div class="box-heading">Automatic Sitrep Generation</div>
+          <p class="box-desc">Generate structured situation reports from crisis-related social media. Dataset and baselines coming soon.</p>
+        </div>
+
+        <div class="keynote-box">
+          <div class="section-label">Call for Keynote Speakers</div>
+          <div class="box-heading">Suggest or Nominate a Speaker</div>
+          <p class="box-desc">Practitioners and researchers in crisis management are welcome to suggest or self-nominate. Contact <strong>LT4Crisis@gmail.com</strong></p>
+        </div>
+
+      </div>
+
+      <div class="field-reports">
+        <div class="field-badge">Submission Options</div>
+        <div class="field-heading">Archival and Non-Archival</div>
+        <p class="field-desc">Archival papers (up to 8 pages) will appear in the ACL Anthology proceedings. Non-archival submissions showcase in-progress work and work published elsewhere, presented at the workshop but not in proceedings.</p>
+      </div>
+
+      <div class="cfp-block">
+        <div class="cfp-left">
+          <div class="cfp-heading">Call for Papers</div>
+          <div class="cfp-sub">Double-blind peer review &nbsp;·&nbsp; Archival and non-archival options &nbsp;·&nbsp; Up to 8 pages</div>
+          <div class="cfp-pills">
+            <span class="cfp-pill">Track 1 · Direct Submission</span>
+            <span class="cfp-pill">Track 2 · ARR Commitment</span>
+            <span class="cfp-pill">Via OpenReview</span>
+          </div>
+        </div>
+        <div class="cfp-deadline">
+          <span class="cfp-deadline-label">Direct: Aug 24 · ARR: Aug 31</span>
+          <span class="cfp-deadline-val">August 2026</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="orange-sep"></div>
+    <footer class="flyer-footer">
+      <div class="qr-wrap">
+        <div id="qr-code"></div>
+        <span class="qr-label">Scan to learn more</span>
+      </div>
+      <div class="footer-text">
+        <span class="footer-url">lt4cpr.github.io/aacl2026-workshop-LT4CPR</span>
+        <span class="footer-email">LT4Crisis@gmail.com</span>
+        <span class="footer-tags">#LT4CPR &nbsp; #AACL2026</span>
+        <span class="footer-nsf">Supported by the National Science Foundation under Grant Nos. 2346334 and 2346335.</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    new QRCode(document.getElementById("qr-code"), {
+      text: "https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/",
+      width: 120,
+      height: 120,
+      colorDark: "#1b2a45",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.M
+    });
+  </script>
+</body>
+</html>
