@@ -4,100 +4,349 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Shared Task · LT4CPR @ AACL 2026</title>
+  <title>Call for Participation: LT4CPR Shared Task @ AACL-IJCNLP 2026</title>
   <meta name="description"
-        content="LT4CPR Shared Task at AACL 2026: Automatic Situation Report (Sitrep) Generation." />
+        content="Call for participation in the LT4CPR Shared Task at AACL-IJCNLP 2026 on automatic situation report generation from crisis-related social media." />
 
   <link rel="icon" type="image/png" href="favicon.png" />
 
-  <meta property="og:title" content="LT4CPR Shared Task @ AACL 2026" />
-  <meta property="og:description" content="Automatic Situation Report (Sitrep) Generation from crisis-related social media." />
+  <meta property="og:title" content="Call for Participation: LT4CPR Shared Task @ AACL-IJCNLP 2026" />
+  <meta property="og:description" content="Participate in the LT4CPR Shared Task on automatic situation report generation from crisis-related social media." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/shared-task.html" />
   <meta property="og:image" content="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/preview-banner.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="LT4CPR Shared Task @ AACL 2026" />
-  <meta name="twitter:description" content="Automatic Situation Report (Sitrep) Generation from crisis-related social media." />
+  <meta name="twitter:title" content="Call for Participation: LT4CPR Shared Task @ AACL-IJCNLP 2026" />
+  <meta name="twitter:description" content="Automatic situation report generation from crisis-related social media." />
   <meta name="twitter:image" content="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/preview-banner.png" />
 
   <link rel="preload" as="image" href="img/venue.webp" type="image/webp" />
   <link rel="stylesheet" href="style.min.css" />
+
+  <!-- These small additions use only existing site colors and can be moved into style.min.css later. -->
+  <style>
+    .notice {
+      margin: 1.25rem 0;
+      padding: 1rem 1.1rem;
+      border-left: 4px solid currentColor;
+      background: rgba(0, 0, 0, 0.035);
+    }
+    .date-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    .date-table th,
+    .date-table td {
+      padding: .65rem .75rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+      text-align: left;
+      vertical-align: top;
+    }
+    .date-table th {
+      width: 45%;
+    }
+    .task-links a {
+      display: inline-block;
+      margin: .25rem .75rem .25rem 0;
+    }
+    .small-note {
+      font-size: .95rem;
+      opacity: .8;
+    }
+  </style>
 </head>
 
 <body>
-    <header class="hero-header">
-  <div class="hero-body">
-    <div class="hero-title">LT4CPR @ AACL-IJCNLP 2026</div>
-    <div class="hero-sub">Language Technologies for Crisis Preparedness and Response</div>
-    <div class="hero-meta">November 9, 2026 · Hengqin, Zhuhai, China</div>
-  </div>
-  <div class="hero-nav-bar">
-    <div class="container">
-      <nav class="nav">
-      <a href="https://lt4cpr.github.io/" class="nav-project">Project Site</a>
-        <a href="index.html">Home</a>
-        <a href="cfp.html">Call for Papers</a>
-        <a href="shared-task.html" class="active">Shared Task</a>
-        <a href="speakers.html">Invited Speakers</a>
-        <a href="program.html">Program</a>
-        <a href="organizers.html">Organizers</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <header class="hero-header">
+    <div class="hero-body">
+      <div class="hero-title">LT4CPR @ AACL-IJCNLP 2026</div>
+      <div class="hero-sub">Language Technologies for Crisis Preparedness and Response</div>
+      <div class="hero-meta">November 9, 2026 · Hengqin, Zhuhai, China</div>
     </div>
-  </div>
-</header>
+    <div class="hero-nav-bar">
+      <div class="container">
+        <nav class="nav">
+          <a href="https://lt4cpr.github.io/" class="nav-project">Project Site</a>
+          <a href="index.html">Home</a>
+          <a href="cfp.html">Call for Papers</a>
+          <a href="shared-task.html" class="active">Shared Task</a>
+          <a href="speakers.html">Invited Speakers</a>
+          <a href="program.html">Program</a>
+          <a href="organizers.html">Organizers</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
   <main class="container">
     <section class="card">
-      <h1>Shared Task: Automatic Situation Report ("Sitrep") Generation</h1>
+      <h1>Call for Participation</h1>
+      <h2>LT4CPR Shared Task on Automatic Situation Report Generation</h2>
+
+      <div class="notice">
+        <strong>First Call for Participation: July 15, 2026.</strong>
+        Training data will be released with the second call on August 1, 2026. Participant registration closes on August 25, 2026.
+      </div>
 
       <p>
-        LT4CPR will host a shared task on <strong>automatic situation report ("sitrep") generation</strong>
-        from crisis-related social media content. Situation reports are commonly compiled manually within
-        the first 24 hours of a crisis and updated daily thereafter; partially automating this process can
-        improve timeliness and coverage for situational awareness.
+        We invite researchers, students, practitioners, humanitarian organizations, and industry teams to
+        participate in the <strong>LT4CPR Shared Task on Automatic Situation Report (Sitrep) Generation</strong>,
+        organized as part of the First Workshop on Language Technologies for Crisis Preparedness and Response
+        (LT4CPR) at AACL-IJCNLP 2026.
+      </p>
+
+      <p>
+        During a crisis, responders must rapidly synthesize large volumes of fragmented, repetitive, uncertain,
+        and sometimes conflicting information. Social media can provide timely reports about hazards, impacts,
+        infrastructure damage, affected populations, urgent needs, and response activities, but turning these
+        messages into an operationally useful overview remains labor-intensive. This shared task explores how
+        language technologies can support the generation of concise, structured, and verifiable situation reports
+        from crisis-related social media streams.
       </p>
 
       <h2>Task Overview</h2>
-      <ul>
-        <li><strong>Input:</strong> crisis-related social media streams (e.g., posts/tweets) with metadata.</li>
-        <li><strong>Output:</strong> a structured and/or narrative sitrep capturing key facts, impacts, and needs.</li>
-        <li><strong>Evaluation:</strong> TBA (automatic + human evaluation; track(s) to be announced).</li>
-      </ul>
-
-      <h2>Data, Baselines, and Rules</h2>
       <p>
-        The shared task dataset, baseline systems, evaluation protocol, and participation rules will be posted here.
+        Participating systems will receive a collection of crisis-related social media messages and generate a
+        situation report that summarizes the most important information contained in the collection.
       </p>
       <ul>
-        <li>Dataset release: TBA</li>
-        <li>Baseline code: TBA</li>
-        <li>Submission instructions: TBA</li>
-        <li>Leaderboard: TBA</li>
+        <li><strong>Input:</strong> a set of crisis-related social media messages, with task-provided metadata where available.</li>
+        <li><strong>Output:</strong> a structured situation report following the official task template and output format.</li>
+        <li><strong>Goal:</strong> produce a report that is informative, concise, well organized, faithful to the source messages, and useful for situational awareness.</li>
       </ul>
+
+      <p>
+        Reports may cover information such as the crisis context, major events, affected people and locations,
+        casualties, displacement, infrastructure and service disruptions, emerging needs, response activities,
+        resource provision, and unresolved or uncertain claims. The final schema and required sections will be
+        specified in the task guidelines.
+      </p>
+
+      <h2>Who Should Participate?</h2>
+      <p>The shared task welcomes teams working in areas including, but not limited to:</p>
+      <ul>
+        <li>Automatic summarization and report generation</li>
+        <li>Information extraction, event extraction, and entity linking</li>
+        <li>Retrieval-augmented generation and evidence-grounded generation</li>
+        <li>Large language models and instruction-tuned systems</li>
+        <li>Multilingual and cross-lingual crisis informatics</li>
+        <li>Humanitarian technology, emergency management, and crisis communication</li>
+        <li>Evaluation of factuality, coverage, uncertainty, and operational usefulness</li>
+      </ul>
+      <p>No prior participation in LT4CPR is required, and interdisciplinary teams are especially encouraged.</p>
+
+      <h2>Participation Tracks</h2>
+      <p>
+        The final track structure will be announced with the dataset release. Depending on data availability and
+        participant interest, the organizers may offer one or more of the following tracks:
+      </p>
+      <ul>
+        <li><strong>Open Track:</strong> participants may use external models, data, retrieval systems, and other resources, provided that all resources are documented.</li>
+        <li><strong>Constrained Track:</strong> participants use only the task-provided data and permitted resources.</li>
+        <li><strong>Multilingual or Cross-lingual Track:</strong> systems process crisis messages in one or more languages beyond English.</li>
+      </ul>
+      <p class="small-note">
+        The official tracks, eligibility rules, and resource restrictions will be defined in the shared task rules.
+      </p>
+
+      <h2>Data and Resources</h2>
+      <p>The organizers plan to provide:</p>
+      <ul>
+        <li>Training data, scheduled for release on August 1, 2026</li>
+        <li>A complete sample package containing sample input, sample system output, and a sample gold-standard report</li>
+        <li>Detailed documentation of the required input and output formats</li>
+        <li>A situation-report template and machine-readable output schema</li>
+        <li>Annotation and data documentation</li>
+        <li>Baseline code and example system outputs, where available</li>
+        <li>Evaluation metric definitions and evaluation code, where available</li>
+        <li>Validation scripts for checking submission format</li>
+        <li>A submission platform and public or private leaderboard</li>
+      </ul>
+
+      <div class="task-links">
+        <!-- Replace the placeholders below when the resources are available. -->
+        <a href="#" aria-disabled="true">Registration: TBA</a>
+        <a href="#" aria-disabled="true">Dataset: TBA</a>
+        <a href="#" aria-disabled="true">Baseline Repository: TBA</a>
+        <a href="#" aria-disabled="true">Submission Platform: TBA</a>
+        <a href="#" aria-disabled="true">Task Guidelines: TBA</a>
+      </div>
+
+      <h2>Evaluation</h2>
+      <p>
+        Systems will be evaluated using a combination of automatic and, where feasible, human-centered evaluation.
+        Before the evaluation phase, the organizers will publish the metric definitions, explain how each score is
+        calculated, and release the official evaluation code when it is available. The final ranking criteria and
+        tie-breaking procedures will also be documented. Evaluation may consider:
+      </p>
+      <ul>
+        <li><strong>Content coverage:</strong> whether the report captures important facts, events, impacts, needs, and response actions.</li>
+        <li><strong>Factual consistency:</strong> whether generated claims are supported by the input messages.</li>
+        <li><strong>Organization and usability:</strong> whether information is placed in the appropriate report sections and presented clearly.</li>
+        <li><strong>Redundancy and conciseness:</strong> whether repeated information is consolidated without losing important distinctions.</li>
+        <li><strong>Uncertainty handling:</strong> whether uncertain, conflicting, or unverified information is represented appropriately.</li>
+      </ul>
+      <p>
+        The organizers may report both an overall score and separate diagnostic scores. Full metric definitions,
+        tie-breaking procedures, and leaderboard policies will be included in the task guidelines.
+      </p>
 
       <h2>How to Participate</h2>
+      <ol>
+        <li>Register your team using the official registration form.</li>
+        <li>Review the task guidelines, data license, and participation rules.</li>
+        <li>Download the released data and baseline resources.</li>
+        <li>Develop and evaluate your system using the training and development sets.</li>
+        <li>Submit system outputs for the official test set through the designated platform.</li>
+        <li>Submit a system description paper if required for inclusion in the shared task proceedings and workshop program.</li>
+      </ol>
       <p>
-        When the shared task opens, we will provide step-by-step instructions and links here.
-        If you are interested in participating, please email
-        <a href="mailto:haz060@uw.edu">haz060@uw.edu</a>.
+        Participation in the shared task does not require a separate submission to the workshop's general Call for
+        Papers. Shared task system papers will follow their own submission instructions and deadlines.
+      </p>
+
+      <h2>System Description Papers</h2>
+      <p>
+        Participating teams will be invited to submit a system description paper explaining their approach,
+        resources, experiments, results, error analysis, limitations, and ethical considerations. Papers should
+        clearly disclose the models, external data, APIs, retrieval sources, and manual interventions used by the system.
+      </p>
+      <ul>
+        <li><strong>Submission format:</strong> ACL style; page limit and submission link TBA.</li>
+        <li><strong>Authorship:</strong> system papers do not need to be anonymous unless otherwise stated in the final instructions.</li>
+        <li><strong>Presentation:</strong> accepted system papers may be presented as posters, talks, or shared-task overview sessions at LT4CPR.</li>
+        <li><strong>Proceedings:</strong> publication details will be announced with the system-paper call.</li>
+      </ul>
+
+      <h2>Participation Rules</h2>
+      <ul>
+        <li>Each team must designate a primary contact and use a consistent team name across registration and submissions.</li>
+        <li>Participants must comply with the dataset license and may not redistribute restricted task data.</li>
+        <li>Test labels or reference reports must not be obtained or reconstructed through unauthorized means.</li>
+        <li>All external data, pretrained models, APIs, prompts, and human involvement must be documented.</li>
+        <li>Submitted outputs must be produced by the registered system by the submission deadline.</li>
+        <li>Teams must follow the submission limits and resource restrictions of their selected track.</li>
+        <li>The organizers reserve the right to inspect submissions for rule compliance and to exclude invalid entries.</li>
+      </ul>
+
+      <h2>Ethics and Responsible Use</h2>
+      <p>
+        Crisis-related social media can contain sensitive personal information, distressing content, rumors, and
+        references to vulnerable populations. Participants must use the data only for the purposes allowed by the
+        dataset license and should avoid attempts to identify, contact, or profile individuals represented in the data.
+        Teams should discuss privacy, representational harms, hallucination risks, model limitations, and the risks of
+        deploying automated reports in high-stakes environments.
+      </p>
+      <p>
+        Shared-task outputs are research artifacts and must not be treated as verified operational intelligence or
+        used as a substitute for expert review and established emergency-management procedures.
+      </p>
+
+      <h2>Important Dates</h2>
+      <p>All deadlines are 11:59 p.m. Anywhere on Earth (AoE), unless otherwise stated. Dates are tentative and may be updated.</p>
+      <table class="date-table">
+        <tbody>
+          <tr>
+            <th scope="row">Shared task website published</th>
+            <td>July 13, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">First Call for Participation</th>
+            <td>July 15, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">Second Call for Participation and training data release</th>
+            <td>August 1, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">Final Call for Participation</th>
+            <td>August 15, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">Participant registration deadline</th>
+            <td>August 25, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">Test data release</th>
+            <td>September 1, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">System output submission deadline</th>
+            <td>September 7, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">Evaluation and review period</th>
+            <td>September 8–22, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">System description paper deadline</th>
+            <td>September 15, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">Notification of acceptance</th>
+            <td>October 1, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">Camera-ready papers due</th>
+            <td>October 10, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">LT4CPR workshop</th>
+            <td>November 9, 2026</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Organizer Milestones</h2>
+      <p class="small-note">
+        The following tentative milestones are included for coordination and may be revised independently of participant deadlines.
+      </p>
+      <table class="date-table">
+        <tbody>
+          <tr>
+            <th scope="row">Review committee finalized</th>
+            <td>September 1, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">Shared task overview paper target</th>
+            <td>September 25, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">Shared task data paper target</th>
+            <td>TBA</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="small-note">
+        The overview paper will be prepared after the organizers have reviewed participating teams’ system description papers.
+      </p>
+
+      <h2>Updates and Contact</h2>
+      <p>
+        Updates will be posted on this page and through the LT4CPR communication channels. Questions about the
+        shared task may be sent to <a href="mailto:haz060@uw.edu">haz060@uw.edu</a>.
+      </p>
+      <p>
+        To help the organizers estimate participation, prospective teams are encouraged to register their interest
+        as soon as the registration form becomes available.
       </p>
     </section>
-</main>
+  </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-inner">
-      <img src="img/NSF_Official_logo_Med_Res_600ppi_rectangle.webp" alt="NSF" loading="lazy" />
-      <div>
-        <p>This material is based upon work supported by the National Science Foundation under Grant Nos. 2346334 and 2346335.</p>
-        <p>Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</p>
-        <p style="margin-top:.5rem; opacity:.6;">© LT4CPR 2026. Website code released under the MIT License.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <img src="img/NSF_Official_logo_Med_Res_600ppi_rectangle.webp" alt="NSF" loading="lazy" />
+        <div>
+          <p>This material is based upon work supported by the National Science Foundation under Grant Nos. 2346334 and 2346335.</p>
+          <p>Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</p>
+          <p style="margin-top:.5rem; opacity:.6;">© LT4CPR 2026. Website code released under the MIT License.</p>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
-
+  </footer>
 </body>
 </html>
