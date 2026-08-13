@@ -401,6 +401,15 @@ main { padding: 1.25rem 0 .75rem; flex: 1; }
 .dates-list .date-event { color: var(--text); font-size: .9rem; }
 .dates-list .date-val   { font-weight: 700; color: var(--navy); white-space: nowrap; }
 
+/* Extended submission deadline */
+.deadline-update { display: inline-flex; align-items: center; flex-wrap: wrap; gap: .3rem; }
+.deadline-update del { color: var(--muted); font-weight: 500; }
+.deadline-badge { display: inline-block; padding: .12rem .4rem; border-radius: 999px;
+                  background: var(--orange); color: #fff; font-size: .62rem;
+                  font-weight: 800; letter-spacing: .05em; line-height: 1.4;
+                  text-transform: uppercase; }
+.dates-list .deadline-update { justify-content: flex-end; white-space: normal; }
+
 
 /* Hero header */
 .hero-header { position: relative; min-height: 175px;
