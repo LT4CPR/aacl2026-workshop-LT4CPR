@@ -28,8 +28,11 @@
     .notice {
       margin: 1.25rem 0;
       padding: 1rem 1.1rem;
-      border-left: 4px solid currentColor;
-      background: rgba(0, 0, 0, 0.035);
+      border: 1px solid #d7e2f2;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 12px 12px 0;
+      background: linear-gradient(120deg, #f0f5fd, #f8faff);
+      box-shadow: 0 4px 14px rgba(53, 104, 184, .07);
     }
     .release-notice {
       display: flex;
@@ -37,7 +40,10 @@
       justify-content: space-between;
       gap: 1rem;
       border-left-color: var(--orange);
-      background: #fff5ef;
+      border-color: #efd5c9;
+      border-left-color: var(--orange);
+      background: linear-gradient(120deg, #fff3ed, #fffaf7);
+      box-shadow: 0 4px 14px rgba(214, 102, 61, .09);
     }
     .release-notice p {
       margin: .2rem 0 0;
@@ -59,9 +65,15 @@
     .date-table th,
     .date-table td {
       padding: .65rem .75rem;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+      border-bottom: 1px solid var(--border);
       text-align: left;
       vertical-align: top;
+    }
+    .date-table tr:nth-child(even) {
+      background: #f8f9fd;
+    }
+    .date-table tr:hover {
+      background: #f1f5fb;
     }
     .date-table th {
       width: 45%;
@@ -80,17 +92,21 @@
       min-height: 50px;
       padding: .7rem .85rem;
       border: 1px solid;
-      border-radius: 8px;
+      border-radius: 10px;
       font-weight: 700;
       line-height: 1.25;
       text-decoration: none;
     }
     .resource-button.active {
-      border-color: var(--navy);
-      background: var(--navy);
+      border-color: var(--blue);
+      background: linear-gradient(135deg, var(--navy), var(--blue));
       color: #fff;
-      box-shadow: 0 2px 7px rgba(27, 42, 69, .2);
+      box-shadow: 0 5px 14px rgba(36, 49, 84, .18);
       transition: opacity .15s, transform .15s;
+    }
+    .resource-button.active:nth-child(2) {
+      border-color: var(--lavender);
+      background: linear-gradient(135deg, #514774, var(--lavender));
     }
     .resource-button.active:hover {
       opacity: .9;
@@ -99,7 +115,7 @@
     }
     .resource-button.inactive {
       border-color: var(--border);
-      background: #f3f4f7;
+      background: #f4f5f9;
       color: var(--muted);
       cursor: not-allowed;
     }
