@@ -32,6 +32,26 @@
       border-left: 4px solid currentColor;
       background: rgba(0, 0, 0, 0.035);
     }
+    .release-notice {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      border-left-color: var(--orange);
+      background: #fff5ef;
+    }
+    .release-notice p {
+      margin: .2rem 0 0;
+    }
+    .release-notice .btn {
+      flex-shrink: 0;
+    }
+    @media (max-width: 640px) {
+      .release-notice {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
     .date-table {
       width: 100%;
       border-collapse: collapse;
@@ -87,11 +107,19 @@
       <h1>Call for Participation</h1>
       <h2>LT4CPR Shared Task on Automatic Situation Report Generation</h2>
 
+      <div class="notice release-notice" aria-label="Data release announcement">
+        <div>
+          <strong>Training and development data released</strong>
+          <p>The train and development datasets for the LT4CPR shared task are now available.</p>
+        </div>
+        <a class="btn" href="https://github.com/LT4CPR/2026_aacl_workshop/tree/main/shared_task/data" target="_blank" rel="noopener noreferrer">Access the data</a>
+      </div>
+
       <div class="notice">
         <strong>First Call for Participation: July 15, 2026.</strong>
-        Training data will be released on
+        Training data was released on
         <del datetime="2026-08-01">August 1, 2026</del>
-        <strong>August 7, 2026</strong>, and the second call will be released on
+        <strong>August 7, 2026</strong>, and the second call was released on
         August 10, 2026. Participant registration closes on
         <del datetime="2026-08-25">August 25, 2026</del>
         <strong>September 5, 2026</strong>.
