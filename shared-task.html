@@ -67,9 +67,59 @@
     .date-table th {
       width: 45%;
     }
-    .task-links a {
-      display: inline-block;
-      margin: .25rem .75rem .25rem 0;
+    .task-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: .75rem;
+      margin: 1.25rem 0;
+    }
+    .resource-button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .75rem;
+      min-height: 50px;
+      padding: .7rem .85rem;
+      border: 1px solid;
+      border-radius: 8px;
+      font-weight: 700;
+      line-height: 1.25;
+      text-decoration: none;
+    }
+    .resource-button.active {
+      border-color: var(--navy);
+      background: var(--navy);
+      color: #fff;
+      box-shadow: 0 2px 7px rgba(27, 42, 69, .2);
+      transition: opacity .15s, transform .15s;
+    }
+    .resource-button.active:hover {
+      opacity: .9;
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+    .resource-button.inactive {
+      border-color: var(--border);
+      background: #f3f4f7;
+      color: var(--muted);
+      cursor: not-allowed;
+    }
+    .resource-status {
+      flex-shrink: 0;
+      padding: .15rem .42rem;
+      border-radius: 999px;
+      font-size: .62rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .resource-button.active .resource-status {
+      background: rgba(255, 255, 255, .16);
+      color: #fff;
+    }
+    .resource-button.inactive .resource-status {
+      background: #e2e5eb;
+      color: var(--muted);
     }
     .small-note {
       font-size: .95rem;
@@ -211,13 +261,27 @@
         Participants should consult this page regularly for the latest information.
       </p>
 
-      <div class="task-links">
-        <!-- Replace the placeholders below when the resources are available. -->
-        <a href="#" aria-disabled="true">Registration: TBA</a>
-        <a href="https://github.com/LT4CPR/2026_aacl_workshop/tree/main/shared_task/data" target="_blank" rel="noopener noreferrer">Dataset</a>
-        <a href="#" aria-disabled="true">Baseline Repository: TBA</a>
-        <a href="#" aria-disabled="true">Submission Platform: TBA</a>
-        <a href="https://github.com/LT4CPR/2026_aacl_workshop/blob/main/README.md" target="_blank" rel="noopener noreferrer">Task Guidelines</a>
+      <div class="task-links" aria-label="Shared task resources">
+        <a class="resource-button active" href="https://github.com/LT4CPR/2026_aacl_workshop/tree/main/shared_task/data" target="_blank" rel="noopener noreferrer">
+          <span>Dataset</span>
+          <span class="resource-status">Available ↗</span>
+        </a>
+        <a class="resource-button active" href="https://github.com/LT4CPR/2026_aacl_workshop/blob/main/README.md" target="_blank" rel="noopener noreferrer">
+          <span>Task Guidelines</span>
+          <span class="resource-status">Available ↗</span>
+        </a>
+        <span class="resource-button inactive" role="link" aria-disabled="true">
+          <span>Registration</span>
+          <span class="resource-status">Coming soon</span>
+        </span>
+        <span class="resource-button inactive" role="link" aria-disabled="true">
+          <span>Baseline Repository</span>
+          <span class="resource-status">Coming soon</span>
+        </span>
+        <span class="resource-button inactive" role="link" aria-disabled="true">
+          <span>Submission Platform</span>
+          <span class="resource-status">Coming soon</span>
+        </span>
       </div>
 
       <h2>Evaluation</h2>
