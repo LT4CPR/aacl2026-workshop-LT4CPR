@@ -1,0 +1,148 @@
+ <strong> LT4CPR - 2nd CALL FOR PAPERS: Extended Deadline </strong>
+
+<em>Important Dates</em>
+
+<ul>
+  <li><strong>Direct submission deadline — EXTENDED: August 31, 2026</strong> (previously August 24, 2026)</li>
+  <li><strong>ARR commitment deadline:</strong> August 31, 2026</li>
+  <li><strong>Notification of acceptance:</strong> October 1, 2026</li>
+  <li><strong>Camera-ready version due:</strong> October 10, 2026</li>
+  <li><strong>Workshop day:</strong> November 9, 2026</li>
+</ul>
+
+All deadlines are 23:59 AoE (Anywhere on Earth).
+
+Submit directly or commit an ARR paper through OpenReview:
+<a href="https://openreview.net/group?id=aclweb.org/AACL-IJCNLP/2026/Workshop/LT4CPR#tab-your-consoles">https://openreview.net/group?id=aclweb.org/AACL-IJCNLP/2026/Workshop/LT4CPR#tab-your-consoles</a>
+
+The language technologies (LTs) that were applied in response to the Haitian
+        earthquake of 2010 showed to the world the life-saving potential for these technologies,
+        where their application was responsible for saving 1,000s of lives. Most concerning is
+        that in a world that is hit by more than 350 disasters in an average year, the most
+        severe of these disasters occur in regions where English is not spoken. With the
+        development of massively popular AI systems used as general-purpose machines, the
+        potential of LTs in disaster preparedness and response has rapidly grown.
+        In response, the focus of this workshop is on the direct application of LTs in crisis
+        preparedness and response, including recent work on multilingual and multimodal LT.
+
+        We invite submissions to the <strong>First Workshop on Language Technologies for Crisis
+        Preparedness and Response (LT4CPR)</strong> at AACL 2026. The workshop focuses on
+        advancing speech and language technologies that support crisis preparedness, crisis
+        response, communication in crises and disaster risk reduction, and aims to bring
+        together LT research communities with crisis management stakeholders (such as
+        practitioners, NGOs, and industry) to bring to the fore interdisciplinary solutions that
+        have real-world impact.
+
+
+   In this first edition, we especially welcome work on:
+
+      <ul>
+        <li>
+          <strong>Identifying Community Needs:</strong> The crisis ecosystem is quite diverse, composed
+          by affected populations, policy-makers, NGOs, industry, public officers,
+          and emergency management.
+        </li>
+        <li>
+          <strong>Interdisciplinary approaches for analysis, design, and evaluation of LT systems:</strong>
+          insights from communication studies, social sciences, psychology, among others,
+          on how to design and evaluate trustworthy crisis technology that fits stakeholders needs.
+        </li>
+        <li>
+          <strong>Translating LT research into operational tools:</strong> how to go beyond AI model
+          development to user adoption of technology in high-stakes scenarios.
+        </li>
+        <li>
+          <strong>Ethics and societal implications of AI</strong> in crisis communication and management.
+        </li>
+      </ul>
+
+      <em>Topics of Interest</em>
+
+      We invite submissions that fall under the following list (but not limited to):
+
+      <ul>
+        <li>Research work on AI for crisis response, such as information extraction (e.g., NER and geolocation), situational awareness (e.g., automated triage), and more</li>
+        <li>Qualitative studies to understand user needs and guide technology design</li>
+        <li>Multilingual and multimodal research on crisis and humanitarian initiatives</li>
+        <li>Evaluation and deployment considerations</li>
+        <li>Automatic approaches to enhance or facilitate communication from and to communities during crisis (e.g., computational social media and news analysis, summarization, translation, etc.)</li>
+        <li>Position papers and literature surveys on current trends, challenges and future directions</li>
+        <li>Abstracts for talk proposals or field reports from practitioners, NGOs, humanitarian organizations, and field experts, including experience reports</li>
+      </ul>
+
+      <em>Submission Types</em>
+
+      The workshop will accept two types of papers:
+
+      <ol>
+        <li>
+          <strong>Archival submissions:</strong> Papers of up to 8 pages of content, plus unlimited
+          pages for limitations, references and appendices. Accepted papers will be given an
+          additional page of content to address reviewer comments. Previously published papers
+          cannot be accepted.
+        </li>
+        <li>
+          <strong>Non-Archival submissions:</strong> Up to 8 pages, excluding references, to
+          summarise and showcase in-progress work and work published elsewhere. These papers
+          may be presented at the workshop but will not appear in the proceedings.
+        </li>
+      </ol>
+
+      <em>Submission Tracks</em>
+
+      The workshop offers two submission tracks. All deadlines are 23:59 AoE (Anywhere on Earth).
+
+ <em>Submission Tracks</em>
+
+The workshop offers two submission tracks. All deadlines are 23:59 AoE (Anywhere on Earth).
+
+<strong>Track 1 · Direct Submissions</strong>
+
+<em>Via OpenReview</em>
+
+For new work submitted directly to the LT4CPR workshop, authors may submit
+archival or non-archival papers through OpenReview:
+<a href="https://openreview.net/group?id=aclweb.org/AACL-IJCNLP/2026/Workshop/LT4CPR#tab-your-consoles">OpenReview submission page</a>.
+
+<ul>
+  <li><strong>Submission deadline — EXTENDED: August 31, 2026</strong> (previously August 24, 2026)</li>
+</ul>
+
+<strong>Track 2 · ARR Commitment</strong>
+
+<em>Via ACL Rolling Review (ARR) and OpenReview</em>
+
+Authors can commit their ARR submissions to the workshop through OpenReview.
+Please include the ARR reviews and meta-reviews with the submission.
+Use the <a href="https://openreview.net/group?id=aclweb.org/AACL-IJCNLP/2026/Workshop/LT4CPR#tab-your-consoles">LT4CPR OpenReview page</a> to commit.
+
+<ul>
+  <li><strong>Commitment deadline:</strong> August 31, 2026</li>
+</ul>
+
+<em>Submission Instructions</em>
+
+<ul>
+  <li>
+    All submissions must follow the <a href="https://2026.aclweb.org/calls/main_conference_papers/#paper-submission-details">  ACL 2026 style guidelines </a> and must be anonymized for double-blind review.
+  </li>
+  <li>
+    Archival submissions must not be under review at another venue during the
+    LT4CPR review period. </li>
+  <li>
+    We follow the <a href="https://www.aclweb.org/portal/content/acl-code-ethics">  ACL Code of Ethics </a>. We encourage authors to include an <em>Ethical Considerations</em> section
+    before the <em>References</em> section. This section does not count toward
+    the page limit.
+  </li>
+</ul>
+
+  Please feel free to circulate this announcement among interested colleagues,
+students, research groups, and relevant mailing lists.
+
+We look forward to your participation.
+
+Best regards,
+
+LT4CPR 2026 Organizers
+First Workshop on Language Technologies for Crisis Preparedness and Response
+AACL-IJCNLP 2026
