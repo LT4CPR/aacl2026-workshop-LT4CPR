@@ -12,7 +12,7 @@
 
 All deadlines are 23:59 AoE (Anywhere on Earth).
 
-Submit directly or commit an ARR paper through OpenReview:
+Submit directly through OpenReview:
 <a href="https://openreview.net/group?id=aclweb.org/AACL-IJCNLP/2026/Workshop/LT4CPR#tab-your-consoles">https://openreview.net/group?id=aclweb.org/AACL-IJCNLP/2026/Workshop/LT4CPR#tab-your-consoles</a>
 
 The language technologies (LTs) that were applied in response to the Haitian
@@ -114,7 +114,6 @@ archival or non-archival papers through OpenReview:
 
 Authors can commit their ARR submissions to the workshop through OpenReview.
 Please include the ARR reviews and meta-reviews with the submission.
-Use the <a href="https://openreview.net/group?id=aclweb.org/AACL-IJCNLP/2026/Workshop/LT4CPR#tab-your-consoles">LT4CPR OpenReview page</a> to commit.
 
 <ul>
   <li><strong>Commitment deadline:</strong> August 31, 2026</li>

@@ -22,7 +22,7 @@ We welcome submissions on:
 - Track 1 (Direct Submission via OpenReview): August 31, 2026
 - Track 2 (ARR Commitment): August 31, 2026
 
-🔗 Submit or commit via OpenReview: https://openreview.net/group?id=aclweb.org/AACL-IJCNLP/2026/Workshop/LT4CPR#tab-your-consoles
+🔗 Submit directly via OpenReview: https://openreview.net/group?id=aclweb.org/AACL-IJCNLP/2026/Workshop/LT4CPR#tab-your-consoles
 
 📄 Call for Papers and submission details: https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/cfp.html
 
