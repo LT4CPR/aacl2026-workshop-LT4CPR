@@ -45,12 +45,12 @@
   }
   function unlockSubmission() {
     if (!config.OFFICIAL_SUBMISSION_URL) {
-      els.configNote.textContent = 'The official upload URL has not yet been configured by the organizers.';
+      els.configNote.textContent = 'The official LT4CPR Google Form URL has not yet been configured by the organizers.';
       return;
     }
     els.submitLink.href = config.OFFICIAL_SUBMISSION_URL;
     els.submitLink.classList.remove('portal-disabled'); els.submitLink.removeAttribute('aria-disabled'); els.submitLock.classList.add('hidden');
-    els.configNote.textContent = 'Your ZIP passed the browser validator. The upload form opens in a new tab.';
+    els.configNote.textContent = 'Your ZIP passed the browser validator. The LT4CPR Google Form opens in a new tab. Upload this exact validated ZIP and enter the SHA-256 shown above.';
   }
   function renderResult(res, digest) {
     els.working.classList.add('hidden'); els.result.classList.remove('hidden');
@@ -123,6 +123,6 @@
   ['dragenter','dragover'].forEach(ev => els.drop.addEventListener(ev,e=>{e.preventDefault();els.drop.classList.add('dragover');}));
   ['dragleave','drop'].forEach(ev => els.drop.addEventListener(ev,e=>{e.preventDefault();els.drop.classList.remove('dragover');}));
   els.drop.addEventListener('drop',e=>{const f=e.dataTransfer.files && e.dataTransfer.files[0]; if(f){resetResult();setFile(f);}});
-  if (!config.OFFICIAL_SUBMISSION_URL) els.configNote.textContent = 'Organizer setup: add the final upload URL in submission-assets/config.js.';
+  if (!config.OFFICIAL_SUBMISSION_URL) els.configNote.textContent = 'Organizer setup: add the public Google Form response URL as OFFICIAL_SUBMISSION_URL in submission-assets/config.js.';
   loadManifest();
 })();

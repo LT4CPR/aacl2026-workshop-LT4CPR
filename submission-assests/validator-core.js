@@ -251,6 +251,7 @@
     if (topDirs.size !== 1) return { errors: errors.concat([`ZIP must contain exactly one top-level team directory; found: ${Array.from(topDirs).sort().join(', ') || '(none)'}`]), warnings, systemSummaries };
     const topDir = Array.from(topDirs)[0];
     if (!ID_RE.test(topDir)) errors.push(`Top-level directory ${JSON.stringify(topDir)} is not a valid machine-readable team ID`);
+    if (file && typeof file.name === "string" && file.name !== `${topDir}.zip`) errors.push(`ZIP filename must be exactly ${topDir}.zip; got ${file.name}`);
     const manifestPath = `${topDir}/submission.json`;
     const mf = zip.file(manifestPath);
     if (!mf) return { errors: errors.concat([`Missing required file: ${manifestPath}`]), warnings, systemSummaries, topDir };
