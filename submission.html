@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>System Submission · LT4CPR Shared Task @ AACL-IJCNLP 2026</title>
+  <meta name="description" content="Validate an LT4CPR shared-task team submission ZIP before final system submission." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta property="og:title" content="LT4CPR Shared Task · System Submission" />
+  <meta property="og:description" content="Browser-based validator for LT4CPR shared-task system submissions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/submission.html" />
+  <meta property="og:image" content="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/preview-banner.png" />
+  <link rel="preload" as="image" href="img/venue.webp" type="image/webp" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="submission-assets/submission.css" />
+</head>
+<body>
+  <header class="hero-header">
+    <div class="hero-body">
+      <div class="hero-title">LT4CPR @ AACL-IJCNLP 2026</div>
+      <div class="hero-sub">Language Technologies for Crisis Preparedness and Response</div>
+      <div class="hero-meta">November 9, 2026 · Hybrid: Hengqin, Zhuhai, China + Online</div>
+    </div>
+  </header>
+
+  <div class="hero-nav-bar">
+    <div class="container">
+      <nav class="nav">
+        <a href="https://lt4cpr.github.io/" class="nav-project">Project Site</a>
+        <a href="index.html">Home</a>
+        <a href="cfp.html">Call for Papers</a>
+        <a href="shared-task.html">Shared Task</a>
+        <a href="submission.html" class="active">System Submission</a>
+        <a href="speakers.html">Invited Speakers</a>
+        <a href="program.html">Program</a>
+        <a href="organizers.html">Organizers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container submission-main">
+    <section class="card submission-intro">
+      <div class="submission-kicker">LT4CPR Shared Task</div>
+      <h1>System Submission Validator</h1>
+      <p class="submission-lead">
+        Check your team submission ZIP before uploading it. Validation is performed locally in your browser;
+        the selected ZIP is not sent to the LT4CPR website.
+      </p>
+      <div class="submission-callouts">
+        <div class="submission-callout">
+          <span class="submission-callout-label">System output deadline</span>
+          <strong>September 10, 2026</strong>
+          <span>23:59 AoE</span>
+        </div>
+        <div class="submission-callout">
+          <span class="submission-callout-label">Submission unit</span>
+          <strong>One team ZIP</strong>
+          <span>One or more complete systems</span>
+        </div>
+        <div class="submission-callout">
+          <span class="submission-callout-label">Public test cells</span>
+          <strong>117 per system</strong>
+          <span>Across six crises</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="format">
+      <h2>Required ZIP structure</h2>
+      <p>Each team submits one ZIP. Crisis directories appear directly under each system directory; do not add an extra <code>test/</code> layer.</p>
+      <div class="format-grid">
+        <pre class="structure-box"><code>&lt;team_id&gt;.zip
+└── &lt;team_id&gt;/
+    ├── submission.json
+    └── systems/
+        ├── &lt;system_id_1&gt;/
+        │   ├── collapse/
+        │   ├── damsafety/
+        │   ├── heatwave/
+        │   ├── indfire/
+        │   ├── landslide/
+        │   └── tornado/
+        └── &lt;system_id_2&gt;/
+            └── ...</code></pre>
+        <div class="format-notes">
+          <div class="format-rule good"><strong>Correct</strong><code>systems/my-system/tornado/cell.report.json</code></div>
+          <div class="format-rule bad"><strong>Incorrect</strong><code>systems/my-system/test/tornado/cell.report.json</code></div>
+          <p>Each system must be complete. If a team submits three systems, the ZIP contains <strong>3 × 117 = 351</strong> report files.</p>
+          <details>
+            <summary>Example <code>submission.json</code></summary>
+            <pre><code>{
+  "submission_format_version": "1.0",
+  "team": {
+    "id": "uw-crisisnlp",
+    "name": "UW CrisisNLP"
+  },
+  "systems": [
+    {
+      "id": "retrieval-llm",
+      "name": "Retrieval + LLM",
+      "primary": true
+    },
+    {
+      "id": "zero-shot-llm",
+      "name": "Zero-shot LLM",
+      "primary": false
+    }
+  ]
+}</code></pre>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="card validator-card" id="validator">
+      <div class="validator-heading">
+        <div>
+          <h2>Validate your submission</h2>
+          <p>The browser validator checks packaging, manifest metadata, report schema, file coverage, and evidence tweet IDs.</p>
+        </div>
+        <a class="validator-version-link" href="tools/validate_submission.py" download>Download CLI validator</a>
+      </div>
+
+      <div id="manifest-warning" class="portal-notice warning hidden" role="status"></div>
+
+      <div class="validator-layout">
+        <div class="upload-column">
+          <label id="drop-zone" class="drop-zone" for="submission-file">
+            <input id="submission-file" type="file" accept=".zip,application/zip" hidden />
+            <span class="drop-icon" aria-hidden="true">⇧</span>
+            <strong>Choose your team ZIP</strong>
+            <span>or drag and drop it here</span>
+            <small>The file stays on this device.</small>
+          </label>
+
+          <div id="file-card" class="selected-file hidden">
+            <div>
+              <span class="mini-label">Selected file</span>
+              <strong id="file-name"></strong>
+              <span id="file-size" class="file-size"></span>
+            </div>
+            <button id="clear-file" class="link-button" type="button">Remove</button>
+          </div>
+
+          <button id="validate-button" class="btn portal-primary" type="button" disabled>Validate submission</button>
+
+          <div class="privacy-box">
+            <strong>Local validation</strong>
+            <p>This page does not upload or retain your ZIP. A SHA-256 hash is calculated locally for your validation receipt. Official submission happens separately through the LT4CPR Google Form.</p>
+          </div>
+        </div>
+
+        <div class="result-column" aria-live="polite">
+          <div id="idle-state" class="state-panel">
+            <div class="state-icon idle">✓</div>
+            <h3>Ready to validate</h3>
+            <p>Select your team ZIP to begin.</p>
+          </div>
+
+          <div id="working-state" class="state-panel hidden">
+            <div class="spinner" aria-hidden="true"></div>
+            <h3>Validating…</h3>
+            <p id="working-message">Reading archive.</p>
+          </div>
+
+          <div id="result-state" class="hidden">
+            <div id="result-status" class="result-status"></div>
+            <h3 id="result-title"></h3>
+            <p id="result-summary"></p>
+
+            <dl id="summary-list" class="summary-list hidden">
+              <div><dt>Team</dt><dd id="summary-team">—</dd></div>
+              <div><dt>Systems</dt><dd id="summary-systems">—</dd></div>
+              <div><dt>Primary system</dt><dd id="summary-primary">—</dd></div>
+              <div><dt>Reports checked</dt><dd id="summary-reports">—</dd></div>
+              <div><dt>SHA-256</dt><dd id="summary-sha" class="hash-text">—</dd></div>
+              <div><dt>Validator</dt><dd id="summary-version">—</dd></div>
+            </dl>
+
+            <div id="system-results" class="system-results hidden"></div>
+
+            <div id="warnings-box" class="issue-box warning hidden">
+              <div class="issue-title"><strong>Warnings</strong><span id="warning-count"></span></div>
+              <ul id="warning-list"></ul>
+            </div>
+
+            <div id="errors-box" class="issue-box error hidden">
+              <div class="issue-title"><strong>Validation errors</strong><span id="error-count"></span></div>
+              <ol id="error-list"></ol>
+            </div>
+
+            <div class="result-actions">
+              <button id="receipt-button" class="btn portal-secondary hidden" type="button">Download validation receipt</button>
+              <button id="reset-button" class="link-button" type="button">Validate another file</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card submit-card" id="final-submission">
+      <div class="submit-grid">
+        <div>
+          <h2>Final system submission</h2>
+          <p>A successful validation does not itself submit your system. After the archive passes, upload the exact same ZIP through the official LT4CPR Google Form.</p>
+          <p class="small-note">Keep the validation receipt and SHA-256. Organizers will rerun the authoritative Python validator on the ZIP collected through Google Forms before evaluation.</p>
+        </div>
+        <div class="submit-action-box">
+          <div id="submit-lock" class="submit-lock">
+            <strong>Google Form locked</strong>
+            <span>Validate a ZIP successfully first.</span>
+          </div>
+          <a id="official-submit-link" class="btn portal-primary portal-disabled" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true">Continue to LT4CPR Google Form →</a>
+          <p id="submission-config-note" class="config-note"></p>
+          <p class="small-note">Google Forms file upload requires respondents to sign in to a Google Account. The uploaded ZIP is stored in the organizers' Google Drive.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card compact-card">
+      <h2>What the validator checks</h2>
+      <div class="check-grid">
+        <div><strong>Archive</strong><span>Safe ZIP paths, one team directory, no obsolete <code>test/</code> layer.</span></div>
+        <div><strong>Manifest</strong><span>Team/system IDs, unique systems, exactly one primary run.</span></div>
+        <div><strong>Coverage</strong><span>117 reports per system with the expected crisis-level counts.</span></div>
+        <div><strong>Report schema</strong><span>Schema v1.2, Sections 1–11, valid bullet hierarchy and confidence values.</span></div>
+        <div><strong>Evidence IDs</strong><span>Every cited tweet ID exists in its corresponding test input when the embedded manifest is installed.</span></div>
+        <div><strong>Internal leakage</strong><span>Obvious construction-time identifiers such as <code>SYN_...</code> are rejected.</span></div>
+      </div>
+      <div class="portal-notice info">
+        <strong>Semantic quality is separate.</strong> Passing this validator means the submission is structurally valid; it does not mean every generated statement is supported by its cited tweets or matches the reference report.
+      </div>
+    </section>
+
+    <section class="card compact-card">
+      <h2>Questions?</h2>
+      <p>For shared-task submission questions, contact <a href="mailto:lt4cpr.sharedtask@gmail.com">lt4cpr.sharedtask@gmail.com</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <img src="img/NSF_Official_logo_Med_Res_600ppi_rectangle.webp" alt="NSF" loading="lazy" />
+        <div>
+          <p>This material is based upon work supported by the National Science Foundation under Grant Nos. 2346334 and 2346335.</p>
+          <p>Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</p>
+          <p style="margin-top:.5rem; opacity:.6;">© LT4CPR 2026. Website code released under the MIT License.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" integrity="sha512-XMVd28F1oH/O71fzwBnV7HucLxVwtxf26XV8P4wPk26EDxuGZ91N8bsOttmnomcCD3CS5ZMRL50H0GgOHvegtg==" crossorigin="anonymous"></script>
+  <script src="submission-assets/config.js"></script>
+  <script src="submission-assets/validator-core.js"></script>
+  <script src="submission-assets/submission.js"></script>
+</body>
+</html>
