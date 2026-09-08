@@ -78,6 +78,12 @@
 .summary-list dt { font-size:.72rem; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
 .summary-list dd { margin:0; color:var(--navy); font-size:.86rem; font-weight:600; overflow-wrap:anywhere; }
 .hash-text { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.72rem !important; word-break:break-all; }
+.sha-value-row { display:flex !important; grid-template-columns:none !important; align-items:center; gap:.55rem !important; }
+.sha-value-row .hash-text { flex:1 1 auto; min-width:0; }
+.copy-sha-button { appearance:none; flex:0 0 auto; border:1px solid #cbd6e8; background:#f7f9fd; color:var(--blue); border-radius:6px; padding:.25rem .5rem; font:inherit; font-size:.72rem; font-weight:800; cursor:pointer; line-height:1.2; }
+.copy-sha-button:hover { background:#edf3fb; border-color:#afc1dd; }
+.copy-sha-button:focus-visible { outline:2px solid var(--blue); outline-offset:2px; }
+.copy-sha-button.copied { color:#237447; border-color:#add6be; background:#edf8f1; }
 .system-results { display:grid; gap:.55rem; margin:.8rem 0; }
 .system-row { border:1px solid var(--border); border-radius:8px; padding:.55rem .7rem; display:flex; justify-content:space-between; gap:.6rem; background:#fff; font-size:.82rem; }
 .system-row strong { color:var(--navy); }
@@ -277,7 +283,7 @@
               <div><dt>Systems</dt><dd id="summary-systems">—</dd></div>
               <div><dt>Primary system</dt><dd id="summary-primary">—</dd></div>
               <div><dt>Reports checked</dt><dd id="summary-reports">—</dd></div>
-              <div><dt>SHA-256</dt><dd id="summary-sha" class="hash-text">—</dd></div>
+              <div><dt>SHA-256</dt><dd class="sha-value-row"><span id="summary-sha" class="hash-text">—</span><button id="copy-sha-button" class="copy-sha-button hidden" type="button" aria-label="Copy SHA-256 to clipboard">Copy</button></dd></div>
               <div><dt>Validator</dt><dd id="summary-version">—</dd></div>
             </dl>
 
@@ -13589,7 +13595,7 @@ window.LT4CPR_SUBMISSION_CONFIG = {
     idle: $('idle-state'), working: $('working-state'), workingMsg: $('working-message'), result: $('result-state'), status: $('result-status'), title: $('result-title'), summary: $('result-summary'),
     summaryList: $('summary-list'), team: $('summary-team'), systems: $('summary-systems'), primary: $('summary-primary'), reports: $('summary-reports'), sha: $('summary-sha'), version: $('summary-version'),
     systemResults: $('system-results'), warningsBox: $('warnings-box'), warningList: $('warning-list'), warningCount: $('warning-count'), errorsBox: $('errors-box'), errorList: $('error-list'), errorCount: $('error-count'),
-    receipt: $('receipt-button'), reset: $('reset-button'), manifestWarning: $('manifest-warning'), submitLink: $('official-submit-link'), submitLock: $('submit-lock'), configNote: $('submission-config-note')
+    receipt: $('receipt-button'), reset: $('reset-button'), copySha: $('copy-sha-button'), manifestWarning: $('manifest-warning'), submitLink: $('official-submit-link'), submitLock: $('submit-lock'), configNote: $('submission-config-note')
   };
 
   function humanBytes(n) {
@@ -13644,7 +13650,7 @@ window.LT4CPR_SUBMISSION_CONFIG = {
     els.systems.textContent = String(systems.length || res.systemSummaries.length || 0);
     els.primary.textContent = primary ? `${primary.name || primary.id} (${primary.id})` : '—';
     els.reports.textContent = String(res.reportsChecked || 0);
-    els.sha.textContent = digest; els.version.textContent = config.VALIDATOR_VERSION; els.summaryList.classList.remove('hidden');
+    els.sha.textContent = digest; els.copySha.classList.toggle('hidden', !digest || digest === '—'); els.copySha.textContent = 'Copy'; els.copySha.classList.remove('copied'); els.version.textContent = config.VALIDATOR_VERSION; els.summaryList.classList.remove('hidden');
     els.systemResults.innerHTML = '';
     res.systemSummaries.forEach(s => { const row=document.createElement('div'); row.className='system-row'; row.innerHTML=`<strong></strong><span></span>`; row.querySelector('strong').textContent=`${s.name || s.id}${s.primary ? ' · primary' : ''}`; row.querySelector('span').textContent=`${s.reports}/${config.EXPECTED_TOTAL_REPORTS} reports`; els.systemResults.appendChild(row); });
     els.systemResults.classList.toggle('hidden', res.systemSummaries.length===0);
@@ -13702,6 +13708,35 @@ window.LT4CPR_SUBMISSION_CONFIG = {
     if (!lastReceipt) return;
     const blob = new Blob([JSON.stringify(lastReceipt,null,2)+'\n'],{type:'application/json'});
     const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`${lastReceipt.team && lastReceipt.team.id ? lastReceipt.team.id : 'lt4cpr'}_validation_receipt.json`; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),5000);
+  });
+  els.copySha.addEventListener('click', async () => {
+    const value = (els.sha.textContent || '').trim();
+    if (!value || value === '—') return;
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(value);
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = value;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        const ok = document.execCommand('copy');
+        ta.remove();
+        if (!ok) throw new Error('Copy command failed');
+      }
+      els.copySha.textContent = 'Copied';
+      els.copySha.classList.add('copied');
+      setTimeout(() => {
+        els.copySha.textContent = 'Copy';
+        els.copySha.classList.remove('copied');
+      }, 1600);
+    } catch (e) {
+      els.copySha.textContent = 'Copy failed';
+      setTimeout(() => { els.copySha.textContent = 'Copy'; }, 1800);
+    }
   });
   ['dragenter','dragover'].forEach(ev => els.drop.addEventListener(ev,e=>{e.preventDefault();els.drop.classList.add('dragover');}));
   ['dragleave','drop'].forEach(ev => els.drop.addEventListener(ev,e=>{e.preventDefault();els.drop.classList.remove('dragover');}));
