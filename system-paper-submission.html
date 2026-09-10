@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>LT4CPR Shared Task — System Paper Submission</title>
+  <meta name="description"
+        content="Submission instructions for LT4CPR 2026 Shared Task system description papers at AACL-IJCNLP 2026." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <meta property="og:title" content="LT4CPR Shared Task — System Paper Submission" />
+  <meta property="og:description" content="System description paper submission instructions for the LT4CPR Shared Task at AACL-IJCNLP 2026." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/system-paper-submission.html" />
+  <meta property="og:image" content="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/preview-banner.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LT4CPR Shared Task — System Paper Submission" />
+  <meta name="twitter:description" content="System description paper submission instructions for LT4CPR 2026." />
+  <meta name="twitter:image" content="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/preview-banner.png" />
+
+  <link rel="preload" as="image" href="img/venue.webp" type="image/webp" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .submission-notice {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.2rem;
+      margin: 1.25rem 0 1.5rem;
+      padding: 1.05rem 1.15rem;
+      border: 1px solid #d7e2f2;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 12px 12px 0;
+      background: linear-gradient(120deg, #f0f5fd, #f8faff);
+      box-shadow: 0 4px 14px rgba(53, 104, 184, .07);
+    }
+    .submission-notice p {
+      margin: .3rem 0 0;
+    }
+    .submission-notice .btn {
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: .85rem;
+      margin: 1rem 0 1.35rem;
+    }
+    .spec-card {
+      padding: .9rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #f8f9fd;
+    }
+    .spec-label {
+      display: block;
+      margin-bottom: .25rem;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .055em;
+      text-transform: uppercase;
+    }
+    .spec-value {
+      font-weight: 750;
+      color: var(--navy);
+    }
+    .deadline-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.25rem;
+    }
+    .deadline-table th,
+    .deadline-table td {
+      padding: .65rem .75rem;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+    .deadline-table th {
+      width: 46%;
+    }
+    .deadline-table tr:nth-child(even) {
+      background: #f8f9fd;
+    }
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .65rem;
+      margin: 1rem 0 1.4rem;
+    }
+    .secondary-link {
+      display: inline-flex;
+      align-items: center;
+      padding: .55rem .75rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .secondary-link:hover {
+      border-color: var(--blue);
+      text-decoration: none;
+    }
+    .callout {
+      margin: 1rem 0;
+      padding: .85rem 1rem;
+      border-left: 3px solid var(--lavender);
+      background: #f8f7fc;
+      border-radius: 0 8px 8px 0;
+    }
+    @media (max-width: 640px) {
+      .submission-notice {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero-header">
+    <div class="hero-body">
+      <div class="hero-title">LT4CPR @ AACL-IJCNLP 2026</div>
+      <div class="hero-sub">Language Technologies for Crisis Preparedness and Response</div>
+      <div class="hero-meta">November 9, 2026 · Hybrid: Hengqin, Zhuhai, China + Online</div>
+    </div>
+  </header>
+
+  <div class="hero-nav-bar">
+    <div class="container">
+      <nav class="nav">
+        <a href="https://lt4cpr.github.io/" class="nav-project">Project Site</a>
+        <a href="index.html">Home</a>
+        <a href="cfp.html">Call for Papers</a>
+        <a href="shared-task.html" class="active">Shared Task</a>
+        <a href="speakers.html">Invited Speakers</a>
+        <a href="program.html">Program</a>
+        <a href="organizers.html">Organizers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="card">
+      <h1>System Paper Submission</h1>
+      <h2>LT4CPR Shared Task System Description Papers</h2>
+
+      <div class="submission-notice" aria-label="System paper submission announcement">
+        <div>
+          <strong>System paper submission is open</strong>
+          <p>Submit your LT4CPR Shared Task system description paper by <strong>September 15, 2026, 11:59 p.m. AoE</strong>.</p>
+        </div>
+        <a class="btn" href="https://openreview.net/group?id=aclweb.org/AACL-IJCNLP/2026/LT4CPR#tab-your-consoles" target="_blank" rel="noopener noreferrer">Submit via OpenReview →</a>
+      </div>
+
+      <p>
+        Participating teams are invited to submit a <strong>system description paper</strong> documenting their
+        approach to the LT4CPR Shared Task on Automatic Situation Report Generation. These papers are submitted
+        through a dedicated shared-task OpenReview venue and are separate from the workshop's general research-paper
+        submission process.
+      </p>
+
+      <div class="spec-grid" aria-label="System paper submission requirements">
+        <div class="spec-card">
+          <span class="spec-label">Page limit</span>
+          <span class="spec-value">Up to 8 pages of main content</span><br />
+          <span>plus references and appendices</span>
+        </div>
+        <div class="spec-card">
+          <span class="spec-label">Format</span>
+          <span class="spec-value">Official ACL style files</span><br />
+          <span>PDF submission</span>
+        </div>
+        <div class="spec-card">
+          <span class="spec-label">Review</span>
+          <span class="spec-value">Double-blind</span><br />
+          <span>anonymized review version</span>
+        </div>
+        <div class="spec-card">
+          <span class="spec-label">Deadline</span>
+          <span class="spec-value">September 15, 2026</span><br />
+          <span>11:59 p.m. Anywhere on Earth</span>
+        </div>
+      </div>
+
+      <h2>Paper Format</h2>
+      <ul>
+        <li><strong>Length:</strong> up to eight (8) pages of main content, plus references and appendices.</li>
+        <li><strong>Style:</strong> use the official ACL style files and do not modify the required formatting.</li>
+        <li><strong>File format:</strong> submit the paper as a PDF through OpenReview.</li>
+        <li><strong>Anonymity:</strong> the review version should be anonymized for double-blind review. Do not include author names, affiliations, acknowledgements, or other identifying information in the review PDF.</li>
+        <li><strong>Appendices:</strong> appendices should appear after the references. The main paper should remain self-contained.</li>
+      </ul>
+
+      <div class="link-row" aria-label="Formatting resources">
+        <a class="secondary-link" href="https://github.com/acl-org/acl-style-files" target="_blank" rel="noopener noreferrer">ACL Style Files ↗</a>
+        <a class="secondary-link" href="https://acl-org.github.io/ACLPUB/formatting.html" target="_blank" rel="noopener noreferrer">ACL Formatting Guidelines ↗</a>
+        <a class="secondary-link" href="https://openreview.net/group?id=aclweb.org/AACL-IJCNLP/2026/Workshop/LT4CPR#tab-your-consoles" target="_blank" rel="noopener noreferrer">Workshop OpenReview Reference ↗</a>
+      </div>
+
+      <h2>What the System Paper Should Describe</h2>
+      <p>
+        The paper should provide enough detail for readers to understand how your submitted system was built and
+        how it produced the official shared-task outputs. At minimum, please describe the following where applicable:
+      </p>
+      <ul>
+        <li>the overall approach and system architecture;</li>
+        <li>models, training procedures, prompts, retrieval components, and other major system components;</li>
+        <li>task data and any external data or resources used;</li>
+        <li>external APIs, pretrained models, retrieval sources, and manual interventions;</li>
+        <li>experimental setup and results;</li>
+        <li>error analysis or qualitative analysis of system behavior;</li>
+        <li>limitations and known failure modes; and</li>
+        <li>ethical considerations and responsible-use considerations relevant to crisis-related data and generated situation reports.</li>
+      </ul>
+
+      <div class="callout">
+        <strong>Transparency requirement.</strong> Please clearly disclose external data, pretrained models, APIs,
+        prompts, retrieval sources, and any human or manual intervention used in producing the submitted system outputs.
+      </div>
+
+      <h2>Submission Checklist</h2>
+      <ul>
+        <li>Your team participated in the LT4CPR Shared Task.</li>
+        <li>The paper describes the system associated with your shared-task participation.</li>
+        <li>The review PDF is anonymized.</li>
+        <li>The paper uses the official ACL style files.</li>
+        <li>The main content does not exceed 8 pages.</li>
+        <li>References and any appendices follow the main paper.</li>
+        <li>The paper documents external resources and manual interventions used by the system.</li>
+        <li>The PDF is submitted to the dedicated LT4CPR Shared Task OpenReview venue before the deadline.</li>
+      </ul>
+
+      <h2>Submit on OpenReview</h2>
+      <p>
+        System description papers must be submitted through the dedicated LT4CPR Shared Task OpenReview portal.
+        Please make sure you are using the <strong>shared-task system paper venue</strong>, not the general LT4CPR workshop paper venue.
+      </p>
+      <p>
+        <a class="btn" href="https://openreview.net/group?id=aclweb.org/AACL-IJCNLP/2026/LT4CPR#tab-your-consoles" target="_blank" rel="noopener noreferrer">Open System Paper Submission Portal →</a>
+      </p>
+
+      <h2>Important Dates</h2>
+      <p>All deadlines are 11:59 p.m. Anywhere on Earth (AoE), unless otherwise stated.</p>
+      <table class="deadline-table">
+        <tbody>
+          <tr>
+            <th scope="row">System description paper deadline</th>
+            <td><strong>September 15, 2026</strong></td>
+          </tr>
+          <tr>
+            <th scope="row">Notification of acceptance</th>
+            <td>October 1, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">Camera-ready papers due</th>
+            <td>October 10, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">LT4CPR workshop</th>
+            <td>November 9, 2026</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Questions</h2>
+      <p>
+        Questions about shared-task system papers may be sent to
+        <a href="mailto:lt4cpr.sharedtask@gmail.com">lt4cpr.sharedtask@gmail.com</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <img src="img/NSF_Official_logo_Med_Res_600ppi_rectangle.webp" alt="NSF" loading="lazy" />
+        <div>
+          <p>This material is based upon work supported by the National Science Foundation under Grant Nos. 2346334 and 2346335.</p>
+          <p>Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</p>
+          <p style="margin-top:.5rem; opacity:.6;">© LT4CPR 2026. Website code released under the MIT License.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
