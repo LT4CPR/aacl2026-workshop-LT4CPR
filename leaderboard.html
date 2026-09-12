@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>LT4CPR Shared Task Leaderboard @ AACL-IJCNLP 2026</title>
+  <meta name="description" content="Official LT4CPR Shared Task leaderboard and evaluation results for AACL-IJCNLP 2026." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <meta property="og:title" content="LT4CPR Shared Task Leaderboard @ AACL-IJCNLP 2026" />
+  <meta property="og:description" content="Official LT4CPR Shared Task rankings and downloadable evaluation results." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/leaderboard.html" />
+  <meta property="og:image" content="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/preview-banner.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LT4CPR Shared Task Leaderboard @ AACL-IJCNLP 2026" />
+  <meta name="twitter:description" content="Official LT4CPR Shared Task rankings and evaluation results." />
+  <meta name="twitter:image" content="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/preview-banner.png" />
+
+  <link rel="preload" as="image" href="img/venue.webp" type="image/webp" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .metric-formula {
+      margin: .8rem 0 1.1rem;
+      padding: .8rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #f8f9fd;
+    }
+    .leaderboard-block { margin: 1.4rem 0 1.8rem; }
+    .leaderboard-block h3 { margin-bottom: .45rem; }
+    .leaderboard-scroll {
+      width: 100%;
+      overflow-x: auto;
+      margin: .75rem 0;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+    }
+    .leaderboard-table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+      font-size: .94rem;
+    }
+    .leaderboard-table th,
+    .leaderboard-table td {
+      padding: .7rem .75rem;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: middle;
+    }
+    .leaderboard-table th {
+      background: var(--navy);
+      color: #fff;
+      font-size: .82rem;
+      letter-spacing: .02em;
+      white-space: nowrap;
+    }
+    .leaderboard-table tbody tr:last-child td { border-bottom: 0; }
+    .leaderboard-table tbody tr:nth-child(even) { background: #f8f9fd; }
+    .leaderboard-table tbody tr:hover { background: #f1f5fb; }
+    .leaderboard-table .rank { width: 54px; text-align: center; font-weight: 800; }
+    .leaderboard-table .score { font-variant-numeric: tabular-nums; }
+    .leaderboard-table .official-score { font-weight: 800; color: var(--navy); }
+    .leaderboard-table .rank-1 { background: #fff8dd; }
+    .leaderboard-table .rank-2 { background: #f5f6f8; }
+    .leaderboard-table .rank-3 { background: #fbefe3; }
+    .primary-badge {
+      display: inline-block;
+      padding: .18rem .45rem;
+      border-radius: 999px;
+      font-size: .72rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    .primary-badge.yes { background: #e8f3ed; color: #245a3b; }
+    .primary-badge.no { background: #f1eef8; color: #5a4b78; }
+    .results-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .7rem;
+      margin: 1rem 0 1.4rem;
+    }
+    .results-note { font-size: .9rem; color: var(--muted); }
+    .results-hero {
+      margin: 1rem 0 1.25rem;
+      padding: 1rem 1.1rem;
+      border: 1px solid #d7e2f2;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 12px 12px 0;
+      background: linear-gradient(120deg, #f0f5fd, #f8faff);
+    }
+  </style>
+</head>
+<body>
+  <header class="hero-header">
+    <div class="hero-body">
+      <div class="hero-title">LT4CPR @ AACL-IJCNLP 2026</div>
+      <div class="hero-sub">Language Technologies for Crisis Preparedness and Response</div>
+      <div class="hero-meta">November 9, 2026 · Hybrid: Hengqin, Zhuhai, China + Online</div>
+    </div>
+  </header>
+
+  <div class="hero-nav-bar">
+    <div class="container">
+      <nav class="nav">
+        <a href="https://lt4cpr.github.io/" class="nav-project">Project Site</a>
+        <a href="index.html">Home</a>
+        <a href="cfp.html">Call for Papers</a>
+        <a href="shared-task.html" class="active">Shared Task</a>
+        <a href="speakers.html">Invited Speakers</a>
+        <a href="program.html">Program</a>
+        <a href="organizers.html">Organizers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="card">
+      <div class="results-hero">
+        <strong>Official evaluation results</strong>
+        <p>The final LT4CPR Shared Task rankings are reported below. Complete scores are available in the downloadable workbook.</p>
+      </div>
+
+      <h1>Official Shared Task Leaderboard</h1>
+      <p>
+        This page reports the official LT4CPR Shared Task rankings. The <strong>Primary System Ranking</strong> uses
+        each team's designated primary submission, while the <strong>Best System Ranking</strong> uses the
+        highest-scoring system submitted by each team.
+      </p>
+      <p><a href="shared-task.html">← Back to the Shared Task page</a></p>
+
+      <div class="metric-formula">
+        <strong>Official Primary Score</strong> = (BERTScore F1 + BLEURT) / 2
+      </div>
+
+      <div class="results-actions">
+        <a class="btn" href="LT4CPR-shared-task-official-results.xlsx" download>Download official results (XLSX)</a>
+        <span class="results-note">The workbook includes all evaluated systems and secondary metrics for use in system papers.</span>
+      </div>
+
+      <div class="leaderboard-block">
+        <h3>Primary System Ranking</h3>
+        <p class="small-note">Each team is ranked using the system designated as primary in its submission.</p>
+        <div class="leaderboard-scroll">
+          <table class="leaderboard-table">
+            <thead>
+              <tr><th>Rank</th><th>Team</th><th>Primary System</th><th>BERTScore F1</th><th>BLEURT</th><th>Official Primary Score</th></tr>
+            </thead>
+            <tbody>
+            <tr class="rank-1"><td class="rank">🥇 1</td><td>Stockmark</td><td><code>report-refinement</code></td><td class="score">0.7269</td><td class="score">0.6362</td><td class="score official-score">0.6816</td></tr>
+            <tr class="rank-2"><td class="rank">🥈 2</td><td>UTS</td><td><code>v6</code></td><td class="score">0.7009</td><td class="score">0.6275</td><td class="score official-score">0.6642</td></tr>
+            <tr class="rank-3"><td class="rank">🥉 3</td><td>Dy</td><td><code>rules-v2</code></td><td class="score">0.6739</td><td class="score">0.6265</td><td class="score official-score">0.6502</td></tr>
+            <tr><td class="rank">4</td><td>Meng-qiu in Zhongguancun</td><td><code>grounded</code></td><td class="score">0.5839</td><td class="score">0.6071</td><td class="score official-score">0.5955</td></tr>
+            <tr><td class="rank">5</td><td>Amrood</td><td><code>nemotron-120b-sitrep</code></td><td class="score">0.5984</td><td class="score">0.5483</td><td class="score official-score">0.5733</td></tr>
+            <tr><td class="rank">6</td><td>gogogo</td><td><code>r01g-sr</code></td><td class="score">0.5018</td><td class="score">0.5528</td><td class="score official-score">0.5273</td></tr>
+            <tr><td class="rank">7</td><td>BMU</td><td><code>system_1</code></td><td class="score">0.4511</td><td class="score">0.5170</td><td class="score official-score">0.4841</td></tr>
+            <tr><td class="rank">8</td><td>Neural Coder</td><td><code>extraction-de</code></td><td class="score">0.5082</td><td class="score">0.4514</td><td class="score official-score">0.4798</td></tr>
+            <tr><td class="rank">9</td><td>Databaes</td><td><code>g5-evidence-grounded</code></td><td class="score">0.3947</td><td class="score">0.5153</td><td class="score official-score">0.4550</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="leaderboard-block">
+        <h3>Best System Ranking</h3>
+        <p class="small-note">Each team is ranked using its highest-scoring submitted system, whether or not that system was designated primary.</p>
+        <div class="leaderboard-scroll">
+          <table class="leaderboard-table">
+            <thead>
+              <tr><th>Rank</th><th>Team</th><th>Best System</th><th>Primary?</th><th>BERTScore F1</th><th>BLEURT</th><th>Official Primary Score</th></tr>
+            </thead>
+            <tbody>
+            <tr class="rank-1"><td class="rank">🥇 1</td><td>Stockmark</td><td><code>report-refinement</code></td><td><span class="primary-badge yes">Yes</span></td><td class="score">0.7269</td><td class="score">0.6362</td><td class="score official-score">0.6816</td></tr>
+            <tr class="rank-2"><td class="rank">🥈 2</td><td>UTS</td><td><code>v6mbr</code></td><td><span class="primary-badge no">No</span></td><td class="score">0.7114</td><td class="score">0.6221</td><td class="score official-score">0.6667</td></tr>
+            <tr class="rank-3"><td class="rank">🥉 3</td><td>Dy</td><td><code>rules-v2</code></td><td><span class="primary-badge yes">Yes</span></td><td class="score">0.6739</td><td class="score">0.6265</td><td class="score official-score">0.6502</td></tr>
+            <tr><td class="rank">4</td><td>Meng-qiu in Zhongguancun</td><td><code>cue</code></td><td><span class="primary-badge no">No</span></td><td class="score">0.5841</td><td class="score">0.6071</td><td class="score official-score">0.5956</td></tr>
+            <tr><td class="rank">5</td><td>Amrood</td><td><code>nemotron-120b-sitrep</code></td><td><span class="primary-badge yes">Yes</span></td><td class="score">0.5984</td><td class="score">0.5483</td><td class="score official-score">0.5733</td></tr>
+            <tr><td class="rank">6</td><td>gogogo</td><td><code>r01g-sr</code></td><td><span class="primary-badge yes">Yes</span></td><td class="score">0.5018</td><td class="score">0.5528</td><td class="score official-score">0.5273</td></tr>
+            <tr><td class="rank">7</td><td>BMU</td><td><code>system_1</code></td><td><span class="primary-badge yes">Yes</span></td><td class="score">0.4511</td><td class="score">0.5170</td><td class="score official-score">0.4841</td></tr>
+            <tr><td class="rank">8</td><td>Neural Coder</td><td><code>extraction-de</code></td><td><span class="primary-badge yes">Yes</span></td><td class="score">0.5082</td><td class="score">0.4514</td><td class="score official-score">0.4798</td></tr>
+            <tr><td class="rank">9</td><td>Databaes</td><td><code>g5-evidence-grounded</code></td><td><span class="primary-badge yes">Yes</span></td><td class="score">0.3947</td><td class="score">0.5153</td><td class="score official-score">0.4550</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="results-note">
+        Scores are rounded to four decimal places for display. Rankings use the unrounded official scores.
+        The organizer baseline is available in the downloadable workbook but is not included in participant rankings.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <img src="img/NSF_Official_logo_Med_Res_600ppi_rectangle.webp" alt="NSF" loading="lazy" />
+        <div>
+          <p>This material is based upon work supported by the National Science Foundation under Grant Nos. 2346334 and 2346335.</p>
+          <p>Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</p>
+          <p style="margin-top:.5rem; opacity:.6;">© LT4CPR 2026. Website code released under the MIT License.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

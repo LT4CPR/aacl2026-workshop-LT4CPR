@@ -6,7 +6,7 @@
 
   <title>LT4CPR Shared Task @ AACL-IJCNLP 2026</title>
   <meta name="description"
-        content="Call for participation in the LT4CPR Shared Task at AACL-IJCNLP 2026 on automatic situation report generation from crisis-related social media." />
+        content="LT4CPR Shared Task at AACL-IJCNLP 2026 on automatic situation report generation from crisis-related social media, including official evaluation results and leaderboard." />
   <link rel="icon" type="image/png" href="favicon.png" />
 
   <meta property="og:title" content="LT4CPR Shared Task @ AACL-IJCNLP 2026" />
@@ -140,6 +140,88 @@
       font-size: .95rem;
       opacity: .8;
     }
+
+    .results-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 1.25rem 0;
+      padding: 1rem 1.1rem;
+      border: 1px solid #d7e2f2;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 12px 12px 0;
+      background: linear-gradient(120deg, #f0f5fd, #f8faff);
+    }
+    .results-summary p { margin: .2rem 0 0; }
+    .results-summary .btn { flex-shrink: 0; }
+    .metric-formula {
+      margin: .8rem 0 1.1rem;
+      padding: .8rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #f8f9fd;
+    }
+    .leaderboard-block { margin: 1.4rem 0 1.8rem; }
+    .leaderboard-block h3 { margin-bottom: .45rem; }
+    .leaderboard-scroll {
+      width: 100%;
+      overflow-x: auto;
+      margin: .75rem 0;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+    }
+    .leaderboard-table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+      font-size: .94rem;
+    }
+    .leaderboard-table th,
+    .leaderboard-table td {
+      padding: .7rem .75rem;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: middle;
+    }
+    .leaderboard-table th {
+      background: var(--navy);
+      color: #fff;
+      font-size: .82rem;
+      letter-spacing: .02em;
+      white-space: nowrap;
+    }
+    .leaderboard-table tbody tr:last-child td { border-bottom: 0; }
+    .leaderboard-table tbody tr:nth-child(even) { background: #f8f9fd; }
+    .leaderboard-table tbody tr:hover { background: #f1f5fb; }
+    .leaderboard-table .rank { width: 54px; text-align: center; font-weight: 800; }
+    .leaderboard-table .score { font-variant-numeric: tabular-nums; }
+    .leaderboard-table .official-score { font-weight: 800; color: var(--navy); }
+    .leaderboard-table .rank-1 { background: #fff8dd; }
+    .leaderboard-table .rank-2 { background: #f5f6f8; }
+    .leaderboard-table .rank-3 { background: #fbefe3; }
+    .primary-badge {
+      display: inline-block;
+      padding: .18rem .45rem;
+      border-radius: 999px;
+      font-size: .72rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    .primary-badge.yes { background: #e8f3ed; color: #245a3b; }
+    .primary-badge.no { background: #f1eef8; color: #5a4b78; }
+    .results-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .7rem;
+      margin: 1rem 0 1.4rem;
+    }
+    .results-note { font-size: .9rem; color: var(--muted); }
+    @media (max-width: 640px) {
+      .results-summary { align-items: flex-start; flex-direction: column; }
+    }
   </style>
 </head>
 
@@ -178,6 +260,14 @@
           <p>The train and development datasets for the LT4CPR shared task are now available.</p>
         </div>
         <a class="btn" href="https://github.com/LT4CPR/2026_aacl_workshop/tree/main/shared_task/data" target="_blank" rel="noopener noreferrer">Access the data</a>
+      </div>
+
+      <div class="results-summary" aria-label="Official evaluation results announcement">
+        <div>
+          <strong>Official evaluation results released</strong>
+          <p>The final shared-task leaderboard and downloadable score workbook are now available.</p>
+        </div>
+        <a class="btn" href="leaderboard.html">View leaderboard</a>
       </div>
 
       <div class="notice">
@@ -268,7 +358,7 @@
         <li>Test data</li>
         <li>A submission platform for system outputs</li>
         <li>A submission platform for shared-task system papers</li>
-        <li>Leaderboard information, if applicable</li>
+        <li>Official leaderboard and downloadable evaluation results</li>
       </ul>
 
       <p>
@@ -291,11 +381,15 @@
         </a>
         <a class="resource-button active" href="submission.html">
           <span>System Submission</span>
-          <span class="resource-status">Available ↗</span>
+          <span class="resource-status">Available →</span>
         </a>
         <a class="resource-button active" href="system-paper-submission.html">
           <span>System Paper Submission</span>
-          <span class="resource-status">Available ↗</span>
+          <span class="resource-status">Available →</span>
+        </a>
+        <a class="resource-button active" href="leaderboard.html">
+          <span>Leaderboard</span>
+          <span class="resource-status">Available →</span>
         </a>
         <span class="resource-button inactive" role="link" aria-disabled="true">
           <span>Baseline Repository</span>
@@ -304,12 +398,14 @@
         
       </div>
 
-      <h2>Evaluation</h2>
+      <h2>Evaluation Results</h2>
       <p>
-        Systems will be evaluated using a combination of automatic metrics such as ROUGE, BLEU, BERTScore etc., across different levels (document level and system level).
-        Before the evaluation phase, the organizers will publish the metric definitions, explain how each score is
-        calculated, and release the official evaluation code when it is available. The final ranking criteria and
-        tie-breaking procedures will also be documented. Evaluation may consider:
+        Official shared-task evaluation results are now available. Rankings use the <strong>Official Primary Score</strong>,
+        defined as the average of BERTScore F1 and BLEURT. Visit the dedicated leaderboard page to view the
+        primary-system and best-system rankings and download the complete official results workbook.
+      </p>
+      <p>
+        <a class="btn" href="leaderboard.html">View official leaderboard →</a>
       </p>
 
       <h2>How to Participate</h2>
