@@ -93,6 +93,7 @@ main { padding: 1.25rem 0 .75rem; flex: 1; }
 
 /* Callouts */
 .callouts { display: flex; gap: .85rem; flex-wrap: wrap; margin-top: 1.4rem; }
+.callouts + h2 { margin-top: 2rem; }
 .callout  { background: #f3f6fc; border: 1px solid #dce4f3;
             border-top: 3px solid var(--navy);
             border-radius: 10px; padding: .7rem 1rem; min-width: 130px; }
