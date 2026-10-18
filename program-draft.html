@@ -156,6 +156,28 @@
     }
     .chip.ok { color: var(--ok); }
     .chip.remote { color: var(--remote); }
+    table.zones {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.75rem;
+      font-size: 0.84rem;
+    }
+    table.zones th, table.zones td {
+      text-align: left;
+      padding: 0.35rem 0.75rem 0.35rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    table.zones th {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--ink-soft);
+    }
+    table.zones td.local { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+    .rationale { margin-top: 2.75rem; }
+    .rationale p { font-size: 0.9rem; color: var(--ink-soft); max-width: 68ch; }
     footer {
       margin-top: 2.5rem;
       padding-top: 1rem;
@@ -203,7 +225,7 @@
             <div class="t">09:15</div>
             <div class="body">
               <p class="title">Critical evaluation of Knowledge Graph-powered Question Answering Systems</p>
-              <p class="meta"><span class="pid">RP-10</span> · Gayatri Ramchandra Vaidya</p>
+              <p class="meta"><span class="pid">RP-10</span> · Gayatri Ramchandra Vaidya · 20:15 on 8 Nov local</p>
             </div>
             <span class="chip remote">Remote</span>
           </div>
@@ -211,7 +233,7 @@
             <div class="t">09:30</div>
             <div class="body">
               <p class="title">Cross-Modal Inconsistency in Multimodal LLMs during Crisis Communication</p>
-              <p class="meta"><span class="pid">RP-09</span> · Anuridhi Gupta</p>
+              <p class="meta"><span class="pid">RP-09</span> · Anuridhi Gupta · 20:30 on 8 Nov local</p>
             </div>
             <span class="chip remote">Remote</span>
           </div>
@@ -219,7 +241,7 @@
             <div class="t">09:45</div>
             <div class="body">
               <p class="title">Speech crisis data</p>
-              <p class="meta">Steven Richardson, BYU, or Belu Ticona</p>
+              <p class="meta">Steven Richardson, BYU, or Belu Ticona · 18:45 on 8 Nov local if joining from BYU</p>
             </div>
           </div>
         </div>
@@ -294,7 +316,7 @@
             <div class="t">12:10</div>
             <div class="body">
               <p class="title">Looking Complete Is Not Being Grounded: Evaluating LLM Sitreps</p>
-              <p class="meta"><span class="pid">RP-07</span> · Sachin Kumar · 10 min</p>
+              <p class="meta"><span class="pid">RP-07</span> · Sachin Kumar · 10 min · local time not yet known</p>
             </div>
             <span class="chip remote">Remote</span>
           </div>
@@ -302,7 +324,7 @@
             <div class="t">12:20</div>
             <div class="body">
               <p class="title">Extractive Corroboration Pipeline for Crisis Situation Report Generation</p>
-              <p class="meta"><span class="pid">ST-03</span> · Sreeja Guha Majumdar · 10 min</p>
+              <p class="meta"><span class="pid">ST-03</span> · Sreeja Guha Majumdar · 10 min · 09:50 local, India</p>
             </div>
             <span class="chip remote">Remote</span>
           </div>
@@ -350,7 +372,7 @@
       <div class="time">14:45–15:30</div>
       <div class="what">
         <h3>Keynote — Federico Marco Federici</h3>
-        <p class="who">University College London · 45 min · title to come</p>
+        <p class="who">University College London · 45 min · title to come · 06:45 local, London</p>
         <p class="who"><span class="chip remote">Remote</span></p>
       </div>
     </div>
@@ -377,7 +399,7 @@
             <div class="t">16:15</div>
             <div class="body">
               <p class="title">CrisiLangs: A Multilingual Resource for Crisis Warning Generation</p>
-              <p class="meta"><span class="pid">RP-03</span> · Giacomo Gonella</p>
+              <p class="meta"><span class="pid">RP-03</span> · Giacomo Gonella · 09:15 local, Italy</p>
             </div>
             <span class="chip remote">Remote</span>
           </div>
@@ -385,7 +407,7 @@
             <div class="t">16:30</div>
             <div class="body">
               <p class="title">Community Radio as Speech Infrastructure for Crisis Preparedness</p>
-              <p class="meta"><span class="pid">RP-02</span> · Gideon Luper Abako</p>
+              <p class="meta"><span class="pid">RP-02</span> · Gideon Luper Abako · 09:30 local, Nigeria</p>
             </div>
             <span class="chip remote">Remote</span>
           </div>
@@ -399,6 +421,32 @@
         <h3>Discussion and closing remarks</h3>
         <p class="who">Organizers · 15 min</p>
       </div>
+    </div>
+
+    <div class="rationale">
+      <h2>Why the remote talks sit where they do</h2>
+      <p>The venue is eight hours ahead of London and thirteen ahead of the US east coast, and
+      none of the zones involved are on summer time by 9 November, so every offset below is
+      fixed. Opening the day with the remote session puts the Americas-based presenters in their
+      own evening rather than the middle of the night. Late afternoon at the venue is morning in
+      Europe and Africa, which is why the Italian and Nigerian talks sit at the end of the day
+      instead. The two remote shared-task talks run at 10 minutes and sit back to back, so the
+      remote setup is only needed once.</p>
+      <table class="zones">
+        <tr><th>Slot</th><th>Presenter</th><th>Venue</th><th>Presenter's local time</th></tr>
+        <tr><td>RP-10</td><td>Gayatri Ramchandra Vaidya, US east coast</td><td class="local">09:15</td><td class="local">20:15, 8 Nov</td></tr>
+        <tr><td>RP-09</td><td>Anuridhi Gupta, US east coast</td><td class="local">09:30</td><td class="local">20:30, 8 Nov</td></tr>
+        <tr><td>Speech crisis data</td><td>Steven Richardson, BYU, if remote</td><td class="local">09:45</td><td class="local">18:45, 8 Nov</td></tr>
+        <tr><td>RP-07</td><td>Sachin Kumar, location not yet known</td><td class="local">12:10</td><td class="local">not known</td></tr>
+        <tr><td>ST-03</td><td>Sreeja Guha Majumdar, India</td><td class="local">12:20</td><td class="local">09:50, 9 Nov</td></tr>
+        <tr><td>Keynote</td><td>Federico Marco Federici, London</td><td class="local">14:45</td><td class="local">06:45, 9 Nov</td></tr>
+        <tr><td>RP-03</td><td>Giacomo Gonella, Italy</td><td class="local">16:15</td><td class="local">09:15, 9 Nov</td></tr>
+        <tr><td>RP-02</td><td>Gideon Luper Abako, Nigeria</td><td class="local">16:30</td><td class="local">09:30, 9 Nov</td></tr>
+      </table>
+      <p>Two slots are still worth a second look. The keynote falls at 06:45 in London, which is
+      early to ask of a speaker: trading it with the 16:00 session would make it 08:00, at the
+      cost of the running order. And Sachin Kumar asked for a morning slot but has not said where
+      he will be, so 12:10 cannot be checked against his clock yet.</p>
     </div>
 
     <footer>
