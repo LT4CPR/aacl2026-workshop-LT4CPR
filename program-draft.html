@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  <title>LT4CPR 2026 draft programme (working draft)</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" />
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --surface: #ffffff;
+      --ink: #17202a;
+      --ink-soft: #5a6775;
+      --rule: #dde2e8;
+      --accent: #1b5e8c;
+      --ok: #17695c;
+      --remote: #3a51a8;
+      --warn: #8a5a10;
+
+      --display: "Newsreader", Georgia, "Times New Roman", serif;
+      --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f151b;
+        --surface: #161e26;
+        --ink: #e6ebf1;
+        --ink-soft: #9aa7b4;
+        --rule: #2a343e;
+        --accent: #6fb4de;
+        --ok: #5fc3ae;
+        --remote: #9aaaf0;
+        --warn: #e0b05c;
+        color-scheme: dark;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 15px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      max-width: 60rem;
+      margin: 0 auto;
+      padding-inline: 16px;
+      padding-block: 2.5rem 4rem;
+    }
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin: 0 0 0.75rem;
+    }
+    h1 {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: clamp(1.8rem, 1.2rem + 2.2vw, 2.7rem);
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      margin: 0 0 0.4rem;
+    }
+    .sub {
+      font-family: var(--display);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      margin: 0 0 1.75rem;
+      max-width: 48ch;
+    }
+    .banner {
+      border-left: 3px solid var(--warn);
+      background: var(--surface);
+      padding: 0.9rem 1.1rem;
+      margin-bottom: 2.25rem;
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+    }
+    .banner strong { color: var(--ink); font-weight: 600; }
+    h2 {
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin: 0 0 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .block {
+      display: grid;
+      grid-template-columns: 7.5rem 1fr;
+      gap: 0 1.5rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .block.break { color: var(--ink-soft); }
+    .time {
+      font-family: var(--mono);
+      font-variant-numeric: tabular-nums;
+      font-size: 0.86rem;
+      color: var(--accent);
+      padding-top: 0.12rem;
+      white-space: nowrap;
+    }
+    .block.break .time { color: var(--ink-soft); }
+    .what { min-width: 0; }
+    .what h3 {
+      font-family: var(--body);
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+    }
+    .block.break .what h3 { font-weight: 400; }
+    .who { font-size: 0.88rem; color: var(--ink-soft); margin: 0.2rem 0 0; }
+    .talks { margin: 0.75rem 0 0.25rem; display: grid; gap: 0.1rem; }
+    .talk {
+      display: grid;
+      grid-template-columns: 4.5rem 1fr auto;
+      gap: 0.25rem 1rem;
+      align-items: start;
+      padding: 0.6rem 0.75rem;
+      border-left: 2px solid var(--rule);
+      background: var(--surface);
+    }
+    .talk .t {
+      font-family: var(--mono);
+      font-variant-numeric: tabular-nums;
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+      white-space: nowrap;
+    }
+    .talk .body { min-width: 0; }
+    .talk .title { font-size: 0.92rem; font-weight: 500; margin: 0; }
+    .talk .meta { font-size: 0.8rem; color: var(--ink-soft); margin: 0.15rem 0 0; }
+    .pid { font-family: var(--mono); font-size: 0.73rem; color: var(--accent); }
+    .chip {
+      font-family: var(--mono);
+      font-size: 0.67rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      padding: 0.18rem 0.5rem;
+      border: 1px solid currentColor;
+      border-radius: 2px;
+    }
+    .chip.ok { color: var(--ok); }
+    .chip.remote { color: var(--remote); }
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.8rem;
+      color: var(--ink-soft);
+    }
+    @media (max-width: 640px) {
+      .block { grid-template-columns: 1fr; gap: 0.3rem; }
+      .talk { grid-template-columns: 1fr; }
+      .talk .t { order: -1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">AACL-IJCNLP 2026 · Hengqin, China · 9 November 2026</p>
+    <h1>LT4CPR draft programme</h1>
+    <p class="sub">First Workshop on Language Technologies for Crisis Preparedness and Response</p>
+
+    <div class="banner">
+      <strong>Working draft, for the organizing committee.</strong> Not final and not linked from
+      the workshop site. Times, session order and presenters may still change, so please do not
+      circulate this page or treat any slot as confirmed.
+    </div>
+
+    <h2>9 November 2026 · venue local time (UTC+8)</h2>
+
+    <div class="block">
+      <div class="time">09:00–09:15</div>
+      <div class="what">
+        <h3>Opening remarks and kickoff</h3>
+        <p class="who">Organizers · 15 min</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="time">09:15–09:45</div>
+      <div class="what">
+        <h3>Spotlight oral presentation — Milena Haykowska</h3>
+        <p class="who">30 min · title to come</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="time">09:45–10:30</div>
+      <div class="what">
+        <h3>Session 1 — Remote Oral Presentation</h3>
+        <p class="who">Three talks · 15 min each</p>
+        <div class="talks">
+          <div class="talk">
+            <div class="t">09:45</div>
+            <div class="body">
+              <p class="title">Critical evaluation of Knowledge Graph-powered Question Answering Systems</p>
+              <p class="meta"><span class="pid">RP-10</span> · Gayatri Ramchandra Vaidya</p>
+            </div>
+            <span class="chip remote">Remote</span>
+          </div>
+          <div class="talk">
+            <div class="t">10:00</div>
+            <div class="body">
+              <p class="title">Cross-Modal Inconsistency in Multimodal LLMs during Crisis Communication</p>
+              <p class="meta"><span class="pid">RP-09</span> · Anuridhi Gupta</p>
+            </div>
+            <span class="chip remote">Remote</span>
+          </div>
+          <div class="talk">
+            <div class="t">10:15</div>
+            <div class="body">
+              <p class="title">Speech crisis data</p>
+              <p class="meta">Steven Richardson, BYU, or Belu Ticona</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block break">
+      <div class="time">10:30–11:00</div>
+      <div class="what"><h3>Coffee break</h3><p class="who">30 min</p></div>
+    </div>
+
+    <div class="block">
+      <div class="time">11:00–11:30</div>
+      <div class="what">
+        <h3>Session 2 — In person Oral Presentation</h3>
+        <p class="who">Both machine translation papers · 15 min each</p>
+        <div class="talks">
+          <div class="talk">
+            <div class="t">11:00</div>
+            <div class="body">
+              <p class="title">Is Machine Translation Ready for the Next Crisis or Pandemic?</p>
+              <p class="meta"><span class="pid">RP-08</span> · Vipasha Bansal / Nicole Mihaylova</p>
+            </div>
+            <span class="chip ok">In person</span>
+          </div>
+          <div class="talk">
+            <div class="t">11:15</div>
+            <div class="body">
+              <p class="title">Communicating with the Entire Population: Machine Translation of Emergency Alerts</p>
+              <p class="meta"><span class="pid">RP-06</span> · Jen Wilson</p>
+            </div>
+            <span class="chip ok">In person</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="time">11:30–12:20</div>
+      <div class="what">
+        <h3>Crisis Social Media - Challenges + Shared Task Overview</h3>
+        <p class="who">The shared-task overview, then two system papers</p>
+        <div class="talks">
+          <div class="talk">
+            <div class="t">11:30</div>
+            <div class="body">
+              <p class="title">Overview of the LT4CPR 2026 Shared Task</p>
+              <p class="meta"><span class="pid">ST-07</span> · Fei Xia and the shared-task organizers · 20 min</p>
+            </div>
+            <span class="chip ok">In person</span>
+          </div>
+          <div class="talk">
+            <div class="t">11:50</div>
+            <div class="body">
+              <p class="title">Frozen-Response Recovery for Evidence-Linked Crisis Situation Reports</p>
+              <p class="meta"><span class="pid">ST-06</span> · Quan Zheng</p>
+            </div>
+            <span class="chip ok">In person</span>
+          </div>
+          <div class="talk">
+            <div class="t">12:05</div>
+            <div class="body">
+              <p class="title">Extractive Corroboration Pipeline for Crisis Situation Report Generation</p>
+              <p class="meta"><span class="pid">ST-03</span> · Sreeja Guha Majumdar</p>
+            </div>
+            <span class="chip remote">Remote</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block break">
+      <div class="time">12:30–14:00</div>
+      <div class="what"><h3>Lunch</h3><p class="who">90 min</p></div>
+    </div>
+
+    <div class="block">
+      <div class="time">14:00–14:45</div>
+      <div class="what">
+        <h3>Session 3 — In person Oral Presentation</h3>
+        <p class="who">Three talks · 15 min each</p>
+        <div class="talks">
+          <div class="talk">
+            <div class="t">14:00</div>
+            <div class="body">
+              <p class="title">Towards a Benchmark for Fire Safety Code Interpretation in the Hong Kong AEC Industry</p>
+              <p class="meta"><span class="pid">RP-01</span> · Emmanuele Chersoni</p>
+            </div>
+            <span class="chip ok">In person</span>
+          </div>
+          <div class="talk">
+            <div class="t">14:15</div>
+            <div class="body">
+              <p class="title">SIREN: Situation-aware Index for Response and Emergency ActioNability</p>
+              <p class="meta"><span class="pid">RP-04</span> · Maria Carmen Staiano</p>
+            </div>
+            <span class="chip ok">In person</span>
+          </div>
+          <div class="talk">
+            <div class="t">14:30</div>
+            <div class="body">
+              <p class="title">Beyond Consensus: Diagnosing Coverage, Majority Bias, and Grounding Equity</p>
+              <p class="meta"><span class="pid">RP-11</span> · Jane Arleth dela Cruz</p>
+            </div>
+            <span class="chip ok">In person</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="time">14:45–15:30</div>
+      <div class="what">
+        <h3>Keynote — Federico Marco Federici</h3>
+        <p class="who">University College London · 45 min · title to come</p>
+        <p class="who"><span class="chip remote">Remote</span></p>
+      </div>
+    </div>
+
+    <div class="block break">
+      <div class="time">15:30–16:00</div>
+      <div class="what"><h3>Coffee break</h3><p class="who">30 min</p></div>
+    </div>
+
+    <div class="block">
+      <div class="time">16:00–16:40</div>
+      <div class="what">
+        <h3>Session 4 — resources and field reports</h3>
+        <p class="who">Four short talks · 10 min each</p>
+        <div class="talks">
+          <div class="talk">
+            <div class="t">16:00</div>
+            <div class="body">
+              <p class="title">Looking Complete Is Not Being Grounded: Evaluating LLM Sitreps</p>
+              <p class="meta"><span class="pid">RP-07</span> · Sachin Kumar</p>
+            </div>
+            <span class="chip ok">In person</span>
+          </div>
+          <div class="talk">
+            <div class="t">16:10</div>
+            <div class="body">
+              <p class="title">Safi: AI-Moderated Conversational Interviews for Rapid, Multilingual Post-Disaster Assessment</p>
+              <p class="meta"><span class="pid">RP-05</span> · Miraal Kabir</p>
+            </div>
+            <span class="chip ok">In person</span>
+          </div>
+          <div class="talk">
+            <div class="t">16:20</div>
+            <div class="body">
+              <p class="title">CrisiLangs: A Multilingual Resource for Crisis Warning Generation</p>
+              <p class="meta"><span class="pid">RP-03</span> · Giacomo Gonella</p>
+            </div>
+            <span class="chip remote">Remote</span>
+          </div>
+          <div class="talk">
+            <div class="t">16:30</div>
+            <div class="body">
+              <p class="title">Community Radio as Speech Infrastructure for Crisis Preparedness</p>
+              <p class="meta"><span class="pid">RP-02</span> · Gideon Luper Abako</p>
+            </div>
+            <span class="chip remote">Remote</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="time">16:45–17:00</div>
+      <div class="what">
+        <h3>Discussion and closing remarks</h3>
+        <p class="who">Organizers · 15 min</p>
+      </div>
+    </div>
+
+    <footer>
+      Draft of 18 October 2026. All times are venue local time in Hengqin (UTC+8). Six
+      presentations are remote, the keynote among them.
+    </footer>
+  </div>
+</body>
+</html>
