@@ -26,13 +26,13 @@
   <!-- These small additions use only existing site colors and can be moved into style.min.css later. -->
   <style>
     .notice {
-      margin: 1.25rem 0;
-      padding: 1rem 1.1rem;
-      border: 1px solid #d7e2f2;
-      border-left: 4px solid var(--blue);
-      border-radius: 0 12px 12px 0;
-      background: linear-gradient(120deg, #f0f5fd, #f8faff);
-      box-shadow: 0 4px 14px rgba(53, 104, 184, .07);
+      margin: 1.35rem 0;
+      padding: 1.15rem 1.25rem;
+      border: 1px solid #d8dce2;
+      border-left: 3px solid var(--blue);
+      border-radius: 14px;
+      background: #f1f3f5;
+      box-shadow: none;
     }
     .release-notice {
       display: flex;
@@ -40,10 +40,10 @@
       justify-content: space-between;
       gap: 1rem;
       border-left-color: var(--orange);
-      border-color: #efd5c9;
+      border-color: #dfcec6;
       border-left-color: var(--orange);
-      background: linear-gradient(120deg, #fff3ed, #fffaf7);
-      box-shadow: 0 4px 14px rgba(214, 102, 61, .09);
+      background: #f3eae5;
+      box-shadow: none;
     }
     .release-notice p {
       margin: .2rem 0 0;
@@ -59,8 +59,12 @@
     }
     .date-table {
       width: 100%;
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0;
       margin: 1rem 0;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
     }
     .date-table th,
     .date-table td {
@@ -70,10 +74,10 @@
       vertical-align: top;
     }
     .date-table tr:nth-child(even) {
-      background: #f8f9fd;
+      background: #f4f0ea;
     }
     .date-table tr:hover {
-      background: #f1f5fb;
+      background: #eee9e2;
     }
     .date-table th {
       width: 45%;
@@ -89,24 +93,24 @@
       align-items: center;
       justify-content: space-between;
       gap: .75rem;
-      min-height: 50px;
-      padding: .7rem .85rem;
+      min-height: 54px;
+      padding: .78rem .95rem;
       border: 1px solid;
-      border-radius: 10px;
+      border-radius: 12px;
       font-weight: 700;
       line-height: 1.25;
       text-decoration: none;
     }
     .resource-button.active {
       border-color: var(--blue);
-      background: linear-gradient(135deg, var(--navy), var(--blue));
+      background: var(--navy);
       color: #fff;
-      box-shadow: 0 5px 14px rgba(36, 49, 84, .18);
+      box-shadow: 0 4px 11px rgba(36, 42, 59, .15);
       transition: opacity .15s, transform .15s;
     }
     .resource-button.active:nth-child(2) {
       border-color: var(--lavender);
-      background: linear-gradient(135deg, #514774, var(--lavender));
+      background: var(--lavender);
     }
     .resource-button.active:hover {
       opacity: .9;
@@ -115,7 +119,7 @@
     }
     .resource-button.inactive {
       border-color: var(--border);
-      background: #f4f5f9;
+      background: #efede9;
       color: var(--muted);
       cursor: not-allowed;
     }
@@ -133,7 +137,7 @@
       color: #fff;
     }
     .resource-button.inactive .resource-status {
-      background: #e2e5eb;
+      background: #e4e1dc;
       color: var(--muted);
     }
     .small-note {
@@ -226,6 +230,22 @@
 </head>
 
 <body>
+  <div class="hero-nav-bar">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="https://lt4cpr.github.io/" class="nav-project">Project Site</a>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#speakers">Invited Speakers</a>
+        <a href="index.html#program">Program</a>
+        <a href="index.html#cfp">Call for Papers</a>
+        <a href="index.html#shared-task">Shared Task</a>
+        <a href="index.html#organizers">Organizers</a>
+        <a href="index.html#qa">Q&amp;A</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
   <header class="hero-header">
     <div class="hero-body">
       <div class="hero-title">LT4CPR @ AACL-IJCNLP 2026</div>
@@ -234,26 +254,10 @@
     </div>
   </header>
 
-  <div class="hero-nav-bar">
-    <div class="container">
-      <nav class="nav">
-        <a href="https://lt4cpr.github.io/" class="nav-project">Project Site</a>
-        <a href="index.html">Home</a>
-        <a href="cfp.html">Call for Papers</a>
-        <a href="shared-task.html" class="active">Shared Task</a>
-        <a href="speakers.html">Invited Speakers</a>
-        <a href="program.html">Program</a>
-        <a href="organizers.html">Organizers</a>
-        <a href="qa.html">Q&amp;A</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </div>
-
   <main class="container">
     <section class="card">
-      <h1>Call for Participation</h1>
-      <h2>LT4CPR Shared Task on Automatic Situation Report Generation</h2>
+      <h1>LT4CPR Shared Task</h1>
+      <h2>Automatic Situation Report Generation</h2>
 
       <div class="notice release-notice" aria-label="Data release announcement">
         <div>
@@ -510,7 +514,7 @@
           </tr>
           <tr>
             <th scope="row">Camera-ready papers due</th>
-            <td>October 10, 2026</td>
+            <td><del>October 10, 2026</del> → <strong>Monday, October 12, 2026 (23:59 AoE)</strong> (extended)</td>
           </tr>
           <tr>
             <th scope="row">LT4CPR workshop</th>

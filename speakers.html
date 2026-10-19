@@ -29,13 +29,13 @@
       padding: 2rem; border-radius: 14px; background: var(--navy); margin-bottom: 2rem;
       border-top: 4px solid var(--orange); }
     .keynote-photo { width: 200px; height: auto; border-radius: 10px; box-shadow: 0 10px 24px rgba(0,0,0,.2); }
-    .card .keynote-label { display: inline-block; color: #f0c9aa; border: 1px solid #687080; border-radius: 999px;
+    .card .keynote-label { display: inline-block; color: var(--accent-light); border: 1px solid #687080; border-radius: 999px;
       padding: .25rem .75rem; font-size: .72rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; margin-bottom: 1rem; }
     .card #keynote-speaker { display: block; color: #fffdf9; font-size: clamp(1.65rem, 3vw, 2.3rem);
       line-height: 1.15; letter-spacing: -.035em; padding: 0; margin-bottom: .7rem; }
     .card #keynote-speaker::after { display: none; }
     .card .keynote-affiliation { color: #cbd4df; font-size: .95rem; margin: 0; }
-    .keynote-website { display: inline-block; margin-top: .75rem; color: #f0c9aa; }
+    .keynote-website { display: inline-block; margin-top: .75rem; color: var(--accent-light); }
     .keynote-talk { padding: .25rem 0 .25rem 1.5rem; border-left: 3px solid var(--orange); margin-bottom: 2rem; }
     .card .keynote-talk-label { color: var(--muted); text-transform: uppercase; letter-spacing: .12em;
       font-size: .72rem; font-weight: 700; margin-bottom: .65rem; }
@@ -51,6 +51,22 @@
 </head>
 
 <body>
+  <div class="hero-nav-bar">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="https://lt4cpr.github.io/" class="nav-project">Project Site</a>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#speakers">Invited Speakers</a>
+        <a href="index.html#program">Program</a>
+        <a href="index.html#cfp">Call for Papers</a>
+        <a href="index.html#shared-task">Shared Task</a>
+        <a href="index.html#organizers">Organizers</a>
+        <a href="index.html#qa">Q&amp;A</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
     <header class="hero-header">
   <div class="hero-body">
     <div class="hero-title">LT4CPR @ AACL-IJCNLP 2026</div>
@@ -58,22 +74,6 @@
     <div class="hero-meta">November 9, 2026 · Hybrid: Hengqin, Zhuhai, China + Online</div>
   </div>
   </header>
-
-  <div class="hero-nav-bar">
-    <div class="container">
-      <nav class="nav">
-      <a href="https://lt4cpr.github.io/" class="nav-project">Project Site</a>
-      <a href="index.html">Home</a>
-      <a href="cfp.html">Call for Papers</a>
-      <a href="shared-task.html">Shared Task</a>
-      <a href="speakers.html" class="active">Invited Speakers</a>
-      <a href="program.html">Program</a>
-      <a href="organizers.html">Organizers</a>
-      <a href="qa.html">Q&amp;A</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    </div>
-  </div>
 
   <main class="container">
     <section class="card">

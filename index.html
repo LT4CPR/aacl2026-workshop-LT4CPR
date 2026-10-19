@@ -36,138 +36,97 @@
 
   <link rel="preload" as="image" href="img/venue.webp" type="image/webp" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sections.css" />
+  <script src="navigation.js" defer></script>
 </head>
 
 <body>
 
-  <header class="hero-header">
-    <div class="hero-body">
-      <div class="hero-title">LT4CPR @ AACL-IJCNLP 2026</div>
-      <div class="hero-sub">Language Technologies for Crisis Preparedness and Response</div>
-      <div class="hero-meta">November 9, 2026 · Hybrid: Hengqin, Zhuhai, China + Online</div>
-    </div>
-  </header>
-
   <div class="hero-nav-bar">
     <div class="container">
-      <nav class="nav">
+      <nav class="nav" aria-label="Main navigation">
         <a href="https://lt4cpr.github.io/" class="nav-project">Project Site</a>
-        <a href="index.html" class="active">Home</a>
-        <a href="cfp.html">Call for Papers</a>
-        <a href="shared-task.html">Shared Task</a>
-        <a href="speakers.html">Invited Speakers</a>
-        <a href="program.html">Program</a>
-        <a href="organizers.html">Organizers</a>
-        <a href="qa.html">Q&amp;A</a>
-        <a href="contact.html">Contact</a>
+        <a href="#home" class="active" aria-current="location">Home</a>
+        <a href="#speakers">Invited Speakers</a>
+        <a href="#program">Program</a>
+        <a href="#cfp">Call for Papers</a>
+        <a href="#shared-task">Shared Task</a>
+        <a href="#organizers">Organizers</a>
+        <a href="#qa">Q&amp;A</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </div>
 
+  <header class="hero-header hero-fullscreen" id="home" data-nav-section>
+    <div class="hero-body">
+      <p class="hero-kicker">AACL-IJCNLP 2026 · November 9</p>
+      <h1 class="hero-title">LT4CPR 2026</h1>
+      <div class="hero-sub">Language Technologies for Crisis Preparedness and Response</div>
+      <div class="hero-intro-panel">
+      <p class="hero-intro">Bringing together NLP research, local languages, and humanitarian
+        practice to support crisis preparedness, disaster risk reduction, and response.</p>
+      <p class="hero-intro hero-intro-detail">Explore multilingual and low-resource settings through
+        invited talks, a panel discussion, and a shared task on generating situation reports
+        from crisis-related social media.</p>
+      </div>
+      <div class="hero-meta">November 9, 2026 · Hengqin, Zhuhai, China + Online</div>
+      <p class="hero-participation">Attend and present in person or virtually.</p>
+      <div class="hero-actions">
+        <a href="#speakers">Meet our invited speaker <span aria-hidden="true">↓</span></a>
+        <a href="#cfp">Explore the workshop <span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+  </header>
+
   <main class="container">
-    <section class="banner" aria-label="Hybrid participation">
-      <strong>Hybrid participation:</strong>
-      Attend and present in person or virtually. Authors of accepted papers may choose
-      either presentation mode.
+<div id="speakers" class="page-section" data-nav-section>
+<section class="card">
+      <h2>Invited Speakers</h2>
+      <p class="speaker-intro">We are very excited to announce our <strong>invited speaker</strong>:</p>
+      <article id="federico-federici" aria-labelledby="keynote-speaker">
+        <div class="keynote-profile">
+          <img src="img/federico_federici_photo.png" alt="Federico Marco Federici" class="keynote-photo" />
+          <div>
+            <p class="keynote-label">Keynote</p>
+            <h3 id="keynote-speaker">Federico Marco Federici</h3>
+            <p class="keynote-affiliation">University College London</p>
+            <a class="keynote-website" href="https://profiles.ucl.ac.uk/47630-federico-m-federici">Visit his UCL profile →</a>
+          </div>
+        </div>
+        <div class="keynote-talk">
+          <p class="keynote-talk-label">The keynote</p>
+          <h4>Multilingual crisis communication: the human-centred pipeline for timely communication</h4>
+        </div>
+        <div class="keynote-bio">
+        <h4>About the speaker</h4>
+        <p>Professor Federico M. Federici is Director of the Centre for Translation Studies at University College London and a Professor of Intercultural Crisis Communication at the university. Dr. Federici has published extensively on language translation in crises, with his current research centered on multilingual communication in crises, in particular, translated communication in medical and healthcare contexts. He was a Principal Investigator on the INTERACT project, a large multi-year EU-funded project, partnering with colleagues at Dublin City University and other European institutions, with a research focus on crisis translation. Dr. Federici&#x27;s work also extends beyond crises, looking at the use of translation in doctor-patient interactions, in particular, in scenarios where patients have limited English proficiency, and the impact that translation (both human-mediated and automated) has on patient care and outcomes.</p>
+        </div>
+      </article>
     </section>
-
-    <!-- Main Description -->
-    <section class="card">
-      <h1>About the Workshop</h1>
-
-      <p>
-        <strong>Language Technologies for Crisis Preparedness and Response (LT4CPR)</strong>
-        focuses on speech and language technologies that support crisis preparedness,
-        disaster risk reduction, and crisis response, especially in settings with
-        linguistic diversity, low-resource languages, and informal communication channels.
-      </p>
-
-      <p>
-        The workshop aims to bridge NLP, local languages, and real-world humanitarian
-        impact. It will feature invited talks, a panel discussion on strategic priorities
-        and shared infrastructure, and a shared task on
-        <em>automatic situation report ("sitrep") generation</em>
-        from crisis-related social media.
-        LT4CPR will be held on <strong>November 9, 2026</strong> as part of
-        <a href="https://2026.aaclnet.org" target="_blank">AACL-IJCNLP 2026</a>
-        in Hengqin, Zhuhai, China and online.
-      </p>
-
-      <div class="callouts">
-        <div class="callout">
-          <div class="label">Submission</div>
-          <div class="value">Direct Submission · ARR Commitment</div>
-        </div>
-
-        <div class="callout">
-          <div class="label">Workshop Date</div>
-          <div class="value">November 9, 2026</div>
-        </div>
-
-        <div class="callout">
-          <div class="label">Participation</div>
-          <div class="value">In Person · Virtual</div>
-        </div>
-
-        <div class="callout">
-          <div class="label">Contact</div>
-          <div class="value">
-            <a href="mailto:LT4Crisis@gmail.com">LT4Crisis@gmail.com</a>
-          </div>
-        </div>
-      </div>
-
-      <h2>Submit to LT4CPR</h2>
-
-      <div class="track-columns">
-        <div class="track-group softconf">
-          <div class="track-badge">Research Papers</div>
-          <div class="track-title">Archival and Non-Archival Papers</div>
-          <p class="track-desc">Choose one of the two research paper submission routes:</p>
-          <div class="track-route">
-            <div class="route-label">Direct Submission</div>
-            <a class="btn" href="https://openreview.net/group?id=aclweb.org/AACL-IJCNLP/2026/Workshop/LT4CPR#tab-your-consoles" target="_blank" rel="noopener noreferrer">Submit via OpenReview →</a>
-          </div>
-          <div class="track-route">
-            <div class="route-label">ACL Rolling Review</div>
-            <a class="btn" href="https://forms.gle/mxa9D59amrRuPFG57" target="_blank" rel="noopener noreferrer">Submit ARR Commitment →</a>
-          </div>
-          <a href="cfp.html">Research paper submission details</a>
-        </div>
-
-        <div class="track-group arr" id="field-reports">
-          <div class="track-badge">Talk Proposals and Field Reports</div>
-          <div class="track-title">Humanitarian and Crisis-Response Practice</div>
-          <p class="track-desc">
-            We welcome humanitarian organizations, NGOs, community-based organizations,
-            emergency-response teams, public agencies, field experts, and other practitioners
-            working on crisis-specific causes to share field experience or propose a talk.
-          </p>
-          <ul class="track-dates">
-            <li><span class="date-label">Submission deadline · 23:59 AoE</span><span class="date-val">September 18, 2026</span></li>
-          </ul>
-          <a class="btn" href="https://docs.google.com/forms/d/15ZQHQ9vL-i5v94q6tHFtJS7q04RcvgjfEhKf9ilxx6w/viewform" target="_blank" rel="noopener noreferrer">Submit a Talk Proposal or Field Report →</a>
-        </div>
-      </div>
-    </section>
+</div>
 
     <!-- News + Dates Grid -->
     <section class="grid">
 
       <div class="card">
-        <h2>News</h2>
-        <ul class="news-timeline">
+        <h2 id="news-heading">News</h2>
+        <ul class="news-timeline" tabindex="0" aria-labelledby="news-heading">
           <li>
             <span class="news-timeline-date">Oct 19</span>
-            <span><a href="speakers.html#federico-federici"><strong>Keynote announced!</strong></a> Federico Marco Federici (University College London) will present “Multilingual crisis communication: the human-centred pipeline for timely communication.”</span>
+            <span><a href="#federico-federici"><strong>Keynote announced!</strong></a> Federico Marco Federici (University College London) will present “Multilingual crisis communication: the human-centred pipeline for timely communication.”</span>
           </li>
           <li>
             <span class="news-timeline-date">Oct 10</span>
-            <span><a href="qa.html#registration">Shared-task registration exception confirmed</a>: <strong>shared-task papers do not require registration to appear in the proceedings</strong> and may be included without a presentation. Registration is still required for papers presented virtually or in person.</span>
+            <span><a href="#camera-ready">Camera-ready submission deadline extended</a>: final versions of research and shared-task papers are now due <strong>Monday, October 12, 2026 (23:59 AoE)</strong>.</span>
+          </li>
+          <li>
+            <span class="news-timeline-date">Oct 10</span>
+            <span><a href="#registration">Shared-task registration exception confirmed</a>: <strong>shared-task papers do not require registration to appear in the proceedings</strong> and may be included without a presentation. Registration is still required for papers presented virtually or in person.</span>
           </li>
           <li>
             <span class="news-timeline-date">Oct 8</span>
-            <span><a href="qa.html">Camera-ready guidelines released</a>: review the formatting requirements, page limits, required PDF and source files, and ACL pubcheck instructions. Research paper camera-ready versions are due <strong>October 10, 2026 (23:59 AoE)</strong>.</span>
+            <span><a href="#qa">Camera-ready guidelines released</a>: review the formatting requirements, page limits, required PDF and source files, and ACL pubcheck instructions.</span>
           </li>
           <li>
             <span class="news-timeline-date">Sep 30</span>
@@ -203,19 +162,19 @@
           </li>
           <li>
             <span class="news-timeline-date">Aug 13</span>
-            <span><a href="cfp.html">Second Call for Papers</a> release: <del datetime="2026-08-10">August 10</del> → <strong>August 13, 2026</strong>.</span>
+            <span><a href="#cfp">Second Call for Papers</a> release: <del datetime="2026-08-10">August 10</del> → <strong>August 13, 2026</strong>.</span>
           </li>
           <li>
             <span class="news-timeline-date">Aug 5</span>
-            <span><a href="organizers.html#program-committee">Preliminary Program Committee</a> announced.</span>
+            <span><a href="#program-committee">Preliminary Program Committee</a> announced.</span>
           </li>
           <li>
             <span class="news-timeline-date">Jul 22</span>
-            <span><a href="shared-task.html">Shared task information</a> released.</span>
+            <span><a href="#shared-task">Shared task information</a> released.</span>
           </li>
           <li>
             <span class="news-timeline-date">Jul 15</span>
-            <span><a href="cfp.html">First Call for Papers</a> released.</span>
+            <span><a href="#cfp">First Call for Papers</a> released.</span>
           </li>
           <li>
             <span class="news-timeline-date">Jun 1</span>
@@ -238,16 +197,741 @@
           </li>
           <li><strong>Field report and talk proposal deadline:</strong> September 18, 2026</li>
           <li><strong>Research paper notification of acceptance:</strong> Monday, October 5, 2026</li>
-          <li><strong>Research paper camera-ready version due:</strong> October 10, 2026</li>
+          <li><strong>Research paper camera-ready version due:</strong> <span class="deadline-update"><del>October 10, 2026</del> → <strong>Monday, October 12, 2026</strong> <span class="deadline-badge">Extended</span></span></li>
           <li><strong>Workshop day:</strong> November 9, 2026</li>
         </ul>
-        <p><a href="cfp.html">See full submission details</a></p>
-        <p><a href="qa.html">Camera-ready formatting Q&amp;A</a></p>
+        <p><a href="#cfp">See full submission details</a></p>
+        <p><a href="#qa">Camera-ready formatting Q&amp;A</a></p>
       </div>
 
     </section>
 
-    <!-- Footer -->
+<div id="program" class="page-section" data-nav-section>
+<section class="card">
+      <h2>Program</h2>
+      <p>The workshop program will be announced after the notification of acceptance. Check back closer to the workshop date.</p>
+      <p>The workshop will take place on <strong>November 9, 2026</strong> in Hengqin, Zhuhai, China, as part of AACL-IJCNLP 2026.</p>
+    </section>
+</div>
+
+<div id="cfp" class="page-section" data-nav-section>
+<section class="card">
+      <h2>Call for Papers</h2>
+
+      <p>
+        The language technologies (LTs) that were applied in response to the Haitian
+        earthquake of 2010 showed to the world the life-saving potential for these technologies,
+        where their application was responsible for saving 1,000s of lives. Most concerning is
+        that in a world that is hit by more than 350 disasters in an average year, the most
+        severe of these disasters occur in regions where English is not spoken. With the
+        development of massively popular AI systems used as general-purpose machines, the
+        potential of LTs in disaster preparedness and response has rapidly grown.
+        In response, the focus of this workshop is on the direct application of LTs in crisis
+        preparedness and response, including recent work on multilingual and multimodal LT.
+      </p>
+
+      <p>
+        We invite submissions to the <strong>First Workshop on Language Technologies for Crisis
+        Preparedness and Response (LT4CPR)</strong> at AACL 2026. The workshop focuses on
+        advancing speech and language technologies that support crisis preparedness, crisis
+        response, communication in crises and disaster risk reduction, and aims to bring
+        together LT research communities with crisis management stakeholders (such as
+        practitioners, NGOs, and industry) to bring to the fore interdisciplinary solutions that
+        have real-world impact.
+      </p>
+
+      <p>In this first edition, we especially welcome work on:</p>
+
+      <ul>
+        <li>
+          <strong>Identifying Community Needs:</strong> The crisis ecosystem is quite diverse, composed
+          by affected populations, policy-makers, NGOs, industry, public officers,
+          and emergency management.
+        </li>
+        <li>
+          <strong>Interdisciplinary approaches for analysis, design, and evaluation of LT systems:</strong>
+          insights from communication studies, social sciences, psychology, among others,
+          on how to design and evaluate trustworthy crisis technology that fits stakeholders needs.
+        </li>
+        <li>
+          <strong>Translating LT research into operational tools:</strong> how to go beyond AI model
+          development to user adoption of technology in high-stakes scenarios.
+        </li>
+        <li>
+          <strong>Ethics and societal implications of AI</strong> in crisis communication and management.
+        </li>
+      </ul>
+
+      <h3>Topics of Interest</h3>
+
+      <p>We invite submissions that fall under the following list (but not limited to):</p>
+
+      <ul>
+        <li>Research work on AI for crisis response, such as information extraction (e.g., NER and geolocation), situational awareness (e.g., automated triage), and more</li>
+        <li>Qualitative studies to understand user needs and guide technology design</li>
+        <li>Multilingual and multimodal research on crisis and humanitarian initiatives</li>
+        <li>Evaluation and deployment considerations</li>
+        <li>Automatic approaches to enhance or facilitate communication from and to communities during crisis (e.g., computational social media and news analysis, summarization, translation, etc.)</li>
+        <li>Position papers and literature surveys on current trends, challenges and future directions</li>
+        <li>Abstracts for talk proposals or field reports from practitioners, NGOs, humanitarian organizations, and field experts, including experience reports</li>
+      </ul>
+
+      <h3>Submission Types</h3>
+
+      <p>The workshop will accept two types of papers:</p>
+
+      <ol>
+        <li>
+          <strong>Archival submissions:</strong> Papers of up to 8 pages of content, plus unlimited
+          pages for limitations, references and appendices. Accepted papers will be given an
+          additional page of content to address reviewer comments. Previously published papers
+          cannot be accepted.
+        </li>
+        <li>
+          <strong>Non-Archival submissions:</strong> Up to 8 pages, excluding references, to
+          summarise and showcase in-progress work and work published elsewhere. These papers
+          may be presented at the workshop but will not appear in the proceedings.
+        </li>
+      </ol>
+
+      <h3>Presentation Mode</h3>
+
+      <p>
+        All accepted papers must be presented at LT4CPR 2026 to appear in the proceedings.
+        Both in-person and virtual presentation options are available.
+      </p>
+
+      <h3>Submission Tracks</h3>
+
+      <p>The workshop offers two submission tracks. All deadlines are 23:59 AoE (Anywhere on Earth).</p>
+
+      <div class="track-columns">
+
+        <div class="track-group softconf">
+          <div class="track-badge">Track 1 · Direct Submissions</div>
+          <div class="track-title">Via OpenReview</div>
+          <p class="track-desc">
+            For new work submitted directly to the LT4CPR workshop, authors may submit
+            archival or non-archival papers through OpenReview.
+          </p>
+          <ul class="track-dates">
+            <li><span class="date-label">Submission deadline</span><span class="date-val deadline-update"><del>August 31, 2026</del> → <strong>September 7, 2026</strong> <span class="deadline-badge">Extended</span></span></li>
+          </ul>
+          <a class="btn" href="https://openreview.net/group?id=aclweb.org/AACL-IJCNLP/2026/Workshop/LT4CPR#tab-your-consoles" target="_blank" rel="noopener noreferrer">Submit via OpenReview →</a>
+        </div>
+
+        <div class="track-group arr">
+          <div class="track-badge">Track 2 · ARR Commitment</div>
+          <div class="track-title">Via ACL Rolling Review (ARR)</div>
+          <p class="track-desc">
+            Authors can commit their ARR submissions to our workshop using the ARR submission form.
+            In your submission, please include ARR reviews and metareviews.
+          </p>
+          <ul class="track-dates">
+            <li><span class="date-label">Commitment deadline</span><span class="date-val deadline-update"><del>August 31, 2026</del> → <strong>September 10, 2026</strong> <span class="deadline-badge">Extended</span></span></li>
+          </ul>
+          <a class="btn" href="https://forms.gle/mxa9D59amrRuPFG57" target="_blank" rel="noopener noreferrer">Submit ARR Commitment →</a>
+        </div>
+
+      </div>
+
+      <h3>Submission Instructions</h3>
+
+      <ul>
+        <li>All submissions must follow the <a href="https://2026.aclweb.org/calls/main_conference_papers/#paper-submission-details" target="_blank">ACL 2026 style guidelines</a> and be anonymized for double-blind review.</li>
+        <li>Authors may use the <a href="https://www.overleaf.com/latex/templates/association-for-computational-linguistics-acl-conference/jvxskxpnznfj" target="_blank" rel="noopener noreferrer">ACL conference paper template on Overleaf</a>.</li>
+        <li>Archival submissions must not be under review at other venues for the duration of the LT4CPR review period.</li>
+        <li>We follow the <a href="https://www.aclweb.org/portal/content/acl-code-ethics" target="_blank">ACL Code of Ethics</a>. We encourage authors to include an "Ethical Considerations" section before "References", which does not count toward the page limit.</li>
+      </ul>
+
+      <h3>Important Dates</h3>
+
+      <p>Paper submission deadlines are end-of-day in Anywhere on Earth (AoE) time.</p>
+
+      <ul class="dates-list">
+        <li><span class="date-event">Direct submission deadline</span><span class="date-val deadline-update"><del>August 31, 2026</del> → <strong>September 7, 2026</strong> <span class="deadline-badge">Extended</span></span></li>
+        <li><span class="date-event">ARR commitment deadline</span><span class="date-val deadline-update"><del>August 31, 2026</del> → <strong>September 10, 2026</strong> <span class="deadline-badge">Extended</span></span></li>
+        <li><span class="date-event">Notification of acceptance</span><span class="date-val">Monday, October 5, 2026</span></li>
+        <li><span class="date-event">Camera-ready version due</span><span class="date-val deadline-update"><del>October 10, 2026</del> → <strong>Monday, October 12, 2026</strong> <span class="deadline-badge">Extended</span></span></li>
+        <li><span class="date-event">Workshop day</span><span class="date-val">November 9, 2026</span></li>
+      </ul>
+
+      <h3>Contact</h3>
+
+      <p>
+        For questions, please contact:
+        <a href="mailto:LT4Crisis@gmail.com">LT4Crisis@gmail.com</a>
+      </p>
+
+    </section>
+    <section class="card">
+      <h2>Submit to LT4CPR</h2>
+
+      <div class="track-columns">
+        <div class="track-group softconf">
+          <div class="track-badge">Research Papers</div>
+          <div class="track-title">Archival and Non-Archival Papers</div>
+          <p class="track-desc">Choose one of the two research paper submission routes:</p>
+          <div class="track-route">
+            <div class="route-label">Direct Submission</div>
+            <a class="btn" href="https://openreview.net/group?id=aclweb.org/AACL-IJCNLP/2026/Workshop/LT4CPR#tab-your-consoles" target="_blank" rel="noopener noreferrer">Submit via OpenReview →</a>
+          </div>
+          <div class="track-route">
+            <div class="route-label">ACL Rolling Review</div>
+            <a class="btn" href="https://forms.gle/mxa9D59amrRuPFG57" target="_blank" rel="noopener noreferrer">Submit ARR Commitment →</a>
+          </div>
+          <a href="#cfp">Research paper submission details</a>
+        </div>
+
+        <div class="track-group arr" id="field-reports">
+          <div class="track-badge">Talk Proposals and Field Reports</div>
+          <div class="track-title">Humanitarian and Crisis-Response Practice</div>
+          <p class="track-desc">
+            We welcome humanitarian organizations, NGOs, community-based organizations,
+            emergency-response teams, public agencies, field experts, and other practitioners
+            working on crisis-specific causes to share field experience or propose a talk.
+          </p>
+          <ul class="track-dates">
+            <li><span class="date-label">Submission deadline · 23:59 AoE</span><span class="date-val">September 18, 2026</span></li>
+          </ul>
+          <a class="btn" href="https://docs.google.com/forms/d/15ZQHQ9vL-i5v94q6tHFtJS7q04RcvgjfEhKf9ilxx6w/viewform" target="_blank" rel="noopener noreferrer">Submit a Talk Proposal or Field Report →</a>
+        </div>
+      </div>
+    </section>
+
+</div>
+
+<div id="shared-task" class="page-section" data-nav-section>
+<section class="card">
+      <h2>LT4CPR Shared Task</h2>
+      <h3>Automatic Situation Report Generation</h3>
+
+      <div class="notice release-notice" aria-label="Data release announcement">
+        <div>
+          <strong>Training and development data released</strong>
+          <p>The train and development datasets for the LT4CPR shared task are now available.</p>
+        </div>
+        <a class="btn" href="https://github.com/LT4CPR/2026_aacl_workshop/tree/main/shared_task/data" target="_blank" rel="noopener noreferrer">Access the data</a>
+      </div>
+
+      <div class="results-summary" aria-label="Official evaluation results announcement">
+        <div>
+          <strong>Official evaluation results released</strong>
+          <p>The final shared-task leaderboard and downloadable score workbook are now available.</p>
+        </div>
+        <a class="btn" href="leaderboard.html">View leaderboard</a>
+      </div>
+
+      <div class="notice">
+        <strong>First Call for Participation: July 15, 2026.</strong>
+        Training data was released on
+        <del datetime="2026-08-01">August 1, 2026</del>
+        <strong>August 7, 2026</strong>, and the second call was released on
+        August 10, 2026. Participant registration closes on
+        <del datetime="2026-08-25">August 25, 2026</del>
+        <strong>September 7, 2026</strong>.
+      </div>
+
+      <p>
+        We invite researchers, students, practitioners, humanitarian organizations, and industry teams to
+        participate in the <strong>LT4CPR Shared Task on Automatic Situation Report (Sitrep) Generation</strong>,
+        organized as part of the First Workshop on Language Technologies for Crisis Preparedness and Response
+        (LT4CPR) at AACL-IJCNLP 2026, on November 9, in Hengqin, Zhuhai, China.
+      </p>
+
+      <p>
+        During a crisis, responders must rapidly synthesize large volumes of fragmented, repetitive, uncertain,
+        and sometimes conflicting information. Social media can provide timely reports about hazards, impacts,
+        infrastructure damage, affected populations, urgent needs, and response activities, but turning these
+        messages into an operationally useful overview remains labor-intensive. This shared task explores how
+        language technologies can support the generation of concise, structured, and verifiable situation reports
+        from crisis-related social media streams.
+      </p>
+
+      <h3>Task Overview</h3>
+      <p>
+        Participating systems will receive a collection of crisis-related social media messages and generate a
+        situation report that summarizes the most important information contained in the collection.
+      </p>
+      <ul>
+        <li><strong>Input:</strong> a set of crisis-related social media messages.</li>
+        <li><strong>Output:</strong> a structured situation report following the official task template and output format.</li>
+        <li><strong>Goal:</strong> produce a report that is informative, concise, well organized, faithful to the source messages, and useful for situational awareness.</li>
+      </ul>
+
+      <p>
+        Reports may cover information such as the crisis context, major events, affected people and locations,
+        casualties, displacement, infrastructure and service disruptions, emerging needs, response activities,
+        resource provision, and unresolved or uncertain claims. The final schema and required sections will be
+        specified in the task guidelines.
+      </p>
+
+      <p>No prior participation in LT4CPR is required, and interdisciplinary teams are especially encouraged.</p>
+
+      <h3>Participation Tracks</h3>
+      <p class="small-note">
+        The official tracks, eligibility rules, and resource restrictions will be defined in the shared task rules.
+      </p>
+
+      <h3>Data and Resources</h3>
+      <p>
+        Shared-task data, documentation, evaluation resources, and submission links
+        will be released in stages according to the following tentative schedule.
+      </p>
+
+      <h4>
+        <del datetime="2026-08-01">August 1, 2026</del>
+        <strong>August 7, 2026</strong>: Initial Data Release
+      </h4>
+      <ul>
+        <li>Training data</li>
+        <li>
+          A complete sample package containing sample input and output,
+          and a sample gold-standard report
+        </li>
+        <li>Detailed documentation of the required input and output formats</li>
+        <li>A situation-report template and machine-readable output schema</li>
+        <li>Annotation and data documentation</li>
+      </ul>
+
+      <h4>
+        <del datetime="2026-08-01">August 1</del>
+        <strong>August 7–September 6, 2026</strong>: Evaluation and Development Resources
+      </h4>
+      <ul>
+        <li>Baseline code and example system outputs, where available</li>
+        <li>Evaluation metric scripts, definitions and evaluation documentation</li>
+        <li>Validation scripts for checking submission format</li>
+      </ul>
+
+      <h4>September 7, 2026: Test and Submission Release</h4>
+      <p>The final release before system submission will include:</p>
+      <ul>
+        <li>Test data</li>
+        <li>A submission platform for system outputs</li>
+        <li>A submission platform for shared-task system papers</li>
+        <li>Official leaderboard and downloadable evaluation results</li>
+      </ul>
+
+      <p>
+        All release dates and resource details are tentative and may be updated.
+        Participants should consult this page regularly for the latest information.
+      </p>
+
+      <div class="task-links" aria-label="Shared task resources">
+        <a class="resource-button active" href="https://github.com/LT4CPR/2026_aacl_workshop/tree/main/shared_task/data" target="_blank" rel="noopener noreferrer">
+          <span>Dataset</span>
+          <span class="resource-status">Available ↗</span>
+        </a>
+        <a class="resource-button active" href="https://github.com/LT4CPR/2026_aacl_workshop/blob/main/README.md" target="_blank" rel="noopener noreferrer">
+          <span>Task Guidelines</span>
+          <span class="resource-status">Available ↗</span>
+        </a>
+        <a class="resource-button active" href="https://forms.gle/8RjwKM5KujQcqNxc8" target="_blank" rel="noopener noreferrer">
+          <span>Registration</span>
+          <span class="resource-status">Available ↗</span>
+        </a>
+        <a class="resource-button active" href="submission.html">
+          <span>System Submission</span>
+          <span class="resource-status">Available ↗</span>
+        </a>
+        <a class="resource-button active" href="system-paper-submission.html">
+          <span>System Paper Submission</span>
+          <span class="resource-status">Available ↗</span>
+        </a>
+        <a class="resource-button active" href="leaderboard.html">
+          <span>Leaderboard</span>
+          <span class="resource-status">Available ↗</span>
+        </a>
+        <span class="resource-button inactive" role="link" aria-disabled="true">
+          <span>Baseline Repository</span>
+          <span class="resource-status">In Oct 2026</span>
+        </span>
+
+      </div>
+
+      <h3>Evaluation Results</h3>
+      <p>
+        Official shared-task evaluation results are now available. Rankings use the <strong>Official Primary Score</strong>,
+        defined as the average of BERTScore F1 and BLEURT. Visit the dedicated leaderboard page to view the
+        primary-system and best-system rankings and download the complete official results workbook.
+      </p>
+      <p>
+        <a class="btn" href="leaderboard.html">View official leaderboard →</a>
+      </p>
+
+      <h3>How to Participate</h3>
+      <ol>
+        <li>Register your team using the official registration form.</li>
+        <li>Review the task guidelines, data license, and participation rules.</li>
+        <li>Download the released data and baseline resources.</li>
+        <li>Develop and evaluate your system using the training and development sets.</li>
+        <li>Submit system outputs for the official test set through the designated platform.</li>
+        <li>Submit a system description paper if required for inclusion in the shared task proceedings and workshop program.</li>
+      </ol>
+      <p>
+        Participation in the shared task does not require a separate submission to the workshop's general Call for
+        Papers. Shared task system papers will follow their own submission instructions and deadlines.
+      </p>
+
+      <h3>System Description Papers</h3>
+      <p>
+        Participating teams will be invited to submit a system description paper explaining their approach,
+        resources, experiments, results, error analysis, limitations, and ethical considerations. Papers should
+        clearly disclose the models, external data, APIs, retrieval sources, and manual interventions used by the system.
+      </p>
+      <ul>
+        <li><strong>Submission format:</strong> official ACL style; up to 8 pages of content, plus unlimited pages for limitations, references, and appendices.</li>
+        <li><strong>Accepted papers:</strong> accepted papers will be given one additional page of content to address reviewer comments.</li>
+        <li><strong>Prior publication:</strong> previously published papers cannot be accepted.</li>
+        <li><strong>Submission deadline:</strong> September 15, 2026, 11:59 p.m. AoE.</li>
+        <li><strong>Submission portal:</strong> <a href="system-paper-submission.html">system paper submission instructions and OpenReview link</a>.</li>
+        <li><strong>Presentation:</strong> accepted system papers may be presented as posters or sessions at the LT4CPR workshop.</li>
+        <li><strong>Proceedings:</strong> publication details will be announced with the system-paper call.</li>
+      </ul>
+
+      <h3>Participation Rules</h3>
+      <ul>
+        <li>Each team must designate a primary contact and use a consistent team name across registration and submissions.</li>
+        <li>Participants must comply with the dataset license and may not redistribute restricted task data.</li>
+        <li>All external data, pretrained models, APIs, prompts, and human involvement must be documented.</li>
+        <li>Submitted outputs must be produced by the registered system by the submission deadline.</li>
+        <li>Teams must follow the submission limits and resource restrictions of their selected track.</li>
+        <li>The organizers reserve the right to inspect submissions for rule compliance and to exclude invalid entries.</li>
+      </ul>
+
+      <h3>Ethics and Responsible Use</h3>
+      <p>
+        Crisis-related social media can contain sensitive personal information, distressing content, rumors, and
+        references to vulnerable populations. Participants must use the data only for the purposes allowed by the
+        dataset license and should avoid attempts to identify, contact, or profile individuals represented in the data.
+        Teams should discuss privacy, representational harms, hallucination risks, model limitations, and the risks of
+        deploying automated reports in high-stakes environments.
+      </p>
+      <p>
+        Shared-task outputs are research artifacts and must not be treated as verified operational intelligence or
+        used as a substitute for expert review and established emergency-management procedures.
+      </p>
+
+      <h3>Important Dates</h3>
+      <p>All deadlines are 11:59 p.m. Anywhere on Earth (AoE), unless otherwise stated. Dates are tentative and may be updated.</p>
+      <table class="date-table">
+        <tbody>
+          <tr>
+            <th scope="row">Shared task website published and First Call for Participation</th>
+            <td>July 15, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">Training data release</th>
+            <td>
+              <del datetime="2026-08-01">August 1, 2026</del>
+              <strong>August 7, 2026</strong>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Second Call for Participation</th>
+            <td>August 10, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">Final Call for Participation</th>
+            <td>August 15, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">Participant registration deadline</th>
+            <td>
+              <del datetime="2026-08-25">August 25, 2026</del>
+              <strong>September 7, 2026</strong>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Test data release</th>
+            <td>September 7, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">System output submission deadline</th>
+            <td>September 10, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">System description paper deadline</th>
+            <td>September 15, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">Notification of acceptance</th>
+            <td>Monday, October 5, 2026</td>
+          </tr>
+          <tr>
+            <th scope="row">Camera-ready papers due</th>
+            <td><del>October 10, 2026</del> → <strong>Monday, October 12, 2026 (23:59 AoE)</strong> (extended)</td>
+          </tr>
+          <tr>
+            <th scope="row">LT4CPR workshop</th>
+            <td>November 9, 2026</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Updates and Contact</h3>
+      <p>
+        Updates will be posted on this page and through the LT4CPR communication channels. Questions about the
+        shared task may be sent to <a href="mailto:lt4cpr.sharedtask@gmail.com">lt4cpr.sharedtask@gmail.com</a>.
+      </p>
+      <p>
+        To help the organizers estimate participation, prospective teams are encouraged to register their interest
+        as soon as the registration form becomes available.
+      </p>
+    </section>
+</div>
+
+<div id="organizers" class="page-section" data-nav-section>
+<h2 style="font-size:1.7rem; font-weight:800; color:var(--navy); margin-top:1rem; margin-bottom:1.25rem; letter-spacing:-.01em;">Organizing Committee</h2>
+
+    <div class="team-columns">
+
+      <div class="team-group gmu">
+        <div class="team-group-header">
+          <img src="img/George Mason University 4C H.png" alt="George Mason University" />
+        </div>
+        <div class="team-grid">
+          <div class="person">
+            <img src="img/anastasopoulos.jpg" alt="Antonios Anastasopoulos" loading="lazy" />
+            <div class="name">Antonios Anastasopoulos</div>
+            <div class="role">Workshop Co-Chair</div>
+            <div class="inst">Principal Investigator</div>
+            <a class="web" href="https://antonisa.github.io" target="_blank">antonisa.github.io</a>
+          </div>
+          <div class="person">
+            <div class="photo-zoom"><img src="img/belu_ticona.jpg" alt="Belu Ticona" loading="lazy" /></div>
+            <div class="name">Belu Ticona</div>
+            <div class="role">Workshop Organizer</div>
+            <div class="inst">PhD Student, CS</div>
+            <a class="web" href="https://beluticona.github.io/" target="_blank">beluticona.github.io</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-group uw">
+        <div class="team-group-header">
+          <img src="img/Wordmark_center_Purple_RGB.png" alt="University of Washington" />
+        </div>
+        <div class="team-grid">
+          <div class="person">
+            <img src="img/fei-xia.jpg" alt="Fei Xia" loading="lazy" />
+            <div class="name">Fei Xia</div>
+            <div class="role">Workshop Co-Chair</div>
+            <div class="inst">Principal Investigator</div>
+            <a class="web" href="https://linguistics.washington.edu/people/fei-xia" target="_blank">linguistics.uw.edu</a>
+          </div>
+          <div class="person">
+            <img src="img/Will-Lewis.jpg" alt="William D. Lewis" loading="lazy" />
+            <div class="name">William D. Lewis</div>
+            <div class="role">Workshop Co-Chair</div>
+            <div class="inst">Co-Principal Investigator</div>
+            <a class="web" href="https://faculty.washington.edu/wlewis2/" target="_blank">faculty.uw.edu/wlewis2</a>
+          </div>
+          <div class="person">
+            <div class="photo-placeholder">HZ</div>
+            <div class="name">Haotian Zhu</div>
+            <div class="role">Workshop Organizer</div>
+            <div class="inst">PhD Student, Linguistics</div>
+            <a class="web" href="https://linguistics.washington.edu/people/haotian-zhu" target="_blank">linguistics.uw.edu</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <section class="card" style="margin-top:1.5rem;">
+      <h3 id="program-committee">Preliminary Program Committee</h3>
+      <p>
+        We are delighted to bring together an interdisciplinary program committee whose
+        expertise spans language technology, crisis communication, humanitarian response,
+        and crisis translation.
+      </p>
+
+      <div class="table-wrap">
+        <table class="grant-table committee-directory">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Affiliation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Angelina Aquino</td>
+              <td>Charles Darwin University</td>
+            </tr>
+            <tr>
+              <td>Patrick Cadwell</td>
+              <td>Dublin City University</td>
+            </tr>
+            <tr>
+              <td>Federico M. Federici</td>
+              <td>University College London (UCL), Centre for Translation Studies (CenTraS)</td>
+            </tr>
+            <tr>
+              <td>Amanda Hughes</td>
+              <td>Brigham Young University</td>
+            </tr>
+            <tr>
+              <td>Philipp Koehn</td>
+              <td>Johns Hopkins University</td>
+            </tr>
+            <tr>
+              <td>Marina Kogan</td>
+              <td>University of Utah</td>
+            </tr>
+            <tr>
+              <td>Gina-Anne Levow</td>
+              <td>University of Washington</td>
+            </tr>
+            <tr>
+              <td>Chi-kiu (Jackie) Lo</td>
+              <td>National Research Council Canada</td>
+            </tr>
+            <tr>
+              <td>Helena Moniz</td>
+              <td>University of Lisbon · INESC-ID</td>
+            </tr>
+            <tr>
+              <td>Sharon O’Brien</td>
+              <td>Dublin City University</td>
+            </tr>
+            <tr>
+              <td>Alp Öktem</td>
+              <td>CLEAR Global</td>
+            </tr>
+            <tr>
+              <td>Steven Richardson</td>
+              <td>Brigham Young University</td>
+            </tr>
+            <tr>
+              <td>Arif Sadri</td>
+              <td>University of Oklahoma</td>
+            </tr>
+            <tr>
+              <td>Giuseppe Samo</td>
+              <td>Beijing Language and Culture University</td>
+            </tr>
+            <tr>
+              <td>Yan Song</td>
+              <td>University of Science and Technology of China</td>
+            </tr>
+            <tr>
+              <td>Maria Carmen Staiano</td>
+              <td>University of Macerata</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+</div>
+
+<div id="qa" class="page-section" data-nav-section>
+<section class="card" id="camera-ready" aria-labelledby="camera-ready-heading">
+        <h2 id="camera-ready-heading">Camera-Ready Q&amp;A</h2>
+
+        <h4>When are camera-ready submissions due?</h4>
+        <p>
+          The deadline for research and shared-task papers has been extended from October 10 to
+          <strong>Monday, October 12, 2026 (23:59 AoE)</strong>.
+        </p>
+
+        <h4>How should I format the final version?</h4>
+        <p>
+          Submit the final, non-anonymous version with all author names and affiliations restored
+          and line numbers removed. Use the unmodified
+          <a href="https://github.com/acl-org/acl-style-files" target="_blank" rel="noopener noreferrer">official ACL style files</a>
+          in final mode; if your template uses <code>\aclfinalcopy</code>, uncomment it.
+          The paper must use A4 paper in two columns, with all fonts embedded and no page numbers.
+        </p>
+
+        <h4>What is the camera-ready page limit?</h4>
+        <p>
+          We suggest 8 pages of main text for camera-ready papers. Accepted archival papers may
+          include up to one additional page to address reviewer comments, for a maximum of
+          9 pages of main text, plus unlimited pages for limitations, references and appendices,
+          consistent with the workshop's <a href="#cfp">published page limits</a>.
+          Non-archival papers may use up to 8 pages, excluding references.
+        </p>
+
+        <h4>Which files should I submit?</h4>
+        <p>Submit both the final PDF and the corresponding LaTeX or Word source.</p>
+
+        <h4>What should I check before submitting?</h4>
+        <p>
+          Run a quick check with
+          <a href="https://github.com/acl-org/aclpubcheck" target="_blank" rel="noopener noreferrer">ACL pubcheck</a>
+          before sending your files, and resolve any formatting issues it identifies.
+          Confirm that author names and affiliations are present, fonts are embedded,
+          and line numbers and page numbers are absent.
+        </p>
+      </section>
+    <section class="card" id="registration" aria-labelledby="registration-heading">
+      <h3 id="registration-heading">Registration and Presentation Q&amp;A</h3>
+      <p><strong>Updated: <time datetime="2026-10-10">October 10, 2026</time></strong></p>
+
+      <h4>Is registration required for both virtual and in-person presentations?</h4>
+      <p>
+        Yes. All papers presented at the workshop must be registered, whether the presentation
+        is virtual or in person.
+      </p>
+
+      <h4>Can a shared-task paper appear in the proceedings without registration or a presentation?</h4>
+      <p>
+        Yes. <strong>Shared-task papers do not require registration to appear in the proceedings.</strong>
+        This exception is now confirmed and allows shared-task papers to be included without
+        a presentation. Registration is still required for papers presented at the workshop,
+        whether virtually or in person.
+      </p>
+    </section>
+    <section class="card" id="funding" aria-labelledby="funding-heading">
+      <h3 id="funding-heading">Funding Q&amp;A</h3>
+
+      <h4>Is funding available for non-archival submissions?</h4>
+      <p>
+        No workshop funding support is available for non-archival submissions.
+        Please consider the AACL-IJCNLP 2026
+        <a href="https://2026.aaclnet.org/calls/volunteers/" target="_blank" rel="noopener noreferrer">student volunteer program</a>
+        and
+        <a href="https://2026.aaclnet.org/calls/subsidies/" target="_blank" rel="noopener noreferrer">Diversity &amp; Inclusion (D&amp;I) grants and subsidies</a>.
+        Check the linked calls for eligibility, application deadlines, and contact information.
+      </p>
+    </section>
+</div>
+
+<div id="contact" class="page-section" data-nav-section>
+<section class="card">
+      <h2>Contact</h2>
+
+      <p>
+        For general inquiries about the workshop, submissions, shared task,
+        or collaboration opportunities, please contact:
+      </p>
+
+      <p style="font-size: 1.1em; font-weight: 600;">
+        <a href="mailto:LT4Crisis@gmail.com">LT4Crisis@gmail.com</a>
+      </p>
+
+      <h3>When to Contact Us</h3>
+      <ul>
+        <li>Questions about direct submissions (Track 1)</li>
+        <li>Questions about ARR commitment (Track 2)</li>
+        <li>Shared task participation inquiries</li>
+        <li>Program or panel-related questions</li>
+        <li>Sponsorship or partnership inquiries</li>
+      </ul>
+
+      <h3>Conference Information</h3>
+      <p>
+        LT4CPR is a workshop at
+        <strong>AACL 2026</strong>, held
+        <strong>November 6–10, 2026</strong> in
+        <strong>Hengqin, Zhuhai, China</strong>.
+      </p>
+
+    </section>
+</div>
 </main>
 
 <footer class="site-footer">
