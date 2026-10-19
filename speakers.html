@@ -5,23 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Invited Speakers | LT4CPR @ AACL 2026</title>
-  <meta name="description" content="Invited speakers for the LT4CPR workshop at AACL 2026." />
+  <meta name="description" content="Keynote by Federico Marco Federici (University College London) on multilingual crisis communication at LT4CPR, AACL 2026." />
 
   <link rel="icon" type="image/png" href="favicon.png" />
 
   <meta property="og:title" content="LT4CPR Invited Speakers @ AACL 2026" />
-  <meta property="og:description" content="Invited speakers for the LT4CPR workshop at AACL 2026." />
+  <meta property="og:description" content="Keynote by Federico Marco Federici (University College London) on multilingual crisis communication at LT4CPR, AACL 2026." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/speakers.html" />
   <meta property="og:image" content="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/preview-banner.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="LT4CPR Invited Speakers @ AACL 2026" />
-  <meta name="twitter:description" content="Invited speakers for the LT4CPR workshop at AACL 2026." />
+  <meta name="twitter:description" content="Keynote by Federico Marco Federici (University College London) on multilingual crisis communication at LT4CPR, AACL 2026." />
   <meta name="twitter:image" content="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/preview-banner.png" />
 
   <link rel="preload" as="image" href="img/venue.webp" type="image/webp" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .card .speaker-intro { max-width: 38rem; color: var(--muted); font-size: 1.15rem; margin-bottom: 2rem; }
+    .speaker-intro strong { color: var(--teal); font-weight: 600; }
+    .keynote-profile { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 2rem; align-items: center;
+      padding: 2rem; border-radius: 14px; background: var(--navy); margin-bottom: 2rem;
+      border-top: 4px solid var(--orange); }
+    .keynote-photo { width: 200px; height: auto; border-radius: 10px; box-shadow: 0 10px 24px rgba(0,0,0,.2); }
+    .card .keynote-label { display: inline-block; color: #f0c9aa; border: 1px solid #687080; border-radius: 999px;
+      padding: .25rem .75rem; font-size: .72rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; margin-bottom: 1rem; }
+    .card #keynote-speaker { display: block; color: #fffdf9; font-size: clamp(1.65rem, 3vw, 2.3rem);
+      line-height: 1.15; letter-spacing: -.035em; padding: 0; margin-bottom: .7rem; }
+    .card #keynote-speaker::after { display: none; }
+    .card .keynote-affiliation { color: #cbd4df; font-size: .95rem; margin: 0; }
+    .keynote-website { display: inline-block; margin-top: .75rem; color: #f0c9aa; }
+    .keynote-talk { padding: .25rem 0 .25rem 1.5rem; border-left: 3px solid var(--orange); margin-bottom: 2rem; }
+    .card .keynote-talk-label { color: var(--muted); text-transform: uppercase; letter-spacing: .12em;
+      font-size: .72rem; font-weight: 700; margin-bottom: .65rem; }
+    .card .keynote-talk h3 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 400; line-height: 1.3; margin: 0; }
+    .keynote-bio { padding-top: 1.5rem; border-top: 1px solid var(--border); }
+    @media (max-width: 600px) {
+      .keynote-profile { grid-template-columns: 1fr; padding: 1.5rem; gap: 1.25rem; }
+      .keynote-photo { width: 160px; }
+      .keynote-talk { padding-left: 1rem; }
+    }
+  </style>
 </head>
 
 <body>
@@ -52,37 +78,26 @@
   <main class="container">
     <section class="card">
       <h1>Invited Speakers</h1>
-      <p>Invited speakers will be announced soon. The workshop will feature talks from researchers and practitioners in NLP, crisis informatics, and humanitarian response.</p>
-
-      <div class="team-grid" style="margin-top:1.25rem;">
-        <div class="person">
-          <div class="photo-placeholder">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="rgba(255,255,255,0.5)">
-              <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-            </svg>
+      <p class="speaker-intro">We are very excited to announce our <strong>invited speaker</strong>:</p>
+      <article id="federico-federici" aria-labelledby="keynote-speaker">
+        <div class="keynote-profile">
+          <img src="img/federico_federici_photo.png" alt="Federico Marco Federici" class="keynote-photo" />
+          <div>
+            <p class="keynote-label">Keynote</p>
+            <h2 id="keynote-speaker">Federico Marco Federici</h2>
+            <p class="keynote-affiliation">University College London</p>
+            <a class="keynote-website" href="https://profiles.ucl.ac.uk/47630-federico-m-federici">Visit his UCL profile →</a>
           </div>
-          <div class="name">To be announced</div>
-          <div class="role">Invited Speaker</div>
         </div>
-        <div class="person">
-          <div class="photo-placeholder">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="rgba(255,255,255,0.5)">
-              <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-            </svg>
-          </div>
-          <div class="name">To be announced</div>
-          <div class="role">Invited Speaker</div>
+        <div class="keynote-talk">
+          <p class="keynote-talk-label">The keynote</p>
+          <h3>Multilingual crisis communication: the human-centred pipeline for timely communication</h3>
         </div>
-        <div class="person">
-          <div class="photo-placeholder">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="rgba(255,255,255,0.5)">
-              <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-            </svg>
-          </div>
-          <div class="name">To be announced</div>
-          <div class="role">Invited Speaker</div>
+        <div class="keynote-bio">
+        <h3>About the speaker</h3>
+        <p>Professor Federico M. Federici is Director of the Centre for Translation Studies at University College London and a Professor of Intercultural Crisis Communication at the university. Dr. Federici has published extensively on language translation in crises, with his current research centered on multilingual communication in crises, in particular, translated communication in medical and healthcare contexts. He was a Principal Investigator on the INTERACT project, a large multi-year EU-funded project, partnering with colleagues at Dublin City University and other European institutions, with a research focus on crisis translation. Dr. Federici&#x27;s work also extends beyond crises, looking at the use of translation in doctor-patient interactions, in particular, in scenarios where patients have limited English proficiency, and the impact that translation (both human-mediated and automated) has on patient care and outcomes.</p>
         </div>
-      </div>
+      </article>
     </section>
 </main>
 
