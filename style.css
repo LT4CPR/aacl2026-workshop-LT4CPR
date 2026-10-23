@@ -552,3 +552,54 @@ html { scroll-padding-top: calc(var(--nav-height, 7rem) + 1.25rem); }
   .hero-fullscreen .hero-body { padding: 2rem 1.5rem; }
   .hero-intro { font-size: 1rem; }
 }
+
+/* ============================================================
+   Modern refinements (2026-10-23)
+   Additive only: appended so the cascade stays predictable and
+   the block can be removed wholesale. Motion follows the
+   prefers-reduced-motion convention used above.
+   ============================================================ */
+
+/* Keynote abstract: a full position-paper abstract plus 28 references
+   is too much standing copy for a page. Contain and scroll it. */
+.keynote-abstract { margin-bottom: 2rem; }
+.keynote-abstract > h4 { font-size: .72rem; font-weight: 700; letter-spacing: .12em;
+                         text-transform: uppercase; color: var(--muted);
+                         margin-bottom: .65rem; }
+.keynote-abstract-scroll { max-height: 22rem; overflow-y: auto; scrollbar-gutter: stable;
+                           padding: .2rem 1rem .2rem 1.1rem;
+                           border-left: 2px solid var(--border);
+                           box-shadow: inset 0 -16px 14px -14px rgba(34,43,64,.18); }
+.keynote-abstract-scroll p { font-size: .94rem; line-height: 1.7; margin-bottom: .85rem; }
+.keynote-abstract-scroll h4 { font-size: .9rem; font-weight: 700; color: var(--navy);
+                              margin: 1.4rem 0 .6rem; }
+.keynote-abstract-scroll:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px;
+                                         border-radius: 4px; }
+
+/* Cards respond to the cursor instead of sitting flat. */
+.card:hover { box-shadow: var(--shadow-md); }
+
+/* Consistent, less heavy-handed focus ring across interactive elements. */
+a:focus-visible, button:focus-visible, summary:focus-visible,
+.btn:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 4px; }
+
+/* Softer table edges to match the rounded cards. */
+.events-table { border-collapse: separate; border-spacing: 0;
+                border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.events-table tbody tr { transition: background .14s; }
+
+/* Pills read as status, so give them a touch more presence. */
+.tag { letter-spacing: .02em; padding: .22rem .62rem; }
+
+/* Modern disclosure: chevron that turns, no +/- glyph swap. */
+details > summary { cursor: pointer; list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .card { transition: box-shadow .2s ease, border-color .2s ease; }
+  .nav a { transition: background .14s, color .14s; }
+  .keynote-photo { transition: transform .22s ease, box-shadow .22s ease; }
+  .keynote-photo:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0,0,0,.26); }
+}
