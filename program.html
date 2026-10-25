@@ -230,8 +230,9 @@
       <div class="slot minor">
         <div class="slot-time">09:00–09:15</div>
         <div class="slot-what">
-          <h3>Opening remarks and kickoff</h3>
-          <p class="slot-who">Organizers · 15 min</p>
+          <h3>Welcome and Opening Remarks: Building a Community for Crisis Response</h3>
+          <p>From the Birds of a Feather gathering at ACL 2025 to the <a href="https://iscram2026.com/workshops/">ISCRAM 2026 workshop</a> and LT4CPR: a look at why crisis preparedness and response matter for language technologies, the conversations that brought us together, and what we hope to build next.</p>
+          <p class="slot-who">Belu Ticona and William D. Lewis · 15 min</p>
 
         </div>
       </div>
@@ -353,7 +354,7 @@
             <div class="talk-tags"><span class="tag tag-inperson">In person</span></div>
           </div>
           <p class="talk-authors"><strong>Fei Xia</strong>, Haotian Zhu, Yun Woo Lee, Eitan Grenev, Allison K Burton, Yingzhe Fan, William D. Lewis, Antonios Anastasopoulos, Belu Ticona</p>
-          <p class="talk-meta"><span class="pid">ID 18</span> · Shared task overview · 15 min</p>
+          <p class="talk-meta"><span class="pid">ID 18</span> · Shared task overview · 10 min</p>
 
           <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>Language Technologies for Crisis Preparedness and Response (LT4CPR) encompass a broad range of natural language applications designed to support disaster response and preparedness. Within this domain, our shared task focuses specifically on leveraging social media data to extract actionable information and generate structured situation reports. To establish a formal benchmark, we introduce a domain-specific taxonomy for categorizing critical crisis information, alongside a novel pipeline for generating synthetic datasets to support task training and evaluation. Furthermore, we develop two baseline systems and propose an evaluation methodology designed to leverage the structural framework of situation reports. The shared task attracted participation from nine teams, whose diverse approaches offer valuable preliminary insights into the feasibility of structured situation report generation and the effectiveness of our evaluation setup. Finally, we highlight key open challenges (such as data access, operational alignment, noise filtering) which needs to be addressed in future research.</p></div></details>
         </article>
@@ -363,10 +364,19 @@
             <div class="talk-tags"><span class="tag tag-inperson">In person</span></div>
           </div>
           <p class="talk-authors"><strong>Quan Zheng</strong>, Ming Wang, Yuanhe Tian, Yan Song</p>
-          <p class="talk-meta"><span class="pid">ID 17</span> · Shared task · 15 min</p>
+          <p class="talk-meta"><span class="pid">ID 17</span> · Shared task · 7 min</p>
 
           <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>Structured crisis reports must preserve both information and its placement under canonical subsections. Merging reports generated from input chunks can omit subsections or duplicate their entries elsewhere. We introduce deterministic missing-subsection recovery and exact cross-title deduplication. The method reuses already generated model outputs, held fixed during postprocessing comparisons, without additional model calls. On 23 development cells, the combined postprocessor increased the official primary score from 0.4820 to 0.4890, a 1.45% relative gain over the baseline. Component comparisons attribute most of this development gain to recovery. On 117 test cells, all three submitted postprocessors scored 0.76–0.85% above the same baseline system on that split. Our primary system, GROUNDED, adds a fixed negative-template filter and placed fourth among nine teams; our highest-scoring submission also placed fourth in the best-system ranking. The results support structural correction of existing outputs, with small numerical differences between recovery policies across splits. They measure reference similarity, not factual entailment.</p></div></details>
         </article>
+        <article class="talk shared">
+        <div class="talk-head">
+          <h4>R01G-SR: Provenance-Preserving Selection over Complementary Evidence Views for Crisis Situation Report Generation</h4>
+          <div class="talk-tags"><span class="tag tag-inperson">In person</span></div>
+        </div>
+        <p class="talk-authors"><strong>Yuqiu Gao</strong>, Yuanhe Tian, Xiaofei Chen, Zhentao Yang, Yan Song</p>
+        <p class="talk-meta"><span class="pid">ID 16</span> · Shared task · 7 min</p>
+        <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>Crisis situation report generation organizes evolving information into structured summaries with traceable supporting evidence. Generating these reports from noisy social-media streams requires balancing evidence completeness and concentration. Unfiltered evidence retains rare observations but includes competing material and remains subject to finite prompt budgets, while filtering and compression risk discarding useful sparse evidence. In this paper, we propose R01G-SR, a provenance-preserving approach that exploits complementary evidence views through whole-report selection. The approach generates two candidate reports using the same quantized 4B generator, presenting unfiltered chronological evidence to one route and filtered, near-duplicate-compressed evidence to the other. A logistic selector uses input- and report-derived features to choose one complete candidate without merging or rewriting reports, and a separate deterministic compliance layer enforces structural and evidence-ID requirements. Nested crisis-disjoint evaluation shows aggregate improvements over both fixed routes, and the official hidden-test evaluation shows improved report quality over the submitted compressed-route fallback. Analysis reveals larger selection gains on longer inputs and later windows, while early windows account for most remaining loss relative to selecting the better available candidate. These findings support evidence-view selection as a useful component of evidence-linked crisis reporting.</p></div></details>
+      </article>
         <article class="talk research">
           <div class="talk-head">
             <h4>Looking Complete Is Not Being Grounded: Evaluating LLM Sitreps Against Human-Authored Situation Reports</h4>
@@ -377,6 +387,12 @@
 
           <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>Evaluation for automatic crisis reporting should measure what practitioners need, not what is convenient to compare. Through LLM-assisted, author-approved content analysis, we derive a 15-slot information schema from professional humanitarian situation reports using qualitative content analysis, then evaluate 121 human and 261 LLM-generated reports across five disasters and three hazard types. Under google/gemini-3.7-flash on Cyclone Idai, the best machine arm is nominally above the empirical human ceiling (0.827 vs. 0.821), but the difference is statistically indistinguishable from zero (95% bootstrap CI [-.049,.059]; permutation p=.852), and the ordering does not replicate under openai/gpt-5.6-luna. On a blind 100-item Idai sample, the author agrees with the Gemini judge at 0.910 accuracy and unweighted Cohen&#x27;s kappa=.799. All four judges clear the plan&#x27;s raw-agreement criterion of .7; only Gemini reaches .7 on chance-corrected kappa. Across the three primary events, machine reports reproduce 5.4--11.0% of same-day official figures. Across those same events, raw exact-number matching links 14.3--19.6% of official figures and 85.4--90.1% of machine figures to the social stream; manual audit confirms 45/50 declared absences, 4/25 official matches, and 24/25 machine matches semantically. The issuing-provenance gap is positive in all 12 observed event--judge cells: report date, organisation, series, and authority were not supplied at professional-report coverage in any cell. On the three primary events, ROUGE-L is uninformative, BERTScore is negatively associated with completeness after multiplicity correction, and a generic LLM judge changes sign.</p></div></details>
         </article>
+        <article class="talk">
+          <div class="talk-head">
+            <h4>Shared-Task Q&amp;A: Feedback and Future Iterations</h4>
+          </div>
+          <p class="talk-meta">6 min</p>
+        </article>
 
 </div>
         </div>
@@ -386,6 +402,7 @@
         <div class="slot-what">
           <h3>🍽️ Lunch</h3>
           <p class="slot-who">90 min</p>
+          <p>(Let’s have lunch together?)</p>
 
         </div>
       </div>
@@ -504,7 +521,8 @@
       <div class="slot minor">
         <div class="slot-time">16:20–17:00</div>
         <div class="slot-what">
-          <h3>Discussion and closing remarks</h3>
+          <h3>Connecting *CL with Other Communities: Serving Humanitarian Crisis Organizations</h3>
+          <p>How can the computational linguistics community build stronger connections with humanitarian practitioners and other disciplines? Join us to discuss how our research can better serve organizations working on crisis preparedness and response, followed by closing remarks.</p>
           <p class="slot-who">Organizers · 40 min</p>
 
         </div>
