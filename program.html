@@ -4,9 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>
-    LT4CPR: Language Technologies for Crisis Preparedness and Response @ AACL 2026
-  </title>
+  <title>Program · LT4CPR @ AACL-IJCNLP 2026</title>
 
   <meta name="description"
         content="LT4CPR Workshop at AACL 2026 · Language Technologies for Crisis Preparedness and Response · November 9, 2026 · AACL-IJCNLP 2026 · Hengqin, Zhuhai, China" />
@@ -21,7 +19,7 @@
         content="Language Technologies for Crisis Preparedness and Response · November 9, 2026 · AACL-IJCNLP 2026 · Hengqin, Zhuhai, China" />
   <meta property="og:type" content="website" />
   <meta property="og:url"
-        content="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/" />
+        content="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/program.html" />
   <meta property="og:image"
         content="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/preview-banner.png" />
 
@@ -36,6 +34,30 @@
 
   <link rel="preload" as="image" href="img/venue.webp" type="image/webp" />
   <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="sections.css" />
+<style>
+  /* Programme components, built from the website's own tokens in style.css.
+     Layout: sticky site nav, hero, then a time-gutter schedule of session
+     cards whose talks carry collapsible abstracts. */
+  :root {
+    --track-research: var(--blue);
+    --track-shared: var(--teal);
+    --flag: #9a3d28;
+    --flag-bg: #f7eae5;
+    --flag-border: #e3c4b8;
+  }
+
+  body { padding-left: max(0px, env(safe-area-inset-left, 0px));
+         padding-right: max(0px, env(safe-area-inset-right, 0px)); }
+  .container { padding-left: max(1.75rem, env(safe-area-inset-left, 0px));
+               padding-right: max(1.75rem, env(safe-area-inset-right, 0px)); }
+  .hero-nav-bar { top: env(safe-area-inset-top, 0px); }
+  body::before { content: ""; position: fixed; inset: 0 0 auto;
+                 height: env(safe-area-inset-top, 0px); z-index: 101;
+                 background: #0c182a; }
+
+</style>
+<link rel="stylesheet" href="agenda.css" />
 </head>
 <body>
   <div class="hero-nav-bar">
@@ -64,10 +86,327 @@
 
   <main class="container">
     <section class="card">
-      <h1>Program</h1>
-      <p>The workshop program will be announced after the notification of acceptance. Check back closer to the workshop date.</p>
-      <p>The workshop will take place on <strong>November 9, 2026</strong> in <strong>Room MR 4</strong> in Hengqin, Zhuhai, China, as part of AACL-IJCNLP 2026.</p>
+      <h1>Workshop program</h1>
+      <p>Welcome to LT4CPR 2026! We look forward to bringing together researchers and practitioners to share ideas and discuss how language technologies can support crisis preparedness and response.</p>
+      <p>Join us on <strong>Monday, November 9, 2026</strong>, in <strong>Room MR 4</strong> in Hengqin, Zhuhai, China, or online, for invited talks, paper presentations, and discussion.</p>
+      <p>Explore the schedule below and select <strong>Abstract</strong> to learn more about each talk. All times are in <strong>Hengqin local time (UTC+8)</strong>, with presentations listed in running order and presenters shown in bold. Each paper is identified by its numeric ID.</p>
+      <p>We look forward to seeing you in person or online.</p>
     </section>
+
+  <section class="card" id="schedule">
+    <div class="day-head">
+      <h2>Monday 9 November 2026</h2>
+      <span class="day-zone">Room MR 4 &middot; venue local time, UTC+8</span>
+    </div>
+    <div class="sched">
+      <div class="slot minor">
+        <div class="slot-time">09:00–09:15</div>
+        <div class="slot-what">
+          <h3>Welcome and Opening Remarks: Building a Community for Crisis and Humanitarian Work</h3>
+          <p>From the Birds of a Feather gathering at ACL 2025 to the <a href="https://iscram2026.com/workshops/">ISCRAM 2026 workshop</a> and LT4CPR: a look at why crisis preparedness and response matter for language technologies, the conversations that brought us together, and what we hope to build next.</p>
+          <p class="slot-who">Belu Ticona and William D. Lewis · 15 min</p>
+
+        </div>
+      </div>
+      <div class="slot ">
+        <div class="slot-time">09:15–09:45</div>
+        <div class="slot-what">
+          <h3>Session 1: Remote Oral Presentations</h3>
+          <div class="talks">
+        <article class="talk research">
+          <div class="talk-head">
+            <h4>Critical evaluation of Knowledge Graph-powered Question Answering Systems to Enable Responsible AI for Disaster Management</h4>
+            <div class="talk-tags"><span class="tag tag-remote">Remote</span></div>
+          </div>
+          <p class="talk-authors"><strong>Gayatri Ramchandra Vaidya</strong>, Yasas Senarath, Hemant Purohit</p>
+          <p class="talk-meta"><span class="pid">ID 10</span> · Research paper · 10 min</p>
+
+          <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>When a disaster strikes, question-answering (QA) systems promise to turn scattered satellite, infrastructure, and hazard impact data into actionable answers for coordinators working under time pressure. But how critically should we trust those answers, even if grounded in the background knowledge? We present RISE, a prototype knowledge-graph (KG)-powered QA system built on data from the June 2026 Venezuela M7.5 earthquake, and subject it to a critical evaluation. Two complementary studies run on the same 30 questions: a stage-wise trace records how each question moves through the pipeline, while an independent LLM-as-a-judge assessment scores the final answer on five language-quality criteria. Taken separately, both studies suggest a system that works: 87% intent accuracy, every question answered, and judge scores averaging above 4 out of 5. Albeit together, they reveal a different picture. Intent misclassifications trace to a linguistic ambiguity no keyword-based classifier can resolve: the same word serves as context in one question and as the information need in another, and lexical matching cannot tell them apart. High scores on grounding and appropriateness do not distinguish a correct answer from a fluent, well-cited answer to the wrong question, because the rubric scores the text against its evidence rather than against the question. Both findings share a common lesson for responsible AI in disaster management to design and develop effective support systems: fluent, well-grounded language by the AI agent is not evidence of a correct answer, and evaluating these systems on their text alone is not enough.</p></div></details>
+        </article>
+        <article class="talk research">
+          <div class="talk-head">
+            <h4>Cross-Modal Inconsistency in Multimodal LLMs during Crisis Communication</h4>
+            <div class="talk-tags"><span class="tag tag-remote">Remote</span></div>
+          </div>
+          <p class="talk-authors"><strong>Anuridhi Gupta</strong>, Hemant Purohit</p>
+          <p class="talk-meta"><span class="pid">ID 9</span> · Research paper · 10 min</p>
+
+          <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>In this paper, we evaluate three state-of-the-art (SOTA) MM-LLMs on consistency of their outputs across text and audio modalities using real emergency alerts. Building on prior semantic-similarity and factual-overlap evaluation, we introduce a LIWC aligned analysis of modality dependent differences in linguistic structure, interpersonal framing, urgency, risk, and action-oriented language. Our findings indicate that despite being unified models, capable of taking in input from different modalities, no single model was able to achieve reliable cross-modal consistency. Persona-level results further indicate that cross-modal disparities vary across user groups. This introduces modality dependent inequity that unfairly affects individuals with access and functional needs. We release prompts, audio recordings, model outputs and evaluation material to support the crisis language technology community in building equitable solution for crisis management.</p></div></details>
+        </article>
+        <article class="talk research">
+          <div class="talk-head">
+            <h4>Safi: AI-Moderated Conversational Interviews for Rapid, Multilingual Post-Disaster Needs Assessment</h4>
+            <div class="talk-tags"><span class="tag tag-remote">Remote</span></div>
+          </div>
+          <p class="talk-authors"><strong>Miraal Kabir</strong>, Martin Turuta</p>
+          <p class="talk-meta"><span class="pid">ID 5</span> · Research paper · 10 min</p>
+
+          <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>Post-disaster needs assessment remains slow, manual, and geographically uneven, forcing responders to allocate aid with limited ground-level information during the most critical hours of a crisis. This gap is compounded by language: disasters disproportionately affect regions where English is not the primary language, and general-purpose AI systems degrade sharply outside a small set of high-resource languages. We present Safi, a live platform that conducts AI-moderated, dynamically-probing conversational interviews over WhatsApp and SMS, requiring no app installation and supporting multimodal input, multilingual reach, and real-time geolocation and dashboarding tools. We describe how this infrastructure, built and validated for rural NGO impact measurement, maps onto the specific demands of crisis response, how it compares to the field-enumerator and remote-survey tools currently used in the sector, and where its real limitations lie, including non-response bias, the verifiability of citizen reports, consent under acute distress, and infrastructure fragility. This is a field/experience report describing a live, deployed system: while its components are already in production use, they have not yet been tested under the specific conditions of an actual, live disaster response.</p></div></details>
+        </article>
+</div>
+        </div>
+      </div>
+      <div class="slot ">
+        <div class="slot-time">09:45–10:30</div>
+        <div class="slot-what">
+          <h3>Spotlight: Voice Technology · Milena Haykowska</h3>
+          <p class="slot-who">CLEAR Global · 45 min</p>
+          <div class="talks">
+        <article class="talk keynote-talk-card">
+          <div class="talk-head">
+            <h4>How human input can help NLP research meet real-world needs in
+            emergencies: a practical view of Rohingya</h4>
+            <a href="https://clearglobal.org">
+              <img class="talk-logo" src="img/cg_logo.svg" alt="CLEAR Global" />
+            </a>
+          </div>
+          <p class="talk-authors"><strong>Milena Haykowska</strong></p>
+          <p class="talk-meta"><a href="https://clearglobal.org">CLEAR Global</a> ·
+          Spotlight oral · 45 min</p>
+          <details class="abs">
+            <summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary>
+            <div class="abs-body"><p>Voice technology could enable governments and humanitarian responders to reach, and hear from, people currently excluded by language or literacy — among the most vulnerable in any emergency. Whether it does so depends on human input on questions no automated benchmark can answer: whether a system targets the right language and variety, whether it works for women as well as men, which script it should transcribe into, and whether its output is good enough for human communication rather than merely scoring well against automated metrics. Drawing on CLEAR Global’s work with community linguists in crisis settings, and using Rohingya as an extended example, we show what is lost when assumption and generalization displace local knowledge. We then set out five research questions on the integration of human input into voice technology development: where a community’s limited time is best spent, who decides which variety a system serves, where an orthographic standard comes from when none exists, what counts as a correct transcription when spellings legitimately differ, and who decides which errors matter most. Each question is open, and each needs the participation of the communities the technology is meant to serve.</p></div>
+          </details>
+        </article>
+</div>
+        </div>
+      </div>
+      <div class="slot break">
+        <div class="slot-time">10:30–11:00</div>
+        <div class="slot-what">
+          <h3>☕ Coffee break</h3>
+          <p class="slot-who">30 min</p>
+
+        </div>
+      </div>
+      <div class="slot ">
+        <div class="slot-time">11:00–11:40</div>
+        <div class="slot-what">
+          <h3>Session 2: Machine Translation</h3>
+          <div class="talks">
+        <article class="talk research">
+          <div class="talk-head">
+            <h4>Is Machine Translation Ready for the Next Crisis or Pandemic?</h4>
+            <div class="talk-tags"><span class="tag tag-remote">Remote</span></div>
+          </div>
+          <p class="talk-authors"><strong>Vipasha Bansal</strong>, William D. Lewis, Nicole Mihaylova, Elizabeth Brown, Benjamin Pong</p>
+          <p class="talk-meta"><span class="pid">ID 8</span> · Research paper · 11:00–11:15 · 15 min</p>
+
+          <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>Communication in times of crisis is essential. However, there is often a mismatch between the language of governments, aid providers, doctors, and those to whom they are providing aid. It is reasonable to turn to commercial MT tools in these scenarios. But how effective are these tools for translating to and from low resource languages, particularly in the crisis or medical domain? In this study, we evaluate 5 commercial systems used for MT (Google Translate, Microsoft Translator, GPT, Gemini and Claude) against the TICO-19 dataset, which contains pandemic-related sentences from a large set of high priority languages spoken by communities most likely to be adversely affected in the next pandemic. We assess the current degree of “readiness” for this next pandemic based on the usability of the output translations.</p></div></details>
+        </article>
+        <article class="talk research">
+          <div class="talk-head">
+            <h4>Communicating with the Entire Population: Machine Translation of Emergency Alerts and Warnings</h4>
+            <div class="talk-tags"><span class="tag tag-inperson">In person</span></div>
+          </div>
+          <p class="talk-authors"><strong>Jen Wilson</strong>, Vipasha Bansal, William D. Lewis</p>
+          <p class="talk-meta"><span class="pid">ID 6</span> · Research paper · 11:15–11:30 · 15 min</p>
+
+          <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>It is essential that we communicate with the entirety of an affected population during a crisis, including those who do not speak a region&#x27;s dominant language(s). Commercial Translation tools offer a tempting solutions to broaden access and can provide a lifeline when no other resources are available. However, Emergency response managers often operate in the dark regarding the quality and adequacy of these automated outputs. In this paper, we conduct a nationwide survey of emergency managers to understand their current workflows, perspectives, and operational challenges. We then evaluate commercial translation tools against these needs, shedding light on their utility and offering practical guidance on how and when these tools can be safely used in emergency response.</p></div></details>
+        </article>
+        <article class="talk">
+          <div class="talk-head">
+            <h4>Q&amp;A with the session speakers</h4>
+          </div>
+          <p class="talk-meta">11:30–11:40 · 10 min</p>
+        </article>
+</div>
+        </div>
+      </div>
+      <div class="slot ">
+        <div class="slot-time">11:40–12:30</div>
+        <div class="slot-what">
+          <h3>Crisis Social Media: Challenges And Shared Task Overview</h3>
+          <div class="talks">
+        <article class="talk">
+          <div class="talk-head">
+            <h4>Crisis Social Media Data: Opportunities and Challenges</h4>
+          </div>
+          <p class="talk-authors"><strong>William D. Lewis</strong>, <strong>Fei Xia</strong></p>
+          <p class="talk-meta">Session introduction · 10 min</p>
+          <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>When a crisis hits, people often turn to social media to ask for help, offer help, find out how others are doing, and decide what they should do. The growth of social media use during crises has been helpful to aid providers as well, giving them a nearly immediate read of the on-the-ground situation that they might not otherwise have. The amount of crisis-related content posted to social media over the past two decades has been explosive, which, in turn, has been a boon to Language Technology (LT) researchers. In this study, we conducted a systematic survey of 355 papers published in the past five years to better understand the expanding growth of LT as it is applied to crisis content, specifically focusing on corpora built over crisis social media data as well as systems and applications that have been developed on this content. We highlight the challenges and possible future directions of research in this space. Our goal is to engender interest in the LT field writ large, in particular in an area of study that can have dramatic impacts on people’s lives. Indeed, the use of LT in crisis response has already been shown to save people’s lives.</p></div></details>
+        </article>
+        <article class="talk shared">
+          <div class="talk-head">
+            <h4>Overview of the LT4CPR 2026 Shared Task: Generating Situation Reports from Social Media Messages</h4>
+            <div class="talk-tags"><span class="tag tag-inperson">In person</span></div>
+          </div>
+          <p class="talk-authors"><strong>Fei Xia</strong>, Haotian Zhu, Yun Woo Lee, Eitan Grenev, Allison K Burton, Yingzhe Fan, William D. Lewis, Antonios Anastasopoulos, Belu Ticona</p>
+          <p class="talk-meta"><span class="pid">ID 18</span> · Shared task overview · 10 min</p>
+
+          <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>Language Technologies for Crisis Preparedness and Response (LT4CPR) encompass a broad range of natural language applications designed to support disaster response and preparedness. Within this domain, our shared task focuses specifically on leveraging social media data to extract actionable information and generate structured situation reports. To establish a formal benchmark, we introduce a domain-specific taxonomy for categorizing critical crisis information, alongside a novel pipeline for generating synthetic datasets to support task training and evaluation. Furthermore, we develop two baseline systems and propose an evaluation methodology designed to leverage the structural framework of situation reports. The shared task attracted participation from nine teams, whose diverse approaches offer valuable preliminary insights into the feasibility of structured situation report generation and the effectiveness of our evaluation setup. Finally, we highlight key open challenges (such as data access, operational alignment, noise filtering) which needs to be addressed in future research.</p></div></details>
+        </article>
+        <article class="talk shared">
+          <div class="talk-head">
+            <h4>Frozen-Response Recovery for Evidence-Linked Crisis Situation Reports</h4>
+            <div class="talk-tags"><span class="tag tag-inperson">In person</span></div>
+          </div>
+          <p class="talk-authors"><strong>Quan Zheng</strong>, Ming Wang, Yuanhe Tian, Yan Song</p>
+          <p class="talk-meta"><span class="pid">ID 17</span> · Shared task · 7 min</p>
+
+          <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>Structured crisis reports must preserve both information and its placement under canonical subsections. Merging reports generated from input chunks can omit subsections or duplicate their entries elsewhere. We introduce deterministic missing-subsection recovery and exact cross-title deduplication. The method reuses already generated model outputs, held fixed during postprocessing comparisons, without additional model calls. On 23 development cells, the combined postprocessor increased the official primary score from 0.4820 to 0.4890, a 1.45% relative gain over the baseline. Component comparisons attribute most of this development gain to recovery. On 117 test cells, all three submitted postprocessors scored 0.76–0.85% above the same baseline system on that split. Our primary system, GROUNDED, adds a fixed negative-template filter and placed fourth among nine teams; our highest-scoring submission also placed fourth in the best-system ranking. The results support structural correction of existing outputs, with small numerical differences between recovery policies across splits. They measure reference similarity, not factual entailment.</p></div></details>
+        </article>
+        <article class="talk shared">
+        <div class="talk-head">
+          <h4>R01G-SR: Provenance-Preserving Selection over Complementary Evidence Views for Crisis Situation Report Generation</h4>
+          <div class="talk-tags"><span class="tag tag-inperson">In person</span></div>
+        </div>
+        <p class="talk-authors"><strong>Yuqiu Gao</strong>, Yuanhe Tian, Xiaofei Chen, Zhentao Yang, Yan Song</p>
+        <p class="talk-meta"><span class="pid">ID 16</span> · Shared task · 7 min</p>
+        <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>Crisis situation report generation organizes evolving information into structured summaries with traceable supporting evidence. Generating these reports from noisy social-media streams requires balancing evidence completeness and concentration. Unfiltered evidence retains rare observations but includes competing material and remains subject to finite prompt budgets, while filtering and compression risk discarding useful sparse evidence. In this paper, we propose R01G-SR, a provenance-preserving approach that exploits complementary evidence views through whole-report selection. The approach generates two candidate reports using the same quantized 4B generator, presenting unfiltered chronological evidence to one route and filtered, near-duplicate-compressed evidence to the other. A logistic selector uses input- and report-derived features to choose one complete candidate without merging or rewriting reports, and a separate deterministic compliance layer enforces structural and evidence-ID requirements. Nested crisis-disjoint evaluation shows aggregate improvements over both fixed routes, and the official hidden-test evaluation shows improved report quality over the submitted compressed-route fallback. Analysis reveals larger selection gains on longer inputs and later windows, while early windows account for most remaining loss relative to selecting the better available candidate. These findings support evidence-view selection as a useful component of evidence-linked crisis reporting.</p></div></details>
+      </article>
+        <article class="talk research">
+          <div class="talk-head">
+            <h4>Looking Complete Is Not Being Grounded: Evaluating LLM Sitreps Against Human-Authored Situation Reports</h4>
+            <div class="talk-tags"><span class="tag tag-remote">Remote</span></div>
+          </div>
+          <p class="talk-authors"><strong>Sachin Kumar</strong></p>
+          <p class="talk-meta"><span class="pid">ID 7</span> · Research paper · 10 min</p>
+
+          <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>Evaluation for automatic crisis reporting should measure what practitioners need, not what is convenient to compare. Through LLM-assisted, author-approved content analysis, we derive a 15-slot information schema from professional humanitarian situation reports using qualitative content analysis, then evaluate 121 human and 261 LLM-generated reports across five disasters and three hazard types. Under google/gemini-3.7-flash on Cyclone Idai, the best machine arm is nominally above the empirical human ceiling (0.827 vs. 0.821), but the difference is statistically indistinguishable from zero (95% bootstrap CI [-.049,.059]; permutation p=.852), and the ordering does not replicate under openai/gpt-5.6-luna. On a blind 100-item Idai sample, the author agrees with the Gemini judge at 0.910 accuracy and unweighted Cohen&#x27;s kappa=.799. All four judges clear the plan&#x27;s raw-agreement criterion of .7; only Gemini reaches .7 on chance-corrected kappa. Across the three primary events, machine reports reproduce 5.4--11.0% of same-day official figures. Across those same events, raw exact-number matching links 14.3--19.6% of official figures and 85.4--90.1% of machine figures to the social stream; manual audit confirms 45/50 declared absences, 4/25 official matches, and 24/25 machine matches semantically. The issuing-provenance gap is positive in all 12 observed event--judge cells: report date, organisation, series, and authority were not supplied at professional-report coverage in any cell. On the three primary events, ROUGE-L is uninformative, BERTScore is negatively associated with completeness after multiplicity correction, and a generic LLM judge changes sign.</p></div></details>
+        </article>
+        <article class="talk">
+          <div class="talk-head">
+            <h4>Shared-Task Q&amp;A: Feedback and Future Iterations</h4>
+          </div>
+          <p class="talk-meta">6 min</p>
+        </article>
+
+</div>
+        </div>
+      </div>
+      <div class="slot break">
+        <div class="slot-time">12:30–14:00</div>
+        <div class="slot-what">
+          <h3>🍽️ Lunch</h3>
+          <p class="slot-who">90 min · Let’s have lunch together!</p>
+
+        </div>
+      </div>
+      <div class="slot ">
+        <div class="slot-time">14:00–14:45</div>
+        <div class="slot-what">
+          <h3>Session 3: In-Person Oral Presentations</h3>
+          <div class="talks">
+        <article class="talk research">
+          <div class="talk-head">
+            <h4>Towards a Benchmark for Fire Safety Code Interpretation in the Hong Kong AEC Industry</h4>
+            <div class="talk-tags"><span class="tag tag-inperson">In person</span></div>
+          </div>
+          <p class="talk-authors">Le Qiu, Zhuan Anne Zhang, Hok Ming Adeline Chan, <strong>Emmanuele Chersoni</strong></p>
+          <p class="talk-meta"><span class="pid">ID 1</span> · Research paper · 15 min</p>
+
+          <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>Large Language Models (LLMs) are increasingly explored in the AEC (Architecture, Engineering, and Construction) domain, yet their reliability in regulatory tasks remains uncertain.</p>
+<p>In this study, we focused on <em>Hong Kong fire safety codes</em>: together with domain experts, we create a localized dataset of multiple-choice (MCQs) and open-ended questions (OEQs) to evaluate 12 widely used LLMs, including both proprietary and open-source models.</p>
+<p>Our findings show that proprietary models may achieve 80–90% accuracy on MCQs, while open-source models generally lag behind. On OEQ, humans and LLM judges rated the answers at 50-70% accuracy, suggesting that LLMs in specialized compliance tasks still have large margins of improvement.</p></div></details>
+        </article>
+        <article class="talk research">
+          <div class="talk-head">
+            <h4>SIREN: Situation-aware Index for Response and Emergency ActioNability in Crisis Translation</h4>
+            <div class="talk-tags"><span class="tag tag-inperson">In person</span></div>
+          </div>
+          <p class="talk-authors"><strong>Maria Carmen Staiano</strong>, Lifeng Han, Johanna Monti, Francesca Chiusaroli</p>
+          <p class="talk-meta"><span class="pid">ID 4</span> · Research paper · 15 min</p>
+
+          <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>Machine translation (MT) is increasingly utilized in multilingual crisis communication, yet conventional evaluation does not directly assess whether translated emergency messages preserve their actionability. We introduce SIREN (Situation-aware Index for Response and Emergency ActioNability), a human evaluation framework assessing whether translation choices compromise protective action, directive force, and urgency of the source text. We evaluate SIREN in two complementary settings. At the error level, we apply it to HOPE-annotated Italian--English translations produced by ChatGPT-4o and Google Translate: 31.63% and 48.73% of errors, respectively, compromise actionability, predominantly by affecting the protective action. At the message level, we evaluate English--French translations produced by TranslateGemma-4B and Google Translate, with actionability preserved in 85.34% and 92.67% of translations, respectively. TranslateGemma-4B failures predominantly weaken directive force, whereas Google Translate failures more often compromise protective actions and receive Major impact ratings. These findings show that translation systems can differ not only in how often actionability is lost, but also in the nature and functional impact of these failures. Alongside SIREN, we contribute an English--French crisis-translation resource with human actionability annotations and post-edited reference translations, supporting further research on function-oriented evaluation for crisis communication. Our experimental data is available at: <a href="https://github.com/mcstaiano/SIREN">https://github.com/mcstaiano/SIREN</a>.</p></div></details>
+        </article>
+        <article class="talk research">
+          <div class="talk-head">
+            <h4>Beyond Consensus: Diagnosing Coverage, Majority Bias, and Grounding Equity in High-Stakes Multi-Document Diversity Summarization</h4>
+            <div class="talk-tags"><span class="tag tag-inperson">In person</span></div>
+          </div>
+          <p class="talk-authors"><strong>Jane Arleth dela Cruz</strong>, Iris Hendrickx, Martha Larson</p>
+          <p class="talk-meta"><span class="pid">ID 11</span> · Research paper · 15 min</p>
+
+          <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>Multi-document diversity summarization (MDDS) in high-stakes domains such as crisis response demands fundamentally different capabilities than consensus-based summarization. While standard summarization focus on fluency and faithfulness, high-stakes tasks would also require: maximizing coverage of divergent information, identifying unique information clusters, and providing verifiable citations to source documents. Existing evaluation frameworks fail to capture these task-specific requirements. Our study introduces a comprehensive evaluation framework for high-stakes MDDS, validated on a multi-source crisis dataset that we developed covering ten crisis events. We propose novel metrics, Comprehensive Coverage Score, Frequency-Salience Correlation, and Citation-Frequency Correlation, to diagnose critical failure modes in six off-the-shelf large language models (LLMs). Our results identified three critical failure modes of LLMs: (1) a consensus trap in coverage: where models capture high-level information clusters, but miss specific, actionable details needed for decision-making; (2) majority bias, where more frequent information are prioritized over rare but important ones and; (3) a verifiability gap, where citations of rare claims are less reliable.</p><p class="abs-note">Supplied by the chair. This paper came through ARR and is non-archival, so it appears in neither the workshop's OpenReview venue nor the camera-ready records.</p></div></details>
+        </article>
+</div>
+        </div>
+      </div>
+      <div class="slot ">
+        <div class="slot-time">14:45–15:30</div>
+        <div class="slot-what">
+          <h3>Keynote: Federico M. Federici</h3>
+          <p class="slot-who">University College London · 45 min</p>
+          <div class="talks">
+        <article class="talk keynote-talk-card">
+          <div class="talk-head">
+            <h4>Multilingual crisis communication: the human-centred pipeline for
+            timely communication</h4>
+            <div class="talk-tags"><span class="tag tag-remote">Remote</span></div>
+          </div>
+          <p class="talk-authors"><strong>Federico M. Federici</strong></p>
+          <p class="talk-meta">University College London, Centre for Translation Studies
+          · 45 min</p>
+          <details class="abs">
+            <summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary>
+            <div class="abs-body abs-scroll" tabindex="0" role="region"
+                 aria-label="Keynote abstract, scrollable"><p>In this presentation, I argue that it is time to envision the design of a human-centred pipeline for multilingual crisis communication. It would enable a shift from the too many ad hoc solutions, which are still prevalent in many disasters, to creating sustainable infrastructures, which could support disaster cycle from early warning systems, through response, to recovery. More powerful machine learning solutions, such as large language models, have opened opportunities but also reignited lazy conceptualisations that standalone automated language translation is sufficient.</p>
+<p>My argument is that the traditional disaster response cycle must evolve beyond standalone technological interventions to embrace congruous workflows where actions, activities, and technologies for multilingual communication function as an integrated system rather than discrete, separate, and standalone tools (Briva-Iglesias &amp; O’Brien, 2026). Climate change intensifies disaster frequency annually, hence wasteful and ephemeral deployments of limited resources become extremely difficult to justify, when technological solutions, which are power hungry and impose infrastructural demands, may be perceived as contributing to, rather than resolving the problem. Given that technological resources for multilingual communication require substantial investment to produce and maintain, embedding them in sustainable pipelines that support all disaster phases is more critical than ever.</p>
+<p>Any form of machine learning supporting multilingual communication generates resources: the problem is whether these resources are always curated, sustained, monitored, and updated. Evidence suggests that they are often produced ad hoc and not integrated. A collaborative aim for researchers working on this space would be to explore why there is not yet a start-to-end human-centred pipeline. A multilingual crisis communication pipeline may integrate all types of technology and data to ensure urgent, timely, efficient, and accurate information is available in crisis contexts. This gap represents both a technical challenge and an opportunity for interdisciplinary research communities (LT, translation studies, disaster management, behavioural psychologists) as well as a call to actively involve policymakers, NGOs, industry, public officers, and crisis and emergency managers.</p>
+<p>While disasters may be triggered unexpectedly by latent or well-known natural or human hazards, their impact regularly disproportionately affects marginalized groups in society as it compounds over existing vulnerabilities (Alexander &amp; Pescaroli, 2020; Federici, 2023). Community-led initiatives could integrate authentic language needs – spoken dialects, vs written languages, low-literacy vs preference for infographics - with data on language distribution from reliable censuses. Furthermore, establishing networks with culturally and linguistically diverse (CALD) communities has the benefit of helping us understand which languages, channels of communication, means of access, and capacity to understand information exists (Brandon &amp; Maang, 2022; Federici et al., 2022). Knowing communities&#x27; preferences is not always possible, but when it is, it allows us to maximise resource use so that when technologies are deployed, developed, and maintained, they create resources usable across the whole disaster cycle.</p>
+<p>Linguistic diversity can be considered a vulnerability (Federici, 2020) in multilingual contexts where information does not reach people whose primary languages are other than the main societal language. Yet with current capacity to gather data, we must ask: why are there not more systems that leverage known language census data to build resources supporting communities with limited proficiency? In high-resource language combinations, data visualisation and evaluation tools identify language needs and their distribution (Llewellyn et al., 2026). My first reflection focuses on whether it is possible to create bespoke solutions, for instance to support early warning systems (EWS) for severe weather (Gaviria Pabón et al., 2025) that could use a standard architecture enabling integration of multiple languages. Undeniably, there are huge differences between resource-rich contexts and resource-poor contexts, where poverty includes digital poverty and a lack of sufficient low-resource data to train any NMTs or LLMs with significant accuracy to support integrated multilingual early warning systems (Reid &amp; Samson Nkoka, 2025); once a multilingual EWS infrastructure is available, its use could support any type of warning (public health, disaster, attacks). For our LT audience from Asia specifically, this presents a critical research frontier in low-resource NLP (Todorova, 2024).</p>
+<p>A second reflection stems from the first one. There has been extraordinary evidence of communities rallying to complement top-down, institutional dissemination of information, with the use of their own channels to communicate information in a way that makes them trusted sources (YCI, 2016). Scaling-up resources to educate people and reduce risks takes time when language resources are scarce and there is no capacity (Knauerhase et al., 2026). When needs, demands, and capacity were supported by crowdsourcing and technological expertise, resources could be and were created (Lewis, 2010; Lewis et al., 2011). Crucially, community involvement in design and deployment would ensure additional buy-in and sustainability; for the LT field, this lesson deserves to be integrated into crisis-oriented systems (Larroyed et al., 2024), but how could this be done?</p>
+<p>My third reflection will focus discussing how we could envision such a consolidated pipeline. Would it be a system, an architecture, or a process? Whichever form it would take, the high-stakes communicative setting demand a human-centred approach (Briva-Iglesias, 2024; Briva-Iglesias &amp; O’Brien, 2026; Carpuat et al., 2025; O&#x27;Brien, 2024). With such a system or human-centred pipeline, validated and trustworthy resources can be re-used and optimised to generate new resources automatically, with a higher degree of quality in output.</p>
+<p>This vision for an integrated pipeline is possibly utopian at this stage. Many questions and objections can be raised: who owns it, where does it sit, who pays for its creation and maintenance, how does it work in contexts of war and conflict? They are all valid especially at a time of extreme diplomatic and political instability globally. The answers could be bottom-up: local authorities could focus on local needs and network with local communities; creating bottom-up networks in the 21st century is extremely easy. If there is a political willingness to create resources to support multilingual communication in crises, the priority will be to test the feasibility of bottom-up systems that validate and share resources for multilingual communities, rather than duplicating work and depleting small budgets with redundant translations, Then, locally viable solutions can be easily networked. If international instability is a barrier, there are also established actors who will could harness such re-usable resources to deploy them in isolated, poor, conflict-torn, and disaster-affected regions. Many organisations such as the Emergency Medical Teams and Médecins sans Frontières have embedded some degree of training for their translation and interpreting teams; giving them access to optimised technological pipelines would not be seen as difficult. Also, organisation such as Crisis Translation Response and Translators without Borders (CLEAR Global) could integrate this hypothetical pipeline in their existing approaches. As scaling-up resources is possible in commercial settings, reusing resources in disaster settings should be more than a moral code, but an infrastructural and design challenge that requires technological solutions and drives brilliant minds to devise a new architecture. Professional translators and interpreters will then be paid properly from budgets that have demonstrated how cost-effective does not mean expensive ad hoc solutions, but long-term optimisation of resources. For pivot and mid-resourced languages, such a system can gradually create additional resources that are domain-specific and for low-resource languages, the pipeline can support training of professional translators.</p>
+<p>These reflections could be dismissed as unachievable and idealistic. Perhaps they are. However, they also provide an overview of ideas coalescing around the findings from studies that show quantitatively that how the impact of high-quality translation (Ray et al., 2025), interpreting, and multimodal communication can be measured (Hibbs et al., 2026). If we can measure how risks (especially health-related risks) can be communicated in multilingual settings, then we will have parameters to evaluate the outputs of any integrated system. It will be possible to scale up evaluations on whether human-centred and optimised pipelines can produce trustworthy translations of risks, whose impact can be measured, and negative outcomes reduced.</p></div>
+          </details>
+          <details class="abs">
+            <summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Speaker biography</span></summary>
+            <div class="abs-body"><p>Professor Federico M. Federici is Director of the Centre for Translation Studies at the University College and a Professor of Intercultural Crisis Communication at the university. Dr. Federici has published extensively on language translation in crises, with his current research centred on multilingual communication in crises, in particular, translated communication in medical and healthcare contexts. He was a Co-Investigator on the INTERACT project, a large multi-year EU-funded project, partnering with colleagues at Dublin City University and other European institutions, with a research focus on crisis translation. Following a project funded by the British Academy, investigating COVID-19 vaccination hesitancy among migrants in Italy and the role of translators, mediators, and interpreters in disseminating health-related information Dr. Federici’s work extended towards multilingual healthcare. His projects now go beyond crises, looking at the use of translation in doctor-patient interactions, in particular, in scenarios where patients have limited English proficiency, and the impact that translation (both human-mediated and automated) has on patient care and outcomes</p></div>
+          </details>
+        </article>
+</div>
+        </div>
+      </div>
+      <div class="slot break">
+        <div class="slot-time">15:30–16:00</div>
+        <div class="slot-what">
+          <h3>☕ Coffee break</h3>
+          <p class="slot-who">30 min</p>
+
+        </div>
+      </div>
+      <div class="slot ">
+        <div class="slot-time">16:00–16:20</div>
+        <div class="slot-what">
+          <h3>Session 4: Resources And Field Reports</h3>
+          <div class="talks">
+        <article class="talk research">
+          <div class="talk-head">
+            <h4>CrisiLangs: A Multilingual Resource for Crisis Warning Generation</h4>
+            <div class="talk-tags"><span class="tag tag-remote">Remote</span></div>
+          </div>
+          <p class="talk-authors"><strong>Giacomo Gonella</strong>, Stefano Menini, Marco Guerini</p>
+          <p class="talk-meta"><span class="pid">ID 3</span> · Research paper · 10 min</p>
+
+          <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>Communicating with the public during an emergency entails issuing warning messages promptly. In Europe, it often requires producing them in more than one language. Recent work has shown that language models can be trained to generate warning messages as a crisis unfolds, but the available data covers only English. To fill this gap, we present <em>CrisiLangs</em>, a multilingual extension of <em>CrisiText</em> (an English dataset of crisis events paired with warning messages written according to expert communication guidelines) to Italian, Bulgarian, German, and Greek. Expert native speakers translated the warning messages of 1,000 events drawn from 411 scenarios, for a total of 5,000 event-message pairs across five languages. We test the resource to fine-tune a multilingual model on all five languages jointly, with and without the emergency guidelines in the prompt, and compare it with a zero-shot baseline. The fine-tuned models outperform the baseline on ROUGE-L, BLEU and BERTScore in every language and configuration. In a human preference study, low decoding temperatures receive the most preferences in all five languages and in both configurations, while the effect of the guidelines varies by language.</p></div></details>
+        </article>
+        <article class="talk research">
+          <div class="talk-head">
+            <h4>Community Radio as Speech Infrastructure for Crisis Preparedness: A Field Report from Uganda</h4>
+            <div class="talk-tags"><span class="tag tag-remote">Remote</span></div>
+          </div>
+          <p class="talk-authors"><strong>Gideon Luper Abako</strong></p>
+          <p class="talk-meta"><span class="pid">ID 2</span> · Research paper · 10 min</p>
+
+          <details class="abs"><summary><svg class="abs-chev" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 3.5 10.5 8l-5 4.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Abstract</span></summary><div class="abs-body"><p>Speech and language systems used during crises depend on language resources that represent the people and communication channels they are meant to serve. Community radio offers one source of such speech in Uganda because it carries local language broadcasts, interviews, discussions and caller contributions at scale. This paper reports field experience from a Ugandan radio speech project that formed agreements with CBS Radio for Luganda content and Voice of Teso for Ateso content, then built a pipeline for radio speech collection, segmentation, quality review, transcription support and dataset preparation. From about 1,900 hours of CBS Radio archive broadcasts, the pipeline retained 514.5 hours of Luganda speech across 170,090 clips between 3 and 15 seconds. A stratified human audit of 300 clips accepted 65 percent and produced an estimate of about 347 usable speech hours. Music and station jingles were the main contaminant. Four automatic speech recognition systems were tested for draft transcription. A Luganda adapted Whisper model from Sunbird AI was selected and a native Luganda speaker reviewed all 195 clips accepted in the audit. The process produced 175 fully verified audio and transcript pairs. We use these results to examine community radio as speech infrastructure for crisis preparedness and to identify the technical, human, institutional and repository conditions that shape this use.</p></div></details>
+        </article>
+</div>
+        </div>
+      </div>
+      <div class="slot minor">
+        <div class="slot-time">16:20–17:00</div>
+        <div class="slot-what">
+          <h3>Connecting *CL with Other Communities: Serving Humanitarian Crisis Organizations</h3>
+          <p>How can the computational linguistics community build stronger connections with humanitarian practitioners and other disciplines? Join us to discuss how our research can better serve organizations working on crisis preparedness and response, followed by closing remarks.</p>
+          <p class="slot-who">Organizers · 40 min</p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
