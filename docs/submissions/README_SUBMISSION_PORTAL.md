@@ -54,7 +54,7 @@ Passing the browser validator means the ZIP is structurally and referentially va
 
 ## Configure the official Google Form
 
-See `GOOGLE_FORM_SETUP.md` for the recommended fields and settings.
+See [GOOGLE_FORM_SETUP.md](GOOGLE_FORM_SETUP.md) for the recommended fields and settings.
 
 When the Form is ready, edit:
 
@@ -91,8 +91,8 @@ Earlier responses/files should be preserved for provenance.
 Run from the repository root:
 
 ```bash
-python -m unittest tools/test_validate_submission.py -v
-node test_submission_validator.js
+python3 -m unittest discover -s tests -p "test_*.py" -v
+node tests/test_submission_validator.js
 ```
 
 ## Main files
@@ -105,6 +105,6 @@ node test_submission_validator.js
 - `submission-assets/test-manifest.json` — real released 117-cell public manifest
 - `tools/build_test_manifest.py` — reproducible manifest generator
 - `tools/validate_submission.py` — authoritative organizer CLI validator
-- `tools/test_validate_submission.py` — Python regression tests
+- `tests/test_validate_submission.py` — Python regression tests
 - `GOOGLE_FORM_SETUP.md` — exact recommended Form configuration
 - `SUBMISSION_DEPLOYMENT_CHECKLIST.md` — release checklist

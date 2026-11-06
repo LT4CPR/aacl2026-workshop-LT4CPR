@@ -1,6 +1,7 @@
 const assert = require('assert');
 const fs = require('fs');
-const V = require('./submission-assets/validator-core.js');
+const path = require('path');
+const V = require('../submission-assets/validator-core.js');
 
 const cfg = {
   SUBMISSION_FORMAT_VERSION: '1.0',
@@ -53,7 +54,7 @@ async function main() {
   assert.deepStrictEqual(V.validateReport(report,{crisis:'tornado',stem:'x',tweet_ids:[1]},'r',cfg),[]);
   assert(V.validateReport(report,{crisis:'tornado',stem:'x',tweet_ids:[2]},'r',cfg).some(x=>x.includes('does not exist')));
 
-  const testManifest = JSON.parse(fs.readFileSync('./submission-assets/test-manifest.json', 'utf8'));
+  const testManifest = JSON.parse(fs.readFileSync(path.join(__dirname, '../submission-assets/test-manifest.json'), 'utf8'));
   const mc = V.validateTestManifest(testManifest, cfg);
   assert.deepStrictEqual(mc.errors, []);
   assert.strictEqual(mc.valid, true);

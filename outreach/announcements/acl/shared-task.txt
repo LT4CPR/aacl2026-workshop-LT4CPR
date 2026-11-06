@@ -1,0 +1,114 @@
+<strong>SHARED TASK</strong>
+
+<em>Important Dates</em>
+
+<ul>
+  <li><strong>First Call for Participation:</strong> July 15, 2026</li>
+  <li>
+    <strong>Training and Dev data and second Call for Participation:</strong>
+    August 13, 2026
+  </li>
+  <li><strong>Final Call for Participation:</strong> August 20, 2026</li>
+  <li>
+    <strong>Participant registration deadline:</strong> September 5th, 2026
+  </li>
+  <li><strong>Test data release:</strong> September 1, 2026</li>
+  <li>
+    <strong>System output submission deadline:</strong> September 7, 2026
+  </li>
+  <li>
+    <strong>Shared-task paper submission deadline:</strong>
+    September 15, 2026
+  </li>
+  <li><strong>Notification of acceptance:</strong> Monday, October 5, 2026</li>
+  <li><strong>Camera-ready deadline:</strong> October 10, 2026</li>
+  <li><strong>Workshop date:</strong> November 9, 2026</li>
+</ul>
+
+<em>
+  All deadlines are tentative and will be confirmed on the shared-task website.
+</em>
+
+<em>Automatic Situation Report Generation</em>
+
+We are pleased to announce the LT4CPR 2026 Shared Task on Automatic Situation
+Report Generation, hosted as part of the <strong>LT4CPR Workshop</strong> at AACL-IJCNLP 2026.
+
+The shared task focuses on generating structured situation reports from
+crisis-related social media messages. Participants will develop systems that
+identify and summarize important information about an unfolding crisis,
+including reported impacts, affected populations, infrastructure damage,
+response activities, resource needs, and other information relevant to
+situational awareness.
+
+The task is intended to support research at the intersection of natural
+language processing, crisis informatics, summarization, information extraction,
+multilingual language technology, and humanitarian response.
+
+<em>Task Overview</em>
+
+<dl>
+  <dt><strong>Input</strong></dt>
+  <dd>
+    A collection of crisis-related social media messages, together with relevant
+    metadata and task documentation.
+  </dd>
+
+  <dt><strong>Output</strong></dt>
+  <dd>
+    A structured and/or narrative situation report summarizing the key
+    information contained in the input messages.
+  </dd>
+</dl>
+
+<em>Task Resources</em>
+
+The organizers plan to release:
+
+<ul>
+  <li>Training data</li>
+  <li>
+    Sample input, sample system output, and a sample gold-standard report
+  </li>
+  <li>Detailed input and output format documentation</li>
+  <li>
+    A situation-report template and machine-readable output schema
+  </li>
+  <li>Annotation and dataset documentation</li>
+  <li>Baseline code and example outputs, where available</li>
+  <li>Evaluation documentation, metrics, and evaluation scripts</li>
+  <li>Submission-format validation tools</li>
+  <li>Test data and system-submission instructions</li>
+  <li>
+    A submission platform for system outputs and shared-task papers
+  </li>
+</ul>
+
+Participation tracks and additional task settings are currently being finalized
+and will be announced separately.
+
+
+<em>System Description Papers</em>
+
+Participating teams will be invited to submit a system description paper
+explaining their approach, experimental setup, use of external resources,
+results, limitations, and relevant ethical considerations.
+
+Researchers interested in participating are encouraged to register by
+<strong>August 25, 2026</strong>.
+
+<strong>Shared Task Website:</strong> <a href="https://lt4cpr.github.io/aacl2026-workshop-LT4CPR/shared-task.html"> LT4CPR 2026 Shared Task
+</a>
+
+<strong>Contact:</strong><a href="mailto:lt4cpr.sharedtask@gmail.com">lt4cpr.sharedtask@gmail.com</a>
+
+Please feel free to circulate this announcement among interested colleagues,
+students, research groups, and relevant mailing lists.
+
+We look forward to your participation.
+
+Best regards,
+
+LT4CPR 2026 Organizers
+First Workshop on Language Technologies for Crisis Preparedness and Response
+AACL-IJCNLP 2026

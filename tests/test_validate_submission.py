@@ -12,7 +12,7 @@ from pathlib import Path
 
 
 HERE = Path(__file__).resolve().parent
-VALIDATOR = HERE / "validate_submission.py"
+VALIDATOR = HERE.parent / "tools" / "validate_submission.py"
 
 spec = importlib.util.spec_from_file_location("validate_submission", VALIDATOR)
 mod = importlib.util.module_from_spec(spec)
